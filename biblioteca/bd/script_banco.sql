@@ -41,14 +41,14 @@ CREATE TABLE cliente(
 
 CREATE TABLE produto(
 	idProduto INT(11) NOT NULL AUTO_INCREMENT,
-	NomeProduto VARCHAR(30) NOT NULL,
-        Preco DOUBLE NOT NULL,
-	Descricao VARCHAR(60) NOT NULL,
-	Tamanho VARCHAR(60) NOT NULL,
-	Imagem VARCHAR(60),
+	nomeProd VARCHAR(30) NOT NULL,
+        preco DOUBLE NOT NULL,
+	descr VARCHAR(60) NOT NULL,
+	tamanho VARCHAR(60) NOT NULL,
+	img VARCHAR(60),
 	Categoria VARCHAR(20) NOT NULL,
-	Estoque_Min INT(5) NOT NULL,
-	Estoque_Max INT(5) NOT NULL,
+	estoquemin INT(5) NOT NULL,
+	estoquemax INT(5) NOT NULL,
 	PRIMARY KEY(idProduto)
 );
 

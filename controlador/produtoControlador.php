@@ -2,37 +2,20 @@
 
 require_once "modelo/produtoModelo.php";
 
-function adicionar(){
-	if (ehPOST()) {
-
-	//validação do nome
-		
-		if (strlen(trim($_POST['nomeProd'])) == 0) {
- 			$errors[] = "Informe um nome válido";
-		 }
-		$nomeProd = $_POST["nomeProd"];	
-                
-                $preco = $_POST["preco"];	
-                
-                $desc = $_POST["desc"];	
-                
-                $tamanho = $_POST["tamanho"];	
-                
-                $img = $_POST["img"];	
-                
-                $estoquemin = $_POST["estoquemin"];
-                
-                $estoquemax = $_POST["estoquemax"];
-
-
-                $msg = adicionarProduto($nomeProd, $preco, $desc, $tamanho, $img, $estoquemin, $estoquemax);
-                echo $msg;
-                
-	} else {
-		exibir("produto/formularioProd");
-	}
-	
-	
+function adicionar() {
+    if (ehPost()) {
+        $nome_produto = $_POST ["nome"];
+        $descricao = $_POST ["descricao"];
+        $valor = $_POST ["valor"];
+        $tamanho = $_POST ["tamanho"];
+        $estoque = $_POST ["estoque"];
+        $categoria = $_POST ["categoria"];
+        $msg = adicionarProdutos($nome_produto, $descricao, $valor, $tamanho, $estoque, $categoria);
+        echo $msg;
+    } else {
+        
+    }
+    exibir("produtos/formulario");
 } 
 
 

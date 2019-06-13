@@ -11,7 +11,7 @@ function adicionar(){
 	//validação do nome
 		
 		if (strlen(trim($_POST['nome'])) == 0) {
- 			$errors[] = "Informe um nome válido.i";
+ 			$errors[] = "Informe um nome válido";
 		 }
 		$nome = $_POST["nome"];
 
@@ -19,14 +19,14 @@ function adicionar(){
 	//validação da senha
 
 		if (strlen(trim($_POST['senha'])) == 0) {
- 			echo "Você deve inserir uma senha válida.<br><BR>";
+ 			echo "Você deve inserir uma senha válida<br><BR>";
 		}
 			$senha = $_POST["senha"];
 
 		
 	//validação do email
 
-		$input['Email'] = filter_input(INPUT_POST, 'Email', FILTER_VALIDATE_EMAIL);
+	$input['Email'] = filter_input(INPUT_POST, 'Email', FILTER_VALIDATE_EMAIL);
  	if ($input['Email'] == FALSE) {
  		echo 'Informe um email valido. <br><BR>';
 	}

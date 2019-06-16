@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/wamp64/www/SipaLoja/visao/produto/formularioProd.php</file>
-            <file>file:/D:/wamp64/www/SipaLoja/modelo/clienteModelo.php</file>
-            <file>file:/D:/wamp64/www/SipaLoja/modelo/produtoModelo.php</file>
-            <file>file:/D:/wamp64/www/SipaLoja/controlador/clienteControlador.php</file>
-            <file>file:/D:/wamp64/www/SipaLoja/controlador/produtoControlador.php</file>
+            <file>file:/C:/wamp64/www/sipaloja/biblioteca/bd/script_banco.sql</file>
+            <file>file:/C:/wamp64/www/sipaloja/controlador/produtoControlador.php</file>
+            <file>file:/C:/wamp64/www/sipaloja/controlador/categoriaControlador.php</file>
         </group>
     </open-files>
 </project-private>

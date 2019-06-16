@@ -9,6 +9,9 @@
     <body class="container">
 
         <div id="menu">
+            
+            	<img src="./publico/img_sipa/oie_transparent.png" id="img1">	
+            
             <ul id="ul1">
                 <li id="li1"> <a href="./cliente/listarClientes" style="color: white;"> Listar Clientes </a></li>
 
@@ -17,12 +20,15 @@
                 <li id="li1"> <a href="./categoria/listarCategorias" style="color: white;"> Listar Categoria </a></li>
             </ul>
         </div>
-        <br><br><br>
-        <main class="container">
+       
+        <br><br><br><br><br>
+    
+    <main class="container">
             <?php require $viewFilePath; ?>
         </main>
 
-
+ <br><br>
+    
 <div id="rodape">
 			<div id="list2">
 				<ul id="ul2">
@@ -52,9 +58,9 @@
 <p id="p12"> Email da loja: sipaloja@gmail.com </p>
 						
 		<div id="esque2">
-			<img src="img_sipa/facebook.svg" id="facebook">
-			<img src="img_sipa/twitter.svg" id="twitter">
-			<img src="img_sipa/insta.png" id="insta">
+			<img src="./publico/img_sipa/facebook.svg" id="facebook">
+			<img src="./publico/img_sipa/twitter.svg" id="twitter">
+			<img src="./publico/img_sipa/insta.png" id="insta">
 		</div>   
    
     </body>

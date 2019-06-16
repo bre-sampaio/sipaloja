@@ -20,15 +20,15 @@
 
 <br><br>
 
-		<h3>Sexo: </h3>
+	<h3>Sexo: </h3>
 	<input type="radio" name="sexo" value="F"> Feminino
 	<input type="radio" name="sexo" value="M"> Masculino
 <br><br>
 
-<input placeholder="Data" type="date" name="nascimento">
+        <input placeholder="Data" type="date" name="nascimento">
 
 <br><br>
-		<input type="submit" name="Enviar">
+	<input type="submit" name="Enviar">
 </form>
 
 

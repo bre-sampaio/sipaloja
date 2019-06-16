@@ -1,14 +1,23 @@
 <h1> Cadastro dos Produtos: </h1>
 
 <form action="" method="POST">
-    Nome do Produto: <input type="text" name="nome"> <br>
-    Descrição: <input type="text" name="descricao"> <br>
-    Valor: <input type="text" name="valor"> <br>
-    Tamanho: <input type="text" name="tamanho"> <br>
-    Estoque: <input type="text" name="estoque"> <br>
-    Categoria: <input type="text" name="categoria"> <br>
+    <input placeholder="Nome do Produto" type="text" name="Nome"> <br>
     
-	<button type="submit">Enviar</button>
+    <input placeholder="Descrição" type="text" name="Descricao"> <br>
+    
+    <input placeholder="Preço" type="text" name="Preco"> <br>
+    
+    <input placeholder="Tamanho" type="text" name="Tamanho"> <br>
+    
+    <input placeholder="Imagem" type="text" name="img"> <br>
+  
+    <input placeholder="Categoria" type="text" name="Categoria"> <br>
+    
+    <input placeholder="Estoque Mínimo" type="number" name="Estoquemin"> <br>
+  
+    <input placeholder="Estoque Máximo" type="number" name="Estoquemax"> <br>
+	
+            <input type="submit" name="Enviar">
 </form>
 
 

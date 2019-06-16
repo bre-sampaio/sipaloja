@@ -13,7 +13,7 @@
             
             <li> <a href="./produto/listarProdutos"> Listar Produtos </a></li>
        
-            <li> <a href="./categoria/listarCategoria"> Listar Categoria </a></li>
+            <li> <a href="./categoria/listarCategorias"> Listar Categoria </a></li>
         </ul>
             
         
@@ -21,5 +21,7 @@
             <?php require $viewFilePath; ?>
         </main>
 
+Rodapé:      
+   
     </body>
 </html>

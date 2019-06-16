@@ -41,14 +41,14 @@ CREATE TABLE cliente(
 
 CREATE TABLE produto(
 	idProduto INT(11) NOT NULL AUTO_INCREMENT,
-	nomeProd VARCHAR(30) NOT NULL,
-        preco DOUBLE NOT NULL,
-	descr VARCHAR(60) NOT NULL,
-	tamanho VARCHAR(60) NOT NULL,
+	Nome VARCHAR(30) NOT NULL,
+        Preco DOUBLE NOT NULL,
+	Descricao VARCHAR(60) NOT NULL,
+	Tamanho VARCHAR(60) NOT NULL,
 	img VARCHAR(60),
 	Categoria VARCHAR(20) NOT NULL,
-	estoquemin INT(5) NOT NULL,
-	estoquemax INT(5) NOT NULL,
+	Estoquemin INT(5) NOT NULL,
+	Estoquemax INT(5) NOT NULL,
 	PRIMARY KEY(idProduto)
 );
 
@@ -123,3 +123,4 @@ foreign key(idProduto) REFERENCES produto(idProduto) ON UPDATE CASCADE ON DELETE
 );
 
 	
+ 

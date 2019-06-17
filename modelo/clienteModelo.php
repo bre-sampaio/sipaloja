@@ -2,14 +2,14 @@
 
 	function adicionarCliente($nome, $senha,$email, $cpf, $sexo, $nascimento){
 		$sql = "INSERT INTO cliente ( nome, 
-                                              email, 
-                                              senha, 
+                                             senha,  email, 
+                                              
                                               cpf, 
-					sexo, 
-									  nascimento)
+					      sexo, 
+                                              nascimento)
 				VALUES('$nome', 
-						'$senha', 
-						'$email', 
+					'$senha', 
+					'$email', 
 						'$cpf', 
 						'$sexo', 
 						'$nascimento')";
@@ -21,7 +21,7 @@
 			die('erro ao cadastrar cliente <br>' .mysqli_error($cnx));
 		}
 
-		return 'Cadastro realizado com sucesso!';
+		return 'Cadastro realizado com sucesso! <br><br> <a href="./adicionar" class="btn btn-primary">Voltar</a>';
 	}
 
 

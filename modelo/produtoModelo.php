@@ -1,8 +1,7 @@
 <?php
 
-function adicionarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categoria, $estoquemin, $estoquemax){
-     $sql = "INSERT INTO produto(Nome, Descricao, Preco, Tamanho, img, Categoria, Estoquemin, Estoquemax)"
-             . "     VALUES ('$nome_produto','$desc','$preco','$tamanho', '$img', '$categoria', $estoquemin','$estoquemax')";
+function adicionarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categoria, $estoquemin, $estoquemax){
+     $sql = "INSERT INTO produto(Nome, Preco, Descricao, Tamanho, img, Categoria, Estoquemin, Estoquemax) VALUES ('$nome_produto','$preco', '$desc','$tamanho', '$img', '$categoria', '$estoquemin','$estoquemax')";
     
      $resultado = mysqli_query($cnx = conn(), $sql);
     
@@ -11,7 +10,7 @@ function adicionarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categor
 			die('erro ao cadastrar produto <br>' .mysqli_error($cnx));
 		}
 
-		return 'Produto Cadastrado com sucesso!';
+                return 'Produto Cadastrado com sucesso! <br><br> <a href="./adicionar" class="btn btn-primary">Voltar</a>';
             
  }
 

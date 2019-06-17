@@ -41,7 +41,7 @@ function adicionar(){
 
 		$nascimento = $_POST["nascimento"];
 
-	$msg = adicionarCliente($nome, $email, $senha, $cpf, $sexo, $nascimento);
+	$msg = adicionarCliente($nome,  $senha,$email, $cpf, $sexo, $nascimento);
 		echo $msg;
 
 

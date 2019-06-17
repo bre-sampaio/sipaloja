@@ -1,20 +1,22 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
-    padding: 2%;
     text-align: center;
 }
 
 #menu{ 
-	display: inline;
-	border: solid;
-        height: 100px;
-	border-width:35px; 
-	background-color: black;
+    display: inline;
+    border: solid;
+    height: 100px;
+    border-width:35px; 
+    background-color: black;
 }
 
-
+#site{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 #img1{
     width: 130px;
@@ -22,18 +24,18 @@ body {
 }
 
 #ul1{
-		list-style: none;
-		display: inline;
-		margin-left: 7%;
+    list-style: none;
+    display: inline;
+    margin-left: 7%;
 }
-        
+
 #li1{
     display: inline;
     padding: 6%;
     font-size: 20px;
-	}      
-        
- a:link{ 
+}      
+
+a:link{ 
     text-decoration:none; 
     color: inherit;
 } 
@@ -45,76 +47,76 @@ body {
 }
 
 #list2{
-	color: white;
-	padding: 2%;
-	font-size: 20px;
-	width: 95%;
+    color: white;
+    padding: 2%;
+    font-size: 20px;
+    width: 95%;
 }
 
 #ul2{
-	list-style: none;
-	float: left;
-	margin-right: 15%;
+    list-style: none;
+    float: left;
+    margin-right: 15%;
 }
 
 #ul3{
-	list-style: none;
-	float: left;
-	margin-right: 15%;
+    list-style: none;
+    float: left;
+    margin-right: 15%;
 }
 
 #ul4{
-	list-style: none;
+    list-style: none;
 }
 
 #p10{
-	color: #858585;
-	padding-top: 30px;
-	float: left;
-	padding-left: 5%;
+    color: #858585;
+    padding-top: 30px;
+    float: left;
+    padding-left: 5%;
 }
 
 #p11{
-	color: #858585;
-	padding-top: 30px;
-	padding-right: 30px;
-	padding-left: 30px;
-	float: left;
+    color: #858585;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    float: left;
 }
 
 #p12{
-	color: #858585;
-	padding-top: 30px;
-	display: inline;
-	float: left;
+    color: #858585;
+    padding-top: 30px;
+    display: inline;
+    float: left;
 }
 
 
-		#facebook{
-			background-color: #39599f;
-			border-radius: 30px;
-			padding: 5px;
-			margin-top: 18px;
-		}
+#facebook{
+    background-color: #39599f;
+    border-radius: 30px;
+    padding: 5px;
+    margin-top: 18px;
+}
 
-		#twitter{
-			background-color: #2daae4;
-			border-radius: 30px;
-			padding: 5px;
-			margin-top: 18px;
-			margin-left: 10px;
-			display: inline;
-		}
+#twitter{
+    background-color: #2daae4;
+    border-radius: 30px;
+    padding: 5px;
+    margin-top: 18px;
+    margin-left: 10px;
+    display: inline;
+}
 
-		#insta{
-			border-radius: 100%;
-			width: 45px;
-			margin-top: 18px;
-			margin-left: 10px;
-			margin-right: 10px;
-		}
+#insta{
+    border-radius: 100%;
+    width: 45px;
+    margin-top: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
-		#esque2{
-			float: right;
-			padding-right: 10px;
-		}
+#esque2{
+    float: right;
+    padding-right: 10px;
+}

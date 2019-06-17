@@ -1,3 +1,4 @@
+/*
 DROP DATABASE mvcd;
 CREATE DATABASE mvcd;
 
@@ -16,7 +17,7 @@ DEFAULT CHARACTER SET = utf8
 
 INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('admin', '123', 'admin@admin', 'admin');
 INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuario', '123', 'usuario@usuario', 'usuario');
-
+*/
 
 /*sipa loja*/
 
@@ -42,7 +43,7 @@ CREATE TABLE cliente(
 CREATE TABLE produto(
 	idProduto INT(11) NOT NULL AUTO_INCREMENT,
 	Nome VARCHAR(30) NOT NULL,
-        Preco DOUBLE NOT NULL,
+        Preco VARCHAR(20) NOT NULL,
 	Descricao VARCHAR(60) NOT NULL,
 	Tamanho VARCHAR(60) NOT NULL,
 	img VARCHAR(60),
@@ -116,7 +117,9 @@ CREATE TABLE estoque(
 
 
 CREATE TABLE categoria(
-idCategoria varchar(15) NOT NULL,
+idCategoria INT(15) NOT NULL AUTO_INCREMENT,
+nome VARCHAR(30) NOT NULL,
+descricao VARCHAR(60) NOT NULL,
 idProduto int(11) NOT NULL,
 primary key(idCategoria),
 foreign key(idProduto) REFERENCES produto(idProduto) ON UPDATE CASCADE ON DELETE CASCADE

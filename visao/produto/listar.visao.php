@@ -1,6 +1,6 @@
 <h2> Listar Produtos: </h2>
 
-<table class="table">
+<table class="table" border="1">
     <thead>
         <tr>
             <th> ID </th>
@@ -21,7 +21,7 @@
     
      <?php foreach ($produtos as $produto): ?>
     <tr>
-        <td><?=$produto['idproduto']?></td>
+        <td><?=$produto['idProduto']?></td>
 
         <td><?=$produto['Nome']?></td>
 
@@ -40,11 +40,11 @@
         <td> <?=$produto['Estoquemax']?> </td>
 
         
- <td><a href="./produto/ver/<?=$produto['idproduto']?>" class="btn btn-secondary">VER</a></td>
+ <td><a href="./produto/ver/<?=$produto['idProduto']?>" class="btn btn-secondary">VER</a></td>
 
-        <td><a href="./produto/editar/<?=$produto['idproduto']?>" class="btn btn-info">EDITAR</a></td>
+        <td><a href="./produto/editar/<?=$produto['idProduto']?>" class="btn btn-info">EDITAR</a></td>
 
-        <td><a href="./produto/deletar/<?=$produto['idproduto']?>" class="btn btn-danger">DELETAR</a></td>
+        <td><a href="./produto/deletar/<?=$produto['idProduto']?>" class="btn btn-danger">DELETAR</a></td>
          </tr>
 
     <?php endforeach; ?>

@@ -1,5 +1,6 @@
 <?php
 
+require_once "servico/validarServico.php";
 require_once "modelo/produtoModelo.php";
 
 function adicionar(){
@@ -34,7 +35,7 @@ function adicionar(){
  /* VER O PRODUTO */
         
         function ver($id){
-            $dados["produto"] = pegarClientePorId($id);
+            $dados["produto"] = pegarProdutoPorId($id);
             exibir("produto/visualizar", $dados);
         }
 

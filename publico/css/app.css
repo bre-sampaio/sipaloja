@@ -19,8 +19,7 @@ body {
 }
 
 #img1{
-    width: 130px;
-    padding-left: 4%;
+    padding-left: 1%;
 }
 
 #ul1{
@@ -41,7 +40,7 @@ a:link{
 } 
 
 #rodape{
-    margin-top: 15px;
+    margin-top: 1%;
     background-color: black;
     height: 300px;
 }

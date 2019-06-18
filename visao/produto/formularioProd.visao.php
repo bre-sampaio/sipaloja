@@ -1,3 +1,12 @@
+<?php
+    if (ehPOST()){
+        foreach($errors as $erro){
+            echo "$erro <br>";
+        }
+    }
+
+?>
+
 <h1> Cadastro dos Produtos: </h1>
 
 <form action="" method="POST">

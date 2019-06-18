@@ -1,3 +1,11 @@
+<?php
+    if (ehPOST()){
+        foreach($errors as $erro){
+            echo "$erro <br>";
+        }
+    }
+
+?>
 
 <h1>Cadastro</h1>
 

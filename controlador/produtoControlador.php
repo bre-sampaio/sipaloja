@@ -14,8 +14,32 @@ function adicionar(){
         $estoquemin = $_POST ["Estoquemin"];
         $estoquemax = $_POST ["Estoquemax"];
         
-        $msg = adicionarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categoria, $estoquemin, $estoquemax);
+        
+        $errors = array();
+        
+        if(strlen(trim($nome_produto)) == 0){
+            $errors[] = "Insira um nome válido!! <br>";
+        }
+       
+         if(strlen(trim($desc)) == 0){
+            $errors[] = "Insira uma descrição válida!! <br>";
+        }
+         
+         if(strlen(trim($preco)) == 0){
+            $errors[] = "Insira um preço válido!! <br>";
+        }
+        
+        
+        if (count($errors) > 0){
+            $dados = array();
+            $dados["errors"] = $errors;
+            exibir("produto/formularioProd", $dados);
+        } else {     
+           $msg = adicionarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categoria, $estoquemin, $estoquemax);
         echo $msg;
+        }
+        
+        
     } else {
          exibir("produto/formularioProd");
     }

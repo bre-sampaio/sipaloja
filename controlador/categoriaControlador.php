@@ -6,17 +6,33 @@ function adicionar(){
 	
 	if (ehPOST()) {
           
-            $nome = $_POST["nome"];
-			
+            $nome = $_POST["nome"];		
             $desc = $_POST["descricao"];
 
-	$msg = adicionarCategoria($nome, $desc);
+    /*VALIDAÇÕES*/        
+            
+        $errors = array();
+            
+          if(strlen(trim($nome)) == 0){
+            $errors[] = "Insira um nome válido!! <br>";
+        }
+       
+         if(strlen(trim($desc)) == 0){
+            $errors[] = "Insira uma descrição válida!! <br>";
+        }
+      
+        if (count($errors) > 0){
+            $dados = array();
+            $dados["errors"] = $errors;
+            exibir("categoria/formulario", $dados);
+        } else {     
+         $msg = adicionarCategoria($nome, $desc);
 		echo $msg;
+        }             
 
-
-	} else {
-		exibir("categoria/formulario");
-	}
+    } else {
+	exibir("categoria/formulario");
+    }
 		
 } 
 

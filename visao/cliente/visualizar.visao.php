@@ -13,3 +13,6 @@
 <p>sexo: <?=$cliente['sexo']?></p>
 
 <p>Data de Nascimento: <?=$cliente['nascimento']?></p>
+
+
+<a href="./cliente/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo cliente</a>

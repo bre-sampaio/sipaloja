@@ -7,47 +7,50 @@ require_once "modelo/clienteModelo.php";
 function adicionar(){
 	
 	if (ehPOST()) {
-
-	//validação do nome
+            
+            $nome = $_POST["nome"];
+            $senha = $_POST["senha"];
+            $email = $_POST["Email"];
+            $sexo = $_POST["sexo"];
+            $cpf = $_POST["cpf"];
+            $nascimento = $_POST["nascimento"];
+            
+	$errors = array();
+	
+        if (strlen(trim($nome)) == 0) {
+            $errors[] = "Informe um nome válido";
+	}
 		
-		if (strlen(trim($_POST['nome'])) == 0) {
- 			$errors[] = "Informe um nome válido";
-		 }
-		$nome = $_POST["nome"];
-
 
 	//validação da senha
 
-		if (strlen(trim($_POST['senha'])) == 0) {
- 			echo "Você deve inserir uma senha válida<br><BR>";
-		}
-			$senha = $_POST["senha"];
-
-		
+	if (strlen(trim($senha)) == 0) {
+           $errors[] = "Você deve inserir uma senha válida<br><BR>";
+	}
+	
+	
 	//validação do email
 
-	$input['Email'] = filter_input(INPUT_POST, 'Email', FILTER_VALIDATE_EMAIL);
- 	if ($input['Email'] == FALSE) {
- 		echo 'Informe um email valido. <br><BR>';
-	}
-		$email = $_POST["Email"];
+	if (strlen(trim($email)) == 0){
+            $errors[] = 'Informe um email <br><BR>';
+	}else{
+            if(filter_var($email, FILTER_VALIDATE_EMAIL) == false){
+                 $errors[] = 'Informe um email válido <br>';
+            }
+        }
 
-
-	//validação do cpf
-	
-		$cpf = $_POST["cpf"];
-
-		$sexo = $_POST["sexo"];
-
-		$nascimento = $_POST["nascimento"];
-
-	$msg = adicionarCliente($nome,  $senha,$email, $cpf, $sexo, $nascimento);
+        if (count($errors) > 0){
+            $dados = array();
+            $dados["errors"] = $errors;
+            exibir("cliente/formulario", $dados);
+        } else {     
+            $msg = adicionarCliente($nome,  $senha,$email, $cpf, $sexo, $nascimento);
 		echo $msg;
+        }
 
-
-	} else {
+    } else {
 		exibir("cliente/formulario");
-	}
+    }
 		
 } 
 

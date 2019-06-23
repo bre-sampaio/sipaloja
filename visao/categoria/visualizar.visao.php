@@ -6,4 +6,4 @@
 
 <p>descrição: <?=$categoria['descricao']?></p>
 
-<a href="./categoria/adicionar" class="btn btn-primary" <br><br><br>Adicionar nova categoria</a>
+<a href="/categoria/adicionar" class="btn btn-primary" <br><br><br>Adicionar nova categoria</a>

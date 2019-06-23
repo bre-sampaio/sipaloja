@@ -19,4 +19,4 @@
 <p>Estoquemax: <?=$produto['Estoquemax']?></p>
 
 
-<a href="./produto/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo produto</a>
+<a href="/produto/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo produto</a>

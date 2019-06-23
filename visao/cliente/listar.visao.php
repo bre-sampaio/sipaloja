@@ -36,11 +36,11 @@
 
 
 
-        <td><a href="./cliente/ver/<?=$cliente['idcliente']?>" class="btn btn-secondary">VER</a></td>
+        <td><a href="/cliente/ver/<?=$cliente['idcliente']?>" class="btn btn-secondary">VER</a></td>
 
-        <td><a href="./cliente/editar/<?=$cliente['idcliente']?>" class="btn btn-info">EDITAR</a></td>
+        <td><a href="/cliente/editar/<?=$cliente['idcliente']?>" class="btn btn-info">EDITAR</a></td>
 
-        <td><a href="./cliente/deletar/<?=$cliente['idcliente']?>" class="btn btn-danger">DELETAR</a></td>
+        <td><a href="/cliente/deletar/<?=$cliente['idcliente']?>" class="btn btn-danger">DELETAR</a></td>
          </tr>
 
     <?php endforeach; ?>
@@ -48,5 +48,5 @@
  
 
 <br><br> 
-<a href="./cliente/adicionar" class="btn btn-primary">Adicionar novo cliente</a>
+<a href="/cliente/adicionar" class="btn btn-primary">Adicionar novo cliente</a>
 

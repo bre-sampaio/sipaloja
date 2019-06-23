@@ -22,11 +22,11 @@
         <td><?=$categoria['descricao']?></td>
 
 
-        <td><a href="./categoria/ver/<?=$categoria['idCategoria']?>" class="btn btn-secondary">VER</a></td>
+        <td><a href="/categoria/ver/<?=$categoria['idCategoria']?>" class="btn btn-secondary">VER</a></td>
 
-        <td><a href="./categoria/editar/<?=$categoria['idCategoria']?>" class="btn btn-info">EDITAR</a></td>
+        <td><a href="/categoria/editar/<?=$categoria['idCategoria']?>" class="btn btn-info">EDITAR</a></td>
 
-        <td><a href="./categoria/deletar/<?=$categoria['idCategoria']?>" class="btn btn-danger">DELETAR</a></td>
+        <td><a href="/categoria/deletar/<?=$categoria['idCategoria']?>" class="btn btn-danger">DELETAR</a></td>
          </tr>
 
     <?php endforeach; ?>
@@ -34,5 +34,5 @@
  
 
 <br><br> 
-<a href="./categoria/adicionar" class="btn btn-primary">Adicionar nova categoria</a>
+<a href="/categoria/adicionar" class="btn btn-primary">Adicionar nova categoria</a>
 

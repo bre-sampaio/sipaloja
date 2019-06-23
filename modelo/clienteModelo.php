@@ -21,7 +21,7 @@
 			die('erro ao cadastrar cliente <br>' .mysqli_error($cnx));
 		}
 
-		return 'Cadastro realizado com sucesso! <br><br> <a href="./adicionar" class="btn btn-primary">Voltar</a>';
+		return 'Cadastro realizado com sucesso! <br><br> <a href="/adicionar" class="btn btn-primary">Voltar</a>';
 	}
 
 

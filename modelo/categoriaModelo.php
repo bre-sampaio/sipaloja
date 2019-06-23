@@ -7,7 +7,7 @@ function adicionarCategoria($nome, $desc){
        die('Erro ao adicionar categoria'. mysqli_error($cnx));
     }
   
-    return 'Categoria adicionada com sucesso! <br><br> <a href="./adicionar" class="btn btn-primary">Voltar</a>';
+    return 'Categoria adicionada com sucesso! <br><br> <a href="/adicionar" class="btn btn-primary">Voltar</a>';
 }
 
 function pegarTodosCategorias(){

@@ -1,13 +1,13 @@
 <?php
 
 function adicionarCategoria($nome, $desc){
-     $sql = "INSERT INTO categoria(idCategoria, idProduto, nome, descricao) VALUES ( NULL , 1,'$nome','$desc')";
+     $sql = "INSERT INTO categoria(idCategoria, nome, descricao) VALUES ( NULL , '$nome','$desc')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado) {
        die('Erro ao adicionar categoria'. mysqli_error($cnx));
     }
   
-    return 'Categoria adicionada com sucesso! <br><br> <a href="/adicionar" class="btn btn-primary">Voltar</a>';
+    return 'Categoria adicionada com sucesso! <br><br> <a href="./adicionar" class="btn btn-primary">Voltar</a>';
 }
 
 function pegarTodosCategorias(){

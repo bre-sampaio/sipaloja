@@ -44,7 +44,7 @@ function adicionar(){
             $dados["errors"] = $errors;
             exibir("cliente/formulario", $dados);
         } else {     
-            $msg = adicionarCliente($nome,  $senha,$email, $cpf, $sexo, $nascimento);
+            $msg = adicionarCliente($nome,  $senha, $email, $cpf, $sexo, $nascimento);
 		echo $msg;
         }
 

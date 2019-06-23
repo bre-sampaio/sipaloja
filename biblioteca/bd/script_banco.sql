@@ -120,9 +120,7 @@ CREATE TABLE categoria(
 idCategoria INT(15) NOT NULL AUTO_INCREMENT,
 nome VARCHAR(30) NOT NULL,
 descricao VARCHAR(60) NOT NULL,
-idProduto int(11) NOT NULL,
-primary key(idCategoria),
-foreign key(idProduto) REFERENCES produto(idProduto) ON UPDATE CASCADE ON DELETE CASCADE
+primary key(idCategoria)
 );
 
 	

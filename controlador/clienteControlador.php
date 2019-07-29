@@ -78,8 +78,26 @@ function adicionar(){
             redirecionar("cliente/listarClientes");
         }
 
+        
+        /* EDITAR CLIENTE */
+        
+        function editar($id){
+            
+            if (ehPost()){    
+                $nome = $_POST["nome"];
+                $senha = $_POST["senha"];
+                $email = $_POST["Email"];
+                $sexo = $_POST["sexo"];
+                $cpf = $_POST["cpf"];
+                $nascimento = $_POST["nascimento"];
 
-
+                editarCliente($id, $nome, $senha,$email, $cpf, $sexo, $nascimento);
+                redirecionar("cliente/listar");
+            }else{
+                $dados["cliente"] = pegarClientePorId($id);
+                exibir("cliente/formulario", $dados);
+            }
+        }
 
 
 ?>

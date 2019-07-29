@@ -11,20 +11,20 @@
 
 <form action="" method="POST">
 
-		<input placeholder="Nome" type="name" name="nome">
+    <input placeholder="Nome" type="name" name="nome" value="<?@ $cliente['nome'] ?>">
 
 <br><br>
 
-		<input placeholder="Senha" type="password" name="senha">
+		<input placeholder="Senha" type="password" name="senha" value="<?@ $cliente['senha'] ?>">
 
 <br><br>
 
 		
-		<input placeholder="Email" type="Email" name="Email"> 
+		<input placeholder="Email" type="Email" name="Email" value="<?@ $cliente['email'] ?>"> 
 
  <br><br>
 
-		<input placeholder="CPF" type="number" name="cpf"> 
+		<input placeholder="CPF" type="number" name="cpf" value="<?@ $cliente['cpf'] ?>"> 
 
 <br><br>
 
@@ -33,7 +33,7 @@
 	<input type="radio" name="sexo" value="M"> Masculino
 <br><br>
 
-        <input placeholder="Data" type="date" name="nascimento">
+        <input placeholder="Data" type="date" name="nascimento" value="<?@ $cliente['nascimento'] ?>">
 
 <br><br>
 	<input type="submit" name="Enviar">

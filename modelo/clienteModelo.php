@@ -57,7 +57,18 @@
             return 'Cliente deletado com secesso';
         }
 
-
+    
+        /* EDITAR CLIENTE */
+        
+         function editarCliente($id, $nome, $senha, $email, $sexo, $cpf, $nascimento){
+            $sql = "UPDATE cliente SET nome = '$nome', senha = '$senha', email = '$email', sexo = '$sexo', cpf = '$cpf', nascimento = '$nascimento'  WHERE idcliente = $id";
+            $resul = mysqli_query($cnx = conn(), $sql);
+            
+            if(!$resul){
+                die('Erro ao editar cliente' . mysqli_error($cnx));
+            }
+            return 'Cliente editado com secesso';
+        }
 
 
 

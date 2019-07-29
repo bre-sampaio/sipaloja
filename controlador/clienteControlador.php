@@ -91,8 +91,8 @@ function adicionar(){
                 $cpf = $_POST["cpf"];
                 $nascimento = $_POST["nascimento"];
 
-                editarCliente($id, $nome, $senha,$email, $cpf, $sexo, $nascimento);
-                redirecionar("cliente/listar");
+                editarCliente($id, $nome, $senha, $email, $sexo, $cpf, $nascimento);
+                redirecionar("cliente/listarClientes");
             }else{
                 $dados["cliente"] = pegarClientePorId($id);
                 exibir("cliente/formulario", $dados);

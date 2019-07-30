@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/sipaloja/biblioteca/bd/script_banco.sql</file>
-            <file>file:/C:/wamp64/www/sipaloja/controlador/produtoControlador.php</file>
-            <file>file:/C:/wamp64/www/sipaloja/controlador/categoriaControlador.php</file>
+            <file>file:/D:/wamp64/www/sipaloja/visao/cliente/formulario.visao.php</file>
+            <file>file:/D:/wamp64/www/sipaloja/visao/cliente/listar.visao.php</file>
+            <file>file:/D:/wamp64/www/sipaloja/modelo/clienteModelo.php</file>
+            <file>file:/D:/wamp64/www/sipaloja/controlador/clienteControlador.php</file>
         </group>
     </open-files>
 </project-private>

@@ -28,13 +28,11 @@ if (ehPOST()) {
     <br><br>
 
     <h3>Sexo: </h3>
-    <?php if($cliente['sexo'] == "F"):?>
-    <input type="radio" name="sexo" value="F" checked=""> Feminino
-    <input type="radio" name="sexo" value="M"> Masculino
-    <?php else:?>
+
+    
     <input type="radio" name="sexo" value="F"> Feminino
-    <input type="radio" name="sexo" value="M" checked=""> Masculino
-    <?php endif;?>
+    <input type="radio" name="sexo" value="M"> Masculino
+    
     <br><br>
 
     <input placeholder="Data" type="date" name="nascimento" value="<?= @ $cliente['nascimento'] ?>">

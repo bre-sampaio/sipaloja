@@ -71,6 +71,27 @@ function adicionar(){
             redirecionar("produto/listarProdutos");
         }
 
+         /* EDITAR PRODUTO */
+        
+        function editar($id){
+            
+            if (ehPost()){    
+                $nome_produto = $_POST ["Nome"];
+                $desc = $_POST ["Descricao"];
+                $preco = $_POST ["Preco"];
+                $tamanho = $_POST ["Tamanho"];
+                $img = $_POST ["img"];
+                $categoria = $_POST ["Categoria"];
+                $estoquemin = $_POST ["Estoquemin"];
+                $estoquemax = $_POST ["Estoquemax"];
+
+                editarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categoria, $estoquemin, $estoquemax);
+                redirecionar("produto/listarProdutos");
+            }else{
+                $dados["produto"] = pegarProdutoPorId($id);
+                exibir("produto/formulario", $dados);
+            }
+        }
 
 
 

@@ -40,11 +40,11 @@
         <td> <?=$produto['Estoquemax']?> </td>
 
         
- <td><a href="/produto/ver/<?=$produto['idProduto']?>" class="btn btn-secondary">VER</a></td>
+ <td><a href="./produto/ver/<?=$produto['idProduto']?>" class="btn btn-secondary">VER</a></td>
 
-        <td><a href="/produto/editar/<?=$produto['idProduto']?>" class="btn btn-info">EDITAR</a></td>
+        <td><a href="./produto/editar/<?=$produto['idProduto']?>" class="btn btn-info">EDITAR</a></td>
 
-        <td><a href="/produto/deletar/<?=$produto['idProduto']?>" class="btn btn-danger">DELETAR</a></td>
+        <td><a href="./produto/deletar/<?=$produto['idProduto']?>" class="btn btn-danger">DELETAR</a></td>
          </tr>
 
     <?php endforeach; ?>
@@ -52,6 +52,6 @@
  
 
 <br><br> 
-<a href="/produto/adicionar" class="btn btn-primary">Adicionar novo produto</a>
+<a href="./produto/adicionar" class="btn btn-primary">Adicionar novo produto</a>
 
 

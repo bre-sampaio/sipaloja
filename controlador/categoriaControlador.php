@@ -58,3 +58,19 @@ function adicionar(){
             $msg = deletarCategoria($id);
             redirecionar("categoria/listarCategorias");
         }
+
+         /* EDITAR CATEGORIA */
+        
+        function editar($id){
+            
+            if (ehPost()){    
+                $nome = $_POST["nome"];		
+                $desc = $_POST["descricao"];
+
+                editarCategoria();
+                redirecionar("categoria/listarCategorias");
+            }else{
+                $dados["categoria"] = pegarCategoriaPorId($id);
+                exibir("categoria/formulario", $dados);
+            }
+        }

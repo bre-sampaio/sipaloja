@@ -46,10 +46,10 @@ function adicionarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categor
         }
 
       
-         /* EDITAR CLIENTE */
+         /* EDITAR PRODUTO */
         
-         function editarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categoria, $estoquemin, $estoquemax){
-            $sql = "UPDATE produto SET Nome = '$nome_produto', Preco = $preco', Descricao = '$desc', Tamanho = '$tamanho', img ='$img', Categoria = '$categoria', Estoquemin = '$estoquemin', Estoquemax = '$estoquemax',  WHERE idproduto = $id";
+         function editarProduto($id, $nome_produto, $preco, $desc, $tamanho, $img, $categoria, $estoquemin, $estoquemax){
+            $sql = "UPDATE produto SET Nome = '$nome_produto', Preco = $preco', Descricao = '$desc', Tamanho = '$tamanho', img ='$img', Categoria = '$categoria', Estoquemin = '$estoquemin', Estoquemax = '$estoquemax'  WHERE idproduto = $id";
             $resul = mysqli_query($cnx = conn(), $sql);
             
             if(!$resul){

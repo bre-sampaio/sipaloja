@@ -21,7 +21,7 @@ function pegarTodosCategorias(){
 		return $categorias;
 	}
       
-     /* VER CLIENTE PELO ID */   
+     /* VER CATEGORIA PELO ID */   
         
         function pegarCategoriaPorId($id){
             $sql = "SELECT * FROM categoria WHERE idcategoria = $id";
@@ -30,7 +30,7 @@ function pegarTodosCategorias(){
             return $categoria;
         }
         
-     /* DELETAR CLIENTE */   
+     /* DELETAR CATEGORIA */   
         function deletarCategoria($id){
             $sql = "DELETE FROM categoria WHERE idcategoria= $id";
             $resul = mysqli_query($cnx = conn(), $sql);
@@ -40,3 +40,17 @@ function pegarTodosCategorias(){
             }
             return 'Categoria deletada com secesso';
         }
+
+         /* EDITAR CATEGORIA */
+        
+         function editarCategoria($id, $nome, $desc){
+            $sql = "UPDATE categoria SET nome = '$nome', descricao = '$desc'  WHERE idcategoria = $id";
+            $resul = mysqli_query($cnx = conn(), $sql);
+            
+            if(!$resul){
+                die('Erro ao editar categoria' . mysqli_error($cnx));
+            }
+            return 'Categoria editada com sucesso';
+        }
+        
+        

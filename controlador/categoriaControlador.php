@@ -67,7 +67,7 @@ function adicionar(){
                 $nome = $_POST["nome"];		
                 $desc = $_POST["descricao"];
 
-                editarCategoria();
+                editarCategoria($id, $nome, $desc);
                 redirecionar("categoria/listarCategorias");
             }else{
                 $dados["categoria"] = pegarCategoriaPorId($id);

@@ -42,15 +42,17 @@ function pegarTodosCategorias(){
         }
 
          /* EDITAR CATEGORIA */
-        
-         function editarCategoria($id, $nome, $desc){
-            $sql = "UPDATE categoria SET nome = '$nome', descricao = '$desc'  WHERE idcategoria = $id";
+      
+            function editarCategoria($id, $nome, $desc){
+            $sql = "UPDATE categoria SET nome = '$nome', descricao = '$desc' WHERE idcategoria = $id";
             $resul = mysqli_query($cnx = conn(), $sql);
             
             if(!$resul){
                 die('Erro ao editar categoria' . mysqli_error($cnx));
             }
-            return 'Categoria editada com sucesso';
+            return 'Categoria editado com secesso';
         }
+
+
         
         

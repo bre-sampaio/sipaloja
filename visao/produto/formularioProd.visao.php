@@ -19,7 +19,7 @@ if (ehPOST()) {
 
     <input placeholder="Imagem" type="text" name="img" value="<?= @ $produto['img'] ?>"> <br><br>
 
-    <select name="Categoria">
+   <select name="Categoria">
         <?php foreach ($categorias as $categoria):?>
         <option value="<?=$categoria["idCategoria"]?>"><?=$categoria["nome"]?></option>
         <?php endforeach;?>

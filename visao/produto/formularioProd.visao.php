@@ -10,7 +10,7 @@ if (ehPOST()) {
 
 <form action="" method="POST">
     <input placeholder="Nome do Produto" type="text" name="Nome" value="<?= @ $produto['Nome'] ?>"> <br><br>
-
+ 
     <input placeholder="Descrição" type="text" name="Descricao" value="<?= @ $produto['Preco'] ?>"> <br><br>
 
     <input placeholder="Preço" type="text" name="Preco" value="<?= @ $produto['Descricao'] ?>"> <br><br>
@@ -19,11 +19,16 @@ if (ehPOST()) {
 
     <input placeholder="Imagem" type="text" name="img" value="<?= @ $produto['img'] ?>"> <br><br>
 
-   <select name="Categoria">
+    
+    
+    <select name="Categoria" style="padding: 10px 52px;">
         <?php foreach ($categorias as $categoria):?>
         <option value="<?=$categoria["idCategoria"]?>"><?=$categoria["nome"]?></option>
         <?php endforeach;?>
     </select>
+    
+    
+    
     <br><br>
     <input placeholder="Estoque Mínimo" type="number" name="Estoquemin" value="<?= @ $produto['Estoquemin'] ?>"> <br><br>
 
@@ -32,3 +37,13 @@ if (ehPOST()) {
     <input type="submit" name="Enviar">
 </form>
 
+<!--
+<input placeholder="Categoria" type="text" name="categoria" value="<?= @ $produto['categoria'] ?>" <br><br>
+    
+    <h4>Sexo: </h4>
+	<input type="radio" name="sexo" value="F"> Feminino
+	<input type="radio" name="sexo" value="M"> Masculino
+<br><br>
+
+  -->
+  

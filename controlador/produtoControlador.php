@@ -43,7 +43,7 @@ function adicionar() {
     } else {
         $dados = array();
         $dados["categorias"] = pegarTodosCategorias();
-        exibir("produto/formularioProd");
+        exibir("produto/formularioProd",$dados);
     }
 }
 
@@ -83,7 +83,7 @@ function editar($id) {
         $estoquemin = $_POST ["Estoquemin"];
         $estoquemax = $_POST ["Estoquemax"];
 
-        editarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categoria, $estoquemin, $estoquemax);
+        editarProduto($id, $nome_produto, $desc, $preco, $tamanho, $img, $categoria, $estoquemin, $estoquemax);
         redirecionar("produto/listarProdutos");
     } else {
         $dados["produto"] = pegarProdutoPorId($id);

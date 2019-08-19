@@ -39,6 +39,107 @@ a:link{
     color: inherit;
 } 
 
+
+/*PARTE 2*/
+
+.divisor4{
+	    background-image: linear-gradient(180deg,transparent 10px,black 0,black 12px,transparent 0);
+	    text-align: center;
+	    margin: 4rem 0;
+	    display: block;
+	    margin-block-start: 1em;
+	    margin-block-end: 1em;
+	    margin-inline-start: 3%;
+	    margin-inline-end: 3%; 
+	}
+
+	span{
+	    display: inline-block;
+	    background-color: #fff;
+    	padding: 0 10px;
+    	text-transform: none;
+    	font-size: 20px;
+	}
+.pri{
+	display: inline;
+}
+
+
+#prod{
+	border:solid;
+	border-color: #d3d3d3;
+	width: 25%;
+	height: 500px;
+	background-color: white;
+	float: left;
+	margin-bottom: 15px;
+	margin-left: 10px;
+}
+
+#prod1{
+	border:solid;
+	border-color: #d3d3d3;
+	width: 25%;
+	height: 500px;
+	background-color: white;
+	float: left;
+	margin-bottom: 15px;
+	margin-left: 10px;
+}
+
+#prod2{
+	border:solid;
+	border-color: #d3d3d3;
+	width: 25%;
+	height: 500px;
+	background-color: white;
+	float: left;
+	margin-bottom: 15px;
+	margin-left: 10px;
+}
+
+#prod3{
+	border:solid;
+	border-color: #d3d3d3;
+	width: 25%;
+	height: 500px;
+	background-color: white;
+	float: left;
+	margin-bottom: 15px;
+	margin-left: 10px;
+}
+
+#pt2{
+	height: 2200px;
+}
+
+#desc{
+	text-align: center;
+	margin-top: 20px;
+}
+
+#bot2{
+	background-color: black;
+	padding: 10px;
+	color: white;
+	border-color: black;
+	font-size: 15px;
+}
+
+		.botao{
+			margin-left: 42%;
+			margin-right: 43%;
+			border: solid;
+			background-color: black;
+			color: white;
+			border-color: black;
+			padding: 20px 36px;
+			font-size: 20px;
+			text-align: center;
+			}
+
+ /*RODAPÉ*/
+
 #rodape{
     margin-top: 1%;
     background-color: black;
@@ -119,3 +220,6 @@ a:link{
     float: right;
     padding-right: 10px;
 }
+
+
+

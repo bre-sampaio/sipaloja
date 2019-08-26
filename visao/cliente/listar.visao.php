@@ -41,7 +41,7 @@
         <td><a href="./cliente/editar/<?=$cliente['idcliente']?>" class="btn btn-info">EDITAR</a></td>
 
         <td><a href="./cliente/deletar/<?=$cliente['idcliente']?>" class="btn btn-danger">DELETAR</a></td>
-         </tr>
+        </tr>
 
     <?php endforeach; ?>
 </table>

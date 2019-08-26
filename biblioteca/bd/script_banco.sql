@@ -76,8 +76,8 @@ CREATE TABLE log_produto(
 CREATE TABLE endereco(
 	idEndereco INT(11) NOT NULL,
 	idUsuario INT (11) NOT NULL,
-	Logradouro VARCHAR(20) NOT NULL,
-	Complemento VARCHAR(20),
+	Logra VARCHAR(20) NOT NULL,
+	Comp VARCHAR(20),
 	Bairro VARCHAR(30) NOT NULL,
 	Cidade VARCHAR(30) NOT NULL,
 	CEP VARCHAR(8) NOT NULL,

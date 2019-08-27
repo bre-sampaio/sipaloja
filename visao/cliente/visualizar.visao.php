@@ -15,4 +15,5 @@
 <p>Data de Nascimento: <?=$cliente['nascimento']?></p>
 
 
-<a href="/cliente/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo cliente</a>
+<a href="./cliente/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo cliente</a> <br>
+<a href="./endereco/adicionar/<?=$cliente['idcliente']?>" class="btn btn-primary" <br><br>Adicionar novo endereço</a>

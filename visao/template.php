@@ -19,7 +19,7 @@
 
                 <li id="li1"> <a href="./categoria/listarCategorias" style="color: white;"> Listar Categoria </a></li>
                 
-                <li id="li1"> <a href="./" style="color: white;"> Carrinho </a></li>
+                 <li id="li1"> <a href="./carrinho" style="color: white;"> Carrinhoos </a></li>
             </ul>
         </div>
 

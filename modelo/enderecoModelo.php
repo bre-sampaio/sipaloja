@@ -1,8 +1,7 @@
 <?php
 
-
-function adicionarEndereco($logra, $comp, $bairro, $cidade, $cep){
-     $sql = "INSERT INTO endereco(logra, comp, bairro, cidade, cep) VALUES ('$logra', '$comp', '$bairro', '$cidade', '$cep')";
+function adicionarEndereco($idcliente, $logra, $comp, $bairro, $cidade, $cep){
+     $sql = "INSERT INTO endereco(idcliente, logra, comp, bairro, cidade, cep) VALUES ('$idcliente', '$logra', '$comp', '$bairro', '$cidade', '$cep')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado) {
        die('Erro ao adicionar endereco'. mysqli_error($cnx));

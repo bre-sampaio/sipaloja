@@ -4,7 +4,7 @@ require_once "modelo/enderecoModelo.php";
 
 
 
-function adicionar(){
+function adicionar($idcliente){
 	
 	if (ehPOST()) {
            
@@ -26,7 +26,7 @@ function adicionar(){
             $dados["errors"] = $errors;
             exibir("endereco/formulario", $dados);
         } else {     
-            $msg = adicionarEndereco($logra, $comp, $bairro, $cidade, $cep);
+            $msg = adicionarEndereco($idcliente, $logra, $comp, $bairro, $cidade, $cep);
 		echo $msg;
         }
 

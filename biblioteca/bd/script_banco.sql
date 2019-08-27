@@ -55,7 +55,7 @@ CREATE TABLE produto(
 
 
 CREATE TABLE cupom(
-	idCupom INT(8) NOT NULL,
+	idCupom INT(8) NOT NULL AUTO_INCREMENT,
 	NomeCupom VARCHAR(20) NOT NULL,
 	Desconto INT(8) NOT NULL,
 	PRIMARY KEY(idCupom)
@@ -63,9 +63,9 @@ CREATE TABLE cupom(
 
 
 CREATE TABLE log_produto(
-	ID_Log INT(11) NOT NULL,
+	ID_Log INT(11) NOT NULL AUTO_INCREMENT,
 	Tabela VARCHAR(45) NOT NULL,
-	Usuario VARCHAR(45) NOT NULL,
+	Cliente VARCHAR(45) NOT NULL,
 	Data_Hora DATETIME NOT NULL,
 	Acao VARCHAR(45) NOT NULL,
 	Dados VARCHAR(1000) NOT NULL,
@@ -74,31 +74,31 @@ CREATE TABLE log_produto(
 
 
 CREATE TABLE endereco(
-	idEndereco INT(11) NOT NULL,
-	idUsuario INT (11) NOT NULL,
+	idEndereco INT(11) NOT NULL AUTO_INCREMENT,
+	idcliente INT (11) NOT NULL,
 	Logra VARCHAR(20) NOT NULL,
 	Comp VARCHAR(20),
 	Bairro VARCHAR(30) NOT NULL,
 	Cidade VARCHAR(30) NOT NULL,
 	CEP VARCHAR(8) NOT NULL,
-	PRIMARY KEY(idEndereco, idUsuario),
-	FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario) ON UPDATE CASCADE ON DELETE CASCADE
+	PRIMARY KEY(idEndereco),
+	FOREIGN KEY(idcliente) REFERENCES usuario(idcliente) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 
 CREATE TABLE pedido (
-	idPedido INT(11) NOT NULL,
-	idUsuario INT(11) NOT NULL,
+	idPedido INT(11) NOT NULL AUTO_INCREMENT,
+	idcliente INT(11) NOT NULL,
 	idEndereco INT(11) NOT NULL,
 	dataCompra DATE NOT NULL,
-	PRIMARY KEY(idUsuario, idEndereco),
-	FOREIGN KEY(idUsuario) REFERENCES usuario(idUsuario) ON UPDATE CASCADE ON DELETE CASCADE,
+	PRIMARY KEY(idcliente, idEndereco),
+	FOREIGN KEY(idcliente) REFERENCES usuario(idcliente) ON UPDATE CASCADE ON DELETE CASCADE,
 	FOREIGN KEY(idEndereco) REFERENCES endereco(idEndereco) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 
 CREATE TABLE pedido_produto(
-	idProduto INT(11) NOT NULL,
+	idProduto INT(11) NOT NULL AUTO_INCREMENT,
 	idPedido INT(11) NOT NULL,
 	Quantidade INT(11) NOT NULL,
 	PRIMARY KEY(idProduto, idPedido),
@@ -108,7 +108,7 @@ CREATE TABLE pedido_produto(
 
 
 CREATE TABLE estoque(
-	idEstoque INT(11) NOT NULL,
+	idEstoque INT(11) NOT NULL AUTO_INCREMENT,
 	idProduto INT(11) NOT NULL,
 	Quantidade INT(11) NOT NULL,
 	PRIMARY KEY(idEstoque),

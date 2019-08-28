@@ -25,12 +25,11 @@ body {
 #ul1{
     list-style: none;
     display: inline;
-    margin-left: 7%;
 }
 
 #li1{
     display: inline;
-    padding: 6%;
+    padding: 2%; 
     font-size: 20px;
 }      
 

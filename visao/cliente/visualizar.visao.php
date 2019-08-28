@@ -14,6 +14,7 @@
 
 <p>Data de Nascimento: <?=$cliente['nascimento']?></p>
 
+<?php include "endereco/listar.visao.php"; ?>
 
 <a href="./cliente/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo cliente</a> <br>
 <a href="./endereco/adicionar/<?=$cliente['idcliente']?>" class="btn btn-primary" <br><br>Adicionar novo endereço</a>

@@ -25,7 +25,7 @@ function adicionar(){
 	//validação da senha
 
 	if (strlen(trim($senha)) == 0) {
-           $errors[] = "Você deve inserir uma senha válida<br><BR>";
+           $errors[] = "Você deve inserir uma senha válida";
 	}
 	
 	
@@ -35,7 +35,7 @@ function adicionar(){
             $errors[] = 'Informe um email <br><BR>';
 	}else{
             if(filter_var($email, FILTER_VALIDATE_EMAIL) == false){
-                 $errors[] = 'Informe um email válido <br>';
+                 $errors[] = 'Informe um email válido';
             }
         }
 

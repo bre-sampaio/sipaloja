@@ -21,7 +21,7 @@ function adicionar(){
             $dados["errors"] = $errors;
             exibir("cupom/formulario", $dados);
         } else {     
-         $msg = adicionarCategoria($nome);
+         $msg = adicionarCupom($nome);
 		echo $msg;
         }             
 
@@ -47,25 +47,24 @@ function adicionar(){
         }
 
         
-        /* DELETAR CATEGORIA */
+        /* DELETAR CUPOM */
         
         function deletar($id){
-            $msg = deletarCategoria($id);
-            redirecionar("categoria/listarCategorias");
+            $msg = deletarCupom($id);
+            redirecionar("cupom/listarCupons");
         }
 
-         /* EDITAR CATEGORIA */
+         /* EDITAR CUPOM */
         
         function editar($id){
             
             if (ehPost()){    
-                $nome = $_POST["nome"];		
-                $desc = $_POST["descricao"];
+                $nome = $_POST["nome"];
 
-                editarCategoria($id, $nome, $desc);
-                redirecionar("categoria/listarCategorias");
+                editarCupom($id, $nome);
+                redirecionar("cupom/listarCupons");
             }else{
-                $dados["categoria"] = pegarCategoriaPorId($id);
-                exibir("categoria/formulario", $dados);
+                $dados["cupom"] = pegarCupomPorId($id);
+                exibir("cupom/formulario", $dados);
             }
         }

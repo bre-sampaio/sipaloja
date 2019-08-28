@@ -19,7 +19,7 @@
         <td><?=$cupom['nome']?></td>
 
 
-        <td><a href="./cupoM/ver/<?=$cupoM['idCupom']?>" class="btn btn-secondary">VER</a></td>
+        <td><a href="./cupom/ver/<?=$cupoM['idCupom']?>" class="btn btn-secondary">VER</a></td>
 
         <td><a href="./cupom/editar/<?=$cupom['idCupom']?>" class="btn btn-info">EDITAR</a></td>
 

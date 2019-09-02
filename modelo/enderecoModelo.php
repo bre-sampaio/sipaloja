@@ -10,8 +10,8 @@ function adicionarEndereco($idcliente, $logra, $comp, $bairro, $cidade, $cep){
     return 'Endereco adicionado com sucesso! <br><br> <a href="./adicionar" class="btn btn-primary">Voltar</a>';
 }
 
-function pegarTodosEderecos(){
-		$sql = "SELECT * FROM endereco";
+function pegarTodosEderecos($id){
+		$sql = "SELECT * FROM endereco WHERE idcliente = $id";
 		$resultado = mysqli_query(conn(), $sql);
 		$enderecos = array();
 		while ($linha = mysqli_fetch_assoc($resultado)) {

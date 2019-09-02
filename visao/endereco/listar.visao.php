@@ -17,7 +17,7 @@
         </tr>
     </thead>
     
-    <?php foreach ($endereco as $endereco): ?>
+    <?php foreach ($enderecos as $endereco): ?>
     <tr>
         <td><?=$endereco['idEndereco']?></td>
 

@@ -40,7 +40,7 @@ function adicionar($idcliente){
 
 	function listarEndereco(){
 		$dados = array();
-		$dados["endereco"] = pegarTodosEderecos();
+		$dados["enderecos"] = pegarTodosEderecos();
 		exibir("endereco/listar", $dados);
 
 	}

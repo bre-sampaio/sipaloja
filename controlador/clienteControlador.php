@@ -1,7 +1,7 @@
 <?php
 
 require_once "modelo/clienteModelo.php";
-
+require_once "modelo/enderecoModelo.php";
 
 
 function adicionar(){
@@ -67,6 +67,7 @@ function adicionar(){
         
         function ver($id){
             $dados["cliente"] = pegarClientePorId($id);
+            $dados["enderecos"] = pegarTodosEderecos($id);
             exibir("cliente/visualizar", $dados);
         }
 

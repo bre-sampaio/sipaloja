@@ -14,7 +14,31 @@
 
 <p>Data de Nascimento: <?=$cliente['nascimento']?></p>
 
-<?php include "endereco/listar.visao.php"; ?>
+<br>
+<h2>Enderecos</h2>
+ <?php foreach ($enderecos as $endereco): ?>
+    <tr>
+        <td><?=$endereco['idEndereco']?></td>
+
+        <td><?=$endereco['idUsuario']?></td>
+
+        <td><?=$endereco['logra']?></td>
+
+        <td> <?=$endereco['comp']?> </td>
+
+        <td> <?=$endereco['cidade']?> </td>
+
+        <td> <?=$endereco['cep']?> </td>
+
+
+        <td><a href="./endereco/ver/<?=$endereco['idEndereco']?>" class="btn btn-secondary">VER</a></td>
+
+        <td><a href="./endereco/editar/<?=$endereco['idEndereco']?>" class="btn btn-info">EDITAR</a></td>
+
+        <td><a href="./endereco/deletar/<?=$endereco['idEndereco']?>" class="btn btn-danger">DELETAR</a></td>
+        </tr>
+
+    <?php endforeach; ?>
 
 <a href="./cliente/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo cliente</a> <br>
 <a href="./endereco/adicionar/<?=$cliente['idcliente']?>" class="btn btn-primary" <br><br>Adicionar novo endereço</a>

@@ -1,9 +1,10 @@
-<h2>Listar enderecos</h2>
+
 
 <table class="table" border="1">
     <thead>
         <tr>
-            <th>ID </th>
+            <th>ID ENDEREÇO </th>
+            <th>ID CLIENTE </th>
             <th>LOGRADOURO</th> 
             <th>COMPLEMENTO</th> 
             <th>BAIRRO</th> 
@@ -20,16 +21,18 @@
     <?php foreach ($enderecos as $endereco): ?>
     <tr>
         <td><?=$endereco['idEndereco']?></td>
+        
+        <td><?=$endereco['idcliente']?></td>
 
-        <td><?=$endereco['idUsuario']?></td>
+        <td><?=$endereco['Logra']?></td>
 
-        <td><?=$endereco['logra']?></td>
+        <td> <?=$endereco['Comp']?> </td>
+        
+        <td> <?=$endereco['Bairro']?> </td>
 
-        <td> <?=$endereco['comp']?> </td>
+        <td> <?=$endereco['Cidade']?> </td>
 
-        <td> <?=$endereco['cidade']?> </td>
-
-        <td> <?=$endereco['cep']?> </td>
+        <td> <?=$endereco['CEP']?> </td>
 
 
 
@@ -45,5 +48,5 @@
  
 
 <br><br> 
-<a href="./endereco/adicionar/" class="btn btn-primary">Adicionar novo endereco</a>
+
 

@@ -15,7 +15,7 @@ function pegarTodosEderecos($id){
 		$resultado = mysqli_query(conn(), $sql);
 		$enderecos = array();
 		while ($linha = mysqli_fetch_assoc($resultado)) {
-			$endereco[] = $linha;
+			$enderecos[] = $linha;
 		}
 
 		return $enderecos;

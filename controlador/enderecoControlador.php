@@ -48,7 +48,7 @@ function adicionar($idcliente){
         /* VER O endereco */
         
         function ver($id){
-            $dados["endereco"] = pegarEderecoPorId($id);
+            $dados["endereco"] = pegarEnderecoPorId($id);
             exibir("endereco/visualizar", $dados);
         }
 

@@ -2,6 +2,6 @@
 
 <p>id: <?=$cupom['idCupom']?></p>
 
-<p>Seu Cupom: <?=$cupom['nome']?></p>
+<p>Seu Cupom: <?=$cupom['Nome']?></p>
 
-<a href="/cupom/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo cupom</a>
+<a href="./cupom/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo cupom</a>

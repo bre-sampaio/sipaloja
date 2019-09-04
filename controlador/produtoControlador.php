@@ -1,6 +1,5 @@
 <?php
 
-require_once "servico/validarServico.php";
 require_once "modelo/produtoModelo.php";
 require_once "modelo/categoriaModelo.php";
 

@@ -34,7 +34,7 @@ function adicionar(){
 
 	function listarCupons(){
 		$dados = array();
-		$dados["copons"] = pegarTodosCupons();
+		$dados["cupons"] = pegarTodosCupons();
 		exibir("cupom/listar", $dados);
 
 	}

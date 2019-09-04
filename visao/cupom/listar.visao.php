@@ -16,10 +16,10 @@
     <tr>
         <td><?=$cupom['idCupom']?></td>
 
-        <td><?=$cupom['nome']?></td>
+        <td><?=$cupom['Nome']?></td>
 
 
-        <td><a href="./cupom/ver/<?=$cupoM['idCupom']?>" class="btn btn-secondary">VER</a></td>
+        <td><a href="./cupom/ver/<?=$cupom['idCupom']?>" class="btn btn-secondary">VER</a></td>
 
         <td><a href="./cupom/editar/<?=$cupom['idCupom']?>" class="btn btn-info">EDITAR</a></td>
 

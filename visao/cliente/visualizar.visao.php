@@ -19,5 +19,5 @@
  <?php include './visao/endereco/listar.visao.php';?>
 
 <a href="./endereco/adicionar/<?=$cliente['idcliente']?>" class="btn btn-primary">Adicionar novo endereco</a>
-
+<br><br>
 <a href="./cliente/adicionar/" class="btn btn-primary" >Adicionar novo cliente</a> <br>

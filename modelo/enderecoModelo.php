@@ -44,7 +44,7 @@ function pegarTodosEderecos($id){
          /* EDITAR endereco */
       
             function editarEndereco($id, $logra, $comp, $bairro, $cidade, $cep){
-            $sql = "UPDATE endereco SET logra= '$logra', comp = '$comp', bairro= '$bairro', cidade = '$cidade', cep = '$cep', WHERE idEndereco = $id";
+            $sql = "UPDATE endereco SET logra= '$logra', comp = '$comp', bairro= '$bairro', cidade = '$cidade', cep = '$cep' WHERE idEndereco = $id";
             $resul = mysqli_query($cnx = conn(), $sql);
             
             if(!$resul){

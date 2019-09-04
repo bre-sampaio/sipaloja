@@ -57,7 +57,7 @@ function adicionar($idcliente){
         
         function deletar($id){
             $msg = deletarEndereco($id);
-            redirecionar("endereco/listarEndereco");
+            redirecionar("cliente/listarClientes");
         }
 
         
@@ -74,7 +74,7 @@ function adicionar($idcliente){
             $cep = $_POST["cep"];
 
                 editarEndereco($id,$logra, $comp, $bairro, $cidade, $cep);
-                redirecionar("endereco/listarEndereco");
+                redirecionar("cliente/ver/1");
             }else{
                 $dados["endereco"] = pegarEnderecoPorId($id);
                 exibir("endereco/formulario", $dados);

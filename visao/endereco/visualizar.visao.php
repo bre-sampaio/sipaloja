@@ -17,4 +17,4 @@
 
 
 
-<a href="./endereco/listarEndereco/" class="btn btn-primary" <br><br><br> Voltar </a> <br>
+<a href="./cliente/ver/1" class="btn btn-primary" <br><br><br> Voltar </a> <br>

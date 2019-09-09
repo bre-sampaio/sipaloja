@@ -21,7 +21,7 @@
                 
                  <li id="li1"> <a href="./cupom/listarCupons" style="color: white;"> Listar Cupons </a></li>
                 
-                 <li id="li1"> <a href="./carrinho" style="color: white;"> Carrinhoos </a></li>
+                 <li id="li1"> <a href="./carrinho" style="color: white;"> Carrinho</a></li>
             </ul>
         </div>
 

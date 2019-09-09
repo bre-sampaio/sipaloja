@@ -91,4 +91,26 @@ function editar($id) {
     }
 }
 
+
+    /*carrinho*/
+
+    $nome_produto = $_GET["Nome"];
+    $desc = $_POST ["Descricao"];
+    $preco = $_POST ["Preco"];
+    $tamanho = $_POST ["Tamanho"];
+    $img = $_POST ["img"];
+    $categoria = $_POST ["Categoria"];
+    $estoquemin = $_POST ["Estoquemin"];
+    $estoquemax = $_POST ["Estoquemax"];
+
+    if(isset($_SESSION["carrinho"])) {
+        $produtos = $_SESSION["carrinho"];
+    } else {
+        $produtos = array();
+    }
+
+    $produtos[] = $nome_produto;
+    $_SESSION["carrinho"] = $produtos;
+
 ?>
+<a href=" ">Carrinho</a>

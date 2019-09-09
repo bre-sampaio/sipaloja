@@ -17,9 +17,6 @@ body {
     justify-content: center;
 }
 
-#img1{
-}
-
 #ul1{
     list-style: none;
     display: inline;
@@ -62,16 +59,38 @@ a:link{
 }
 
 
-		.botao{
-			margin-left: 42%;
-			margin-right: 43%;
-			border: solid;
-			background-color: black;
-			color: white;
-			border-color: black;
-			padding: 20px 36px;
-			font-size: 20px;
-			text-align: center;
+#prod{
+	border:solid;
+	border-color: #d3d3d3;
+	width: 25%;
+	height: 500px;
+	background-color: white;
+	float: left;
+	margin-bottom: 15px;
+	margin-left: 10px;
+}
+
+#prod1{
+	border:solid;
+	border-color: #d3d3d3;
+	width: 20%;
+	height: 500px;
+	background-color: white;
+	float: left;
+	margin-bottom: 15px;
+	margin-left: 10px;
+}
+
+.botao{
+    margin-left: 42%;
+    margin-right: 43%;
+    border: solid;
+    background-color: black;
+    color: white;
+    border-color: black;
+    padding: 20px 36px;
+    font-size: 20px;
+    text-align: center;
 			}
 
  /*RODAPÉ*/

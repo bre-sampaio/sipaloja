@@ -74,10 +74,11 @@ function adicionar($idcliente){
             $cep = $_POST["cep"];
 
                 editarEndereco($id,$logra, $comp, $bairro, $cidade, $cep);
-                redirecionar("cliente/ver/1");
+                redirecionar("cliente/listarClientes");
             }else{
                 $dados["endereco"] = pegarEnderecoPorId($id);
                 exibir("endereco/formulario", $dados);
+                
             }
         }
 

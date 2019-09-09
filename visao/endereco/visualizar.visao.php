@@ -17,4 +17,4 @@
 
 
 
-<a href="./cliente/ver/1" class="btn btn-primary" <br><br><br> Voltar </a> <br>
+<a href="./cliente/ver/<?=$endereco['idcliente']?>" class="btn btn-primary" <br><br><br> Voltar </a> <br>

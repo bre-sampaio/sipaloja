@@ -93,15 +93,7 @@ function editar($id) {
 
 
     /*carrinho*/
-
-    $nome_produto = $_GET["Nome"];
-    $desc = $_POST ["Descricao"];
-    $preco = $_POST ["Preco"];
-    $tamanho = $_POST ["Tamanho"];
-    $img = $_POST ["img"];
-    $categoria = $_POST ["Categoria"];
-    $estoquemin = $_POST ["Estoquemin"];
-    $estoquemax = $_POST ["Estoquemax"];
+function comprar($idproduto){
 
     if(isset($_SESSION["carrinho"])) {
         $produtos = $_SESSION["carrinho"];
@@ -111,6 +103,8 @@ function editar($id) {
 
     $produtos[] = $nome_produto;
     $_SESSION["carrinho"] = $produtos;
-
+    
+    redirecionar("sacola/listarSacola");
+}
 ?>
-<a href=" ">Carrinho</a>
+

@@ -10,7 +10,7 @@
 		<img src="./publico/produtos/li1.jpg" style="width: 75%; height: 350px;">
 		<p id="desc"> livro <br> R$ </p><br>
                 <a href="./produto/li1"> <button id="bot2" style="margin-left: 9%;"> Ver o produto </button> </a>
-                <a href=""> <button id="bot2"> Adicionar ao carrinho </button> </a>
+                <a href="comprar.php?nome=Produto1"> <button id="bot2"> Adicionar ao carrinho </button> </a>
 	</div> 
     
          <div id="prod">
@@ -21,7 +21,7 @@
 	</div>
 
          <div id="prod">
-		<img src="./publico/produtos/li3.jpg" style="width: 100%; height: 350px;">
+		<img src="./publico/produtos/li3.jpg" style="width: 75%; height: 350px;">
 		<p id="desc"> Tênis Adidas Vermelho <br> R$ 100,00</p><br>
 		<button id="bot2" style="margin-left: 9%;"> Ver o produto </button>
 		<button id="bot2"> Adicionar ao carrinho </button>

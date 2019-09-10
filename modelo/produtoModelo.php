@@ -66,3 +66,13 @@ function adicionarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categor
             }
             return 'Produto editado com secesso';
         }
+        
+        /*PESQUISAR*/
+        
+     $pesquisar = $_POST['pesquisar'];
+     $sql = "SELECT * FROM produto WHERE Nome LIKE '%$pesquisar%";
+     $resul = mysqli_query($cnx = conn(), $sql);
+     
+     while ($produto = mysqli_fetch_assoc($resul)){
+         echo "Produto: ".$produto['Nome'];
+     }

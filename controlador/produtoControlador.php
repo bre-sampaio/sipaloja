@@ -106,5 +106,14 @@ function comprar($idproduto){
     
     redirecionar("sacola/listarSacola");
 }
+
+
+
+    /*PESQUISAR*/
+function pesquisa(){
+    $pesquisar = $_POST['pesquisar'];
+}
+
 ?>
+
 

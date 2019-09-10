@@ -13,15 +13,23 @@
             <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
 
             <ul id="ul1">
-                <li id="li1"> <a href="./cliente/listarClientes" style="color: white;"> Listar Clientes </a></li>
+                    <li id="li1"> <a href="./cliente/listarClientes" style="color: white;"> Listar Clientes </a></li>
 
-                <li id="li1"> <a href="./produto/listarProdutos" style="color: white;"> Listar Produtos </a></li>
+                    <li id="li1"> <a href="./produto/listarProdutos" style="color: white;"> Listar Produtos </a></li>
 
-                <li id="li1"> <a href="./categoria/listarCategorias" style="color: white;"> Listar Categoria </a></li>
-                
-                 <li id="li1"> <a href="./cupom/listarCupons" style="color: white;"> Listar Cupons </a></li>
-                
-                 <li id="li1"> <a href="./carrinho" style="color: white;"> Carrinho</a></li>
+                    <li id="li1"> <a href="./categoria/listarCategorias" style="color: white;"> Listar Categoria </a></li>
+
+                     <li id="li1"> <a href="./cupom/listarCupons" style="color: white;"> Listar Cupons </a></li>
+
+                <div id="esque">
+                    <form method="POST" action="produto/pesquisa"> 
+                        <img src="img_sipa/pesquisa.png" id="pesquisa"> <input placeholder="Pesquisar" type="text" name="pesquisar" style="padding: 3% 3%;">
+                    </form>
+                    
+                     <a href="Login.html"> <img src="img_sipa/profile.jpg" id="pro"> </a>		
+                     <a href="./carrinho" style="color: white;"> <img src="img_sipa/sacola.jpg" id="sac"> </a>
+	        </div>
+                 
             </ul>
         </div>
 

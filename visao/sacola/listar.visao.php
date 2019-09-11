@@ -7,7 +7,7 @@
         </tr>
     </thead>
     
-    <?php foreach ($produtos as $produto): ?>
+    <?php print_r($produtos);foreach ($produtos as $produto): ?>
     <tr>
         <td><?=$produto['Nome']?></td>
         

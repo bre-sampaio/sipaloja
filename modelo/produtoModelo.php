@@ -28,7 +28,7 @@ function adicionarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categor
          /* VER PRODUTO POR ID */   
         
         function pegarProdutoPorId($id){
-            $sql = "SELECT * FROM produto WHERE idproduto = $id";
+            $sql = "SELECT * FROM produto WHERE idProduto = '$id'";
             $resul = mysqli_query(conn(), $sql);
             $produto = mysqli_fetch_assoc($resul);
             return $produto;
@@ -36,7 +36,7 @@ function adicionarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categor
         
      /* DELETAR PRODUTO */   
         function deletarProduto($id){
-            $sql = "DELETE FROM produto WHERE idproduto = $id";
+            $sql = "DELETE FROM produto WHERE idProduto = $id";
             $resul = mysqli_query($cnx = conn(), $sql);
             
             if(!$resul){
@@ -66,13 +66,3 @@ function adicionarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categor
             }
             return 'Produto editado com secesso';
         }
-        
-        /*PESQUISAR*/
-        
-     $pesquisar = $_POST['pesquisar'];
-     $sql = "SELECT * FROM produto WHERE Nome LIKE '%$pesquisar%";
-     $resul = mysqli_query($cnx = conn(), $sql);
-     
-     while ($produto = mysqli_fetch_assoc($resul)){
-         echo "Produto: ".$produto['Nome'];
-     }

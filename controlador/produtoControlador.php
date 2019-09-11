@@ -108,12 +108,6 @@ function comprar($idproduto){
 }
 
 
-
-    /*PESQUISAR*/
-function pesquisa(){
-    $pesquisar = $_POST['pesquisar'];
-}
-
 ?>
 
 

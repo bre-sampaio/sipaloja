@@ -92,21 +92,13 @@ function editar($id) {
 }
 
 
-    /*carrinho*/
-function comprar($idproduto){
-
-    if(isset($_SESSION["carrinho"])) {
-        $produtos = $_SESSION["carrinho"];
-    } else {
-        $produtos = array();
+function busca (){
+    if(ehPost()){
+      $nome = $_POST["pesquisar"];
+      $dados['produtos'] = buscarModel($nome);
+      exibir('pesquisar/listarP', $dados);
     }
-
-    $produtos[] = $nome_produto;
-    $_SESSION["carrinho"] = $produtos;
-    
-    redirecionar("sacola/listarSacola");
 }
-
 
 ?>
 

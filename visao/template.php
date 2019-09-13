@@ -20,10 +20,14 @@
                     <li id="li1"> <a href="./categoria/listarCategorias" style="color: white;"> Listar Categoria </a></li>
 
                      <li id="li1"> <a href="./cupom/listarCupons" style="color: white;"> Listar Cupons </a></li>
+                     
+                     <li id="li1"> <a href="./pagamento/listarPagamentos" style="color: white;"> Listar Formas de Pagamento </a></li>
 
+                     
                 <div id="esque">
-                    <form method="POST" action="produto/pesquisa"> 
-                        <img src="./publico/img_sipa/pesquisa.png" id="pesquisa"> <input placeholder="Pesquisar" type="text" name="pesquisar" style="padding: 8% 3% 1%; margin-left: 5px;">
+                    <form method="POST" action="produto/busca"> 
+                      <input placeholder="Pesquisar" type="text" name="pesquisar" style="padding: 8% 3% 1%; margin-left: 5px;" method="POST" action="./produto/busca">
+                      <button><img src="./publico/img_sipa/pesquisa.png" id="pesquisa"></button>
                     </form>		
                      <a href="./sacola/listar" style="color: white;"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
 	        </div>

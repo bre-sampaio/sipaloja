@@ -27,12 +27,12 @@ function adicionarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categor
         
          /* VER PRODUTO POR ID */   
         
-        function pegarProdutoPorId($id){
+   function pegarProdutoPorId($id){
             $sql = "SELECT * FROM produto WHERE idProduto = '$id'";
             $resul = mysqli_query(conn(), $sql);
-            $produto = mysqli_fetch_assoc($resul);
+            $produto= mysqli_fetch_assoc($resul);
             return $produto;
-        }
+      }
         
      /* DELETAR PRODUTO */   
         function deletarProduto($id){
@@ -66,3 +66,16 @@ function adicionarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categor
             }
             return 'Produto editado com secesso';
         }
+        
+        
+        function buscarModel($nome){
+            $sql = "SELECT * FROM produto WHERE Nome LIKE '%$nome%'";
+            $resultado = mysqli_query(conn(), $sql);
+            $produtos = array();
+		while ($linha = mysqli_fetch_assoc($resultado)) {
+			$produtos[] = $linha;
+		}
+
+		return $produtos;
+	}
+        

@@ -24,7 +24,7 @@
         <td><a href="./cupom/editar/<?=$cupom['idCupom']?>" class="btn btn-info">EDITAR</a></td>
 
         <td><a href="./cupom/deletar/<?=$cupom['idCupom']?>" class="btn btn-danger">DELETAR</a></td>
-         </tr>
+    </tr>
 
     <?php endforeach; ?>
 </table>

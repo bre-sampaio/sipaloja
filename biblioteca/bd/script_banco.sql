@@ -122,5 +122,10 @@ descricao VARCHAR(60) NOT NULL,
 primary key(idCategoria)
 );
 
+CREATE TABLE FormaPagamento(
+    idFormaPagamento INT NOT NULL AUTO_INCREMENT,
+    descricao VARCHAR(45),
+    primary key(idFormaPagamento)
+);
 	
  

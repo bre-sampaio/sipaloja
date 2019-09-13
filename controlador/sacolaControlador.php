@@ -3,48 +3,29 @@
 require_once 'modelo/produtoModelo.php';
 
 function adicionar($idproduto) {
-    if (isset($_SESSION["sacola"])) {
-        $produtos = $_SESSION["sacola"];
+ if (!isset($_SESSION["carrinho"])) {
+        $_SESSION["carrinho"] = array();
     } else {
-        $produtos = [];
+        $produtos = $_SESSION["carrinho"];
     }
-    $produtos[] = pegarProdutoPorId($idproduto);
-    $_SESSION["sacola"] = $produtos;
+    $produtos[] = $produto;
+    $_SESSION["carrinho"] = $produtos;
     redirecionar("sacola/listar");
 }
 
 
-
-function listar(){
-if (isset($_SESSION["sacola"])) {
+function listar() {
+    if (isset($_SESSION["carrinho"])) {
         $todos = array();
-        $produtos = $_SESSION["sacola"];
+        $produtos = $_SESSION["carrinho"];
         foreach ($produtos as $produto):
-            $todos[] = pegarProdutoPorId($produto);
+        $todos[] = pegarProdutoPorId($produto);
         endforeach;
     } else {
-        echo "Não existe sessao sacola!";
-        echo "Carrinho vazio!";
+        echo "Não existe sessao carrinho!";
+        echo "Sacola vazia!";
     }
     $dados = array();
     $dados["produtos"] = $todos;
-    exibir('sacola/listar', $dados);
+    exibir('carrinho/listar', $dados);
 }
-
-
-function deletar($idproduto) {
-    print_r ($_SESSION["sacola"]);
-    
-    for ($i = 0; $i <= count($_SESSION["sacola"]); $i++) {
-        if ($_SESSION["sacola"][$i] == $idproduto) {
-            $indice = $i;
-            unset($_SESSION["sacola"][$indice]);
-        }
-    }
-    $_SESSION["sacola"] = array_values($_SESSION["sacola"]);
-    redirecionar("sacola/listar");
-}
-
-
-
-

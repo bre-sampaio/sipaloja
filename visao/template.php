@@ -25,10 +25,7 @@
 
                      
                 <div id="esque">
-                    <form method="POST" action="produto/busca"> 
-                      <input placeholder="Pesquisar" type="text" name="pesquisar" style="padding: 8% 3% 1%; margin-left: 5px;" method="POST" action="./produto/busca">
-                      <button><img src="./publico/img_sipa/pesquisa.png" id="pesquisa"></button>
-                    </form>		
+                      <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">
                      <a href="./sacola/listar" style="color: white;"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
 	        </div>
                  

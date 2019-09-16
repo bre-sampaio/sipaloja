@@ -1,5 +1,4 @@
 
-
 <div id="pt2">	
 	<p class="divisor4">
 		<span> Destaques </span>

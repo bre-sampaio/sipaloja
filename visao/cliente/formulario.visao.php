@@ -6,24 +6,28 @@ if (ehPOST()) {
 }
 ?>
 
+<div style="margin: auto;">
+<img src="publico/img_sipa/profile.jpg" id="pro2" style="display: inline;
+	border-radius: 100%;
+	width: 100px;">
 <h1>Cadastro</h1>
 
 <form action="" method="POST">
 
-    <input placeholder="Nome" type="name" name="nome" value="<?= @ $cliente['nome'] ?>">
+    <input placeholder="Nome" type="name" name="nome" value="<?= @ $cliente['nome'] ?>" style="width: 250px; height: 40px;">
 
     <br><br>
 
-    <input placeholder="Senha" type="password" name="senha" value="<?= @ $cliente['senha'] ?>">
+    <input placeholder="Senha" type="password" name="senha" value="<?= @ $cliente['senha'] ?>" style="width: 250px; height: 40px;">
 
     <br><br>
 
 
-    <input placeholder="Email" type="Email" name="Email" value="<?= @ $cliente['email'] ?>"> 
+    <input placeholder="Email" type="Email" name="Email" value="<?= @ $cliente['email'] ?>" style="width: 250px; height: 40px;"> 
 
     <br><br>
 
-    <input placeholder="CPF" type="number" name="cpf" value="<?= @ $cliente['cpf'] ?>"> 
+    <input placeholder="CPF" type="number" name="cpf" value="<?= @ $cliente['cpf'] ?>" style="width: 250px; height: 40px;"> 
 
     <br><br>
 
@@ -35,10 +39,17 @@ if (ehPOST()) {
     
     <br><br>
 
-    <input placeholder="Data" type="date" name="nascimento" value="<?= @ $cliente['nascimento'] ?>">
+    <input placeholder="Data" type="date" name="nascimento" value="<?= @ $cliente['nascimento'] ?>" style="width: 250px; height: 40px;">
 
     <br><br>
-    <input type="submit" name="Enviar">
+    	<button title="Enviar" style="background-color: black;
+			color: white;
+			border-color: black;
+			padding: 20px 35px;
+			font-size: 20px;
+			margin-top: 25px;
+                        margin-bottom: 20px;">Cadastrar-me </button>
+        
 </form>
 
-
+</div>

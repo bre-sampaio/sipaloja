@@ -2,6 +2,7 @@
 
 require_once "modelo/cupomModelo.php";
 
+/** admin */
 function adicionar(){
 	
 	if (ehPOST()) {
@@ -31,7 +32,7 @@ function adicionar(){
 		
 } 
 
-
+/** admin */
 	function listarCupons(){
 		$dados = array();
 		$dados["cupons"] = pegarTodosCupons();
@@ -41,6 +42,7 @@ function adicionar(){
         
         /* VER A CUPONS */
         
+ /** admin */       
         function ver($id){
             $dados["cupom"] = pegarCupomPorId($id);
             exibir("cupom/visualizar", $dados);
@@ -48,7 +50,8 @@ function adicionar(){
 
         
         /* DELETAR CUPOM */
-        
+
+/** admin */    
         function deletar($id){
             $msg = deletarCupom($id);
             redirecionar("cupom/listarCupons");
@@ -56,6 +59,7 @@ function adicionar(){
 
          /* EDITAR CUPOM */
         
+ /** admin */       
         function editar($id){
             
             if (ehPost()){    

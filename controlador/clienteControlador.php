@@ -3,7 +3,7 @@
 require_once "modelo/clienteModelo.php";
 require_once "modelo/enderecoModelo.php";
 
-
+/** user */
 function adicionar(){
 	
 	if (ehPOST()) {
@@ -56,6 +56,8 @@ function adicionar(){
 
 	/* chama a func "pegarTodosClientes" para passar os dados para a func "exibir" */
 
+/** admin */
+
 	function listarClientes(){
 		$dados = array();
 		$dados["clientes"] = pegarTodosClientes();
@@ -65,6 +67,7 @@ function adicionar(){
         
         /* VER O CLIENTE */
         
+/** admin */
         function ver($id){
             $dados["cliente"] = pegarClientePorId($id);
             $dados["enderecos"] = pegarTodosEderecos($id);
@@ -73,7 +76,8 @@ function adicionar(){
 
         
         /* DELETAR CLIENTE */
-        
+
+/** admin */
         function deletar($id){
             $msg = deletarCliente($id);
             redirecionar("cliente/listarClientes");
@@ -81,7 +85,8 @@ function adicionar(){
 
         
         /* EDITAR CLIENTE */
-        
+ 
+/** user */       
         function editar($id){
             
             if (ehPost()){    

@@ -2,6 +2,7 @@
 
 require_once "modelo/pagamentoModelo.php";
 
+/** admin */
 function adicionar(){
 	
 	if (ehPOST()) {
@@ -29,7 +30,7 @@ function adicionar(){
     }
 		
 } 
-
+/** admin */
 	function listarPagamentos(){
 		$dados = array();
 		$dados["pagamentos"] = pegarTodosPagamentos();
@@ -39,6 +40,7 @@ function adicionar(){
         
         /* VER A CUPONS */
         
+/** admin */        
         function ver($id){
             $dados["pagamento"] = pegarPagamentoPorId($id);
             exibir("pagamento/visualizar", $dados);
@@ -46,7 +48,8 @@ function adicionar(){
 
         
         /* DELETAR PAGAMENTO */
-        
+
+/** admin */        
         function deletar($id){
             $msg = deletarPagamento($id);
             redirecionar("pagamento/listarPagamentos");
@@ -54,6 +57,7 @@ function adicionar(){
 
          /* EDITAR PAGAMENTO */
         
+/** admin */
         function editar($id){
             
 	if (ehPOST()) {

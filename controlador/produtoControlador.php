@@ -3,6 +3,7 @@
 require_once "modelo/produtoModelo.php";
 require_once "modelo/categoriaModelo.php";
 
+/** admin */
 function adicionar() {
     if (ehPOST()) {
         $nome_produto = $_POST ["Nome"];
@@ -48,6 +49,7 @@ function adicionar() {
 
 /* chama a func "pegarTodosProduto" para passar os dados para a func "exibir" */
 
+/** anon */
 function listarProdutos() {
     $dados = array();
     $dados["produtos"] = pegarTodosProdutos();
@@ -56,6 +58,7 @@ function listarProdutos() {
 
 /* VER O PRODUTO */
 
+/** admin */
 function ver($id) {
     $dados["produto"] = pegarProdutoPorId($id);
     exibir("produto/visualizar", $dados);
@@ -63,6 +66,7 @@ function ver($id) {
 
 /* DELETAR PRODUTO */
 
+/** admin */
 function deletar($id) {
     $msg = deletarProduto($id);
     redirecionar("produto/listarProdutos");
@@ -70,6 +74,7 @@ function deletar($id) {
 
 /* EDITAR PRODUTO */
 
+/** admin */
 function editar($id) {
 
     if (ehPost()) {
@@ -92,12 +97,15 @@ function editar($id) {
 }
 
 
-function busca (){
-    if(ehPost()){
-      $nome = $_POST["pesquisar"];
-      $dados['produtos'] = buscarModel($nome);
-      exibir('pesquisar/listarP', $dados);
-    }
+/** anon */    
+    function buscar(){
+	if (ehpost()){
+            $busca = $_POST["busca"];
+            $produto = array();
+            $dados["produtos"] = buscarProduto($busca);
+            exibir("produtos/listarP", $dados);
+		
+	}
 }
 
 ?>

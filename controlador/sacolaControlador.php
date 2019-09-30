@@ -2,6 +2,7 @@
 
 require_once 'modelo/produtoModelo.php';
 
+/** anon */
 function adicionar($idproduto) {
  if (!isset($_SESSION["carrinho"])) {
         $_SESSION["carrinho"] = array();
@@ -13,7 +14,7 @@ function adicionar($idproduto) {
     redirecionar("sacola/listar");
 }
 
-
+/** anon */
 function listar() {
     if (isset($_SESSION["carrinho"])) {
         $todos = array();

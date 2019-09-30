@@ -2,8 +2,8 @@
 
 require_once "modelo/clienteModelo.php";
 
-/** anon */
 
+/** anon */
 function adicionar(){
 	
 	if (ehPOST()) {

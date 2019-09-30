@@ -7,7 +7,7 @@ if (ehPOST()) {
 ?>
 
 <div style="margin: auto;">
-<img src="publico/img_sipa/profile.jpg" id="pro2" style="display: inline;
+<img src="publico/img_sipa/profile.jpg"  style="display: inline;
 	border-radius: 100%;
 	width: 100px;">
 <h1>Cadastro</h1>

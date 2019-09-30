@@ -3,7 +3,7 @@
 require_once "modelo/enderecoModelo.php";
 
 
-
+/** user */
 function adicionar($idcliente){
 	
 	if (ehPOST()) {
@@ -38,6 +38,7 @@ function adicionar($idcliente){
 
 	/* chama a func "pegarTodosEnderecos" para passar os dados para a func "exibir" */
 
+/** admin */
 	function listarEndereco(){
 		$dados = array();
 		$dados["enderecos"] = pegarTodosEderecos();
@@ -47,6 +48,7 @@ function adicionar($idcliente){
         
         /* VER O endereco */
         
+ /** user */       
         function ver($id){
             $dados["endereco"] = pegarEnderecoPorId($id);
             exibir("endereco/visualizar", $dados);
@@ -55,6 +57,7 @@ function adicionar($idcliente){
         
         /* DElETAR endereco */
         
+ /** user */       
         function deletar($id){
             $msg = deletarEndereco($id);
             redirecionar("cliente/listarClientes");
@@ -62,7 +65,7 @@ function adicionar($idcliente){
 
         
         /* EDITAR endereco */
-        
+ /** user */       
         function editar($id){
             
             if (ehPost()){    

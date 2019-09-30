@@ -11,8 +11,8 @@
         <div id="menu">
 
             <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
-
-            <ul id="ul1">
+    
+            <ul id="ul1">          
                     <li id="li1"> <a href="./cliente/listarClientes" style="color: white;"> Listar Clientes </a></li>
 
                     <li id="li1"> <a href="./produto/listarProdutos" style="color: white;"> Listar Produtos </a></li>
@@ -22,8 +22,7 @@
                      <li id="li1"> <a href="./cupom/listarCupons" style="color: white;"> Listar Cupons </a></li>
                      
                      <li id="li1"> <a href="./pagamento/listarPagamentos" style="color: white;"> Listar Formas de Pagamento </a></li>
-
-                     
+         
                 <div id="esque">
                     <a href="./login/adicionar"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a> 
                     <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">

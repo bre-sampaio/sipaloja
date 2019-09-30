@@ -1,5 +1,5 @@
 <?php
-
+/*
 require_once "modelo/usuarioModelo.php";
 
 function index() {
@@ -40,3 +40,4 @@ function visualizar($id) {
     $dados["usuario"] = pegarUsuarioPorId($id);
     exibir("usuario/visualizar", $dados);
 }
+*/

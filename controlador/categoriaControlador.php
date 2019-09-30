@@ -2,6 +2,7 @@
 
 require_once "modelo/categoriaModelo.php";
 
+/** admin */
 function adicionar(){
 	
 	if (ehPOST()) {
@@ -36,7 +37,7 @@ function adicionar(){
 		
 } 
 
-
+/** admin */
 	function listarCategorias(){
 		$dados = array();
 		$dados["categorias"] = pegarTodosCategorias();
@@ -45,7 +46,7 @@ function adicionar(){
 	}
         
         /* VER A CATEGORIA */
-        
+/** admin */        
         function ver($id){
             $dados["categoria"] = pegarCategoriaPorId($id);
             exibir("categoria/visualizar", $dados);
@@ -53,14 +54,14 @@ function adicionar(){
 
         
         /* DELETAR CATEGORIA */
-        
+/** admin */        
         function deletar($id){
             $msg = deletarCategoria($id);
             redirecionar("categoria/listarCategorias");
         }
 
          /* EDITAR CATEGORIA */
-        
+ /** admin */       
         function editar($id){
             
             if (ehPost()){    

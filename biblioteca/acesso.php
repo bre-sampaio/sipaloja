@@ -2,11 +2,11 @@
 
 define('ACESSO', true);
 
-function acessoLogar($usuario) {
-    if(!empty($usuario)) { //se o usuario não for vazio, logo existe o usuário na base com as credenciais
+function acessoLogar($cliente) {
+    if(!empty($cliente)) { //se o usuario não for vazio, logo existe o usuário na base com as credenciais
         $_SESSION["acesso"] = array( //cria a sessao acesso com os dados do usuario
-            "email" => $usuario["email"], 
-            "papel" => $usuario["papel"]
+            "email" => $cliente["email"], 
+            "papel" => $cliente["tipoCliente"]
         );
         return true; 
     }
@@ -20,18 +20,18 @@ function acessoDeslogar() {
     }
 }
 
-function acessoUsuarioEstaLogado() {
+function acessoClienteEstaLogado() {
     return isset($_SESSION["acesso"]);
 }
 
-function acessoPegarPapelDoUsuario() {
-    if (acessoUsuarioEstaLogado()) {
-        return $_SESSION["acesso"]["papel"];
+function acessoPegarTipoDoCliente() {
+    if (acessoClienteEstaLogado()) {
+        return $_SESSION["acesso"]["tipo"];
     }
 }
 
-function acessoPegarUsuarioLogado() {
-    if (acessoUsuarioEstaLogado()) {
+function acessoPegarClienteLogado() {
+    if (acessoClienteEstaLogado()) {
         return $_SESSION["acesso"]["email"];
     }   
 }

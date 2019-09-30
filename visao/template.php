@@ -25,8 +25,9 @@
 
                      
                 <div id="esque">
-                      <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">
-                     <a href="./sacola/listar" style="color: white;"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
+                    <a href="./login/adicionar"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a> 
+                    <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">
+                     <a href="./sacola/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
 	        </div>
                  
             </ul>

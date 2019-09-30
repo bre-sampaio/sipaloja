@@ -35,7 +35,7 @@ CREATE TABLE cliente(
 	cpf VARCHAR(11) NOT NULL,
 	nascimento VARCHAR(10) NOT NULL,
 	sexo VARCHAR(1) NOT NULL,
-        tipoCliente VARCHAR(5),
+        tipoCliente VARCHAR(50) NOT NULL DEFAULT 'cliente',
 	PRIMARY KEY (idcliente)
 );
 

@@ -21,8 +21,14 @@ if (ehPOST()) {
     <input placeholder="Senha" type="password" name="senha" value="<?= @ $cliente['senha'] ?>" style="width: 250px; height: 40px;">
 
     <br><br>
+    
+    <select name="Tiposuario" style="padding: 10px 52px;">
+        <option value="Cliente"> Tipo de Usuario</option>
+       <option value="Cliente"> Cliente</option>
+        <option value="Adm"> Administrador</option>
+    </select>
 
-
+    <br><br>
     <input placeholder="Email" type="Email" name="Email" value="<?= @ $cliente['email'] ?>" style="width: 250px; height: 40px;"> 
 
     <br><br>

@@ -3,7 +3,7 @@
 require_once "modelo/clienteModelo.php";
 require_once "modelo/enderecoModelo.php";
 
-/** user */
+/** anon */
 function adicionar(){
 	
 	if (ehPOST()) {

@@ -23,9 +23,9 @@ if (ehPOST()) {
     <br><br>
     
     <select name="Tiposuario" style="padding: 10px 52px;">
-        <option value="Cliente"> Tipo de Usuario</option>
-       <option value="Cliente"> Cliente</option>
-        <option value="Adm"> Administrador</option>
+        <option value=""> Tipo de Usuario</option>
+       <option value=" user"> Cliente</option>
+        <option value="admin"> Administrador</option>
     </select>
 
     <br><br>

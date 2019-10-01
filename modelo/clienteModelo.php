@@ -10,9 +10,9 @@
 				VALUES('$nome', 
 					'$senha', 
 					'$email', 
-						'$cpf', 
-						'$sexo', 
-						'$nascimento')";
+					'$cpf', 
+					'$sexo', 
+					'$nascimento')";
 
 		$resultado = mysqli_query($cnx = conn(), $sql);
 

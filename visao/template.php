@@ -1,3 +1,5 @@
+<?php require_once "biblioteca/acesso.php"; ?>
+
 <html>
     <head>
         <title>Sipa Loja</title>
@@ -13,16 +15,30 @@
             <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
     
             <ul id="ul1">          
-                    <li id="li1"> <a href="./cliente/listarClientes" style="color: white;"> Listar Clientes </a></li>
-
-                    <li id="li1"> <a href="./produto/listarProdutos" style="color: white;"> Listar Produtos </a></li>
-
-                    <li id="li1"> <a href="./categoria/listarCategorias" style="color: white;"> Listar Categoria </a></li>
-
-                     <li id="li1"> <a href="./cupom/listarCupons" style="color: white;"> Listar Cupons </a></li>
+                    <li id="li1"> 
+                        <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
+                             <a href="./cliente/listarClientes" style="color: white;"> Listar Clientes </a></li>
+                        <?php } ?>
+                    
+                    <li id="li1">
+                        <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
+                            <a href="./produto/listarProdutos" style="color: white;"> Listar Produtos </a></li>
+                         <?php } ?>
+                    
+                    <li id="li1"> 
+                        <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
+                           <a href="./categoria/listarCategorias" style="color: white;"> Listar Categoria </a></li>
+                         <?php } ?>
+                    
+                     <li id="li1"> 
+                         <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?> 
+                             <a href="./cupom/listarCupons" style="color: white;"> Listar Cupons </a></li>
+                         <?php } ?>
                      
-                     <li id="li1"> <a href="./pagamento/listarPagamentos" style="color: white;"> Listar Formas de Pagamento </a></li>
-         
+                     <li id="li1"> 
+                          <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
+                            <a href="./pagamento/listarPagamentos" style="color: white;"> Listar Formas de Pagamento </a></li>
+                          <?php } ?>
                 <div id="esque">
                     <a href="./login/adicionar"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a> 
                     <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">

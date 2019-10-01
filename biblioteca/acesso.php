@@ -20,18 +20,18 @@ function acessoDeslogar() {
     }
 }
 
-function acessoClienteEstaLogado() {
+function acessoUsuarioEstaLogado() {
     return isset($_SESSION["acesso"]);
 }
 
-function acessoPegarTipoDoCliente() {
-    if (acessoClienteEstaLogado()) {
-        return $_SESSION["acesso"]["tipo"];
+function acessoPegarPapelDoUsuario() {
+    if (acessoUsuarioEstaLogado()) {
+        return $_SESSION["acesso"]["tipoCliente"];
     }
 }
 
-function acessoPegarClienteLogado() {
-    if (acessoClienteEstaLogado()) {
+function acessoPegarUsuarioLogado() {
+    if (acessoUsuarioEstaLogado()) {
         return $_SESSION["acesso"]["email"];
     }   
 }

@@ -1,15 +1,17 @@
 <?php
 
-	function adicionarCliente($nome, $senha,$email, $cpf, $sexo, $nascimento){
+	function adicionarCliente($nome, $senha,$email, $tipo, $cpf, $sexo, $nascimento){
 		$sql = "INSERT INTO cliente ( nome, 
-                                             senha,  email, 
-                                              
+                                              senha,
+                                              email, 
+                                              tipoCliente,
                                               cpf, 
 					      sexo, 
                                               nascimento)
 				VALUES('$nome', 
 					'$senha', 
 					'$email', 
+                                        '$tipo',    
 					'$cpf', 
 					'$sexo', 
 					'$nascimento')";

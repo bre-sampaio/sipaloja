@@ -1,11 +1,3 @@
-<?php
-    if (ehPOST()){
-        foreach($errors as $erro){
-            echo "$erro <br>";
-        }
-    }
-
-?>
 
 <div id="tudo" style="text-align: center; display: inline;">
 	<div id="log">
@@ -17,7 +9,7 @@
     
     
 <form action="" method="POST">
-    <input placeholder="Email" type="Email" name="Email" value="<?= @ $cliente['email'] ?>" style="width: 250px; height: 40px;"> <br><br>
+    <input placeholder="Email" type="Email" name="email" value="<?= @ $cliente['email'] ?>" style="width: 250px; height: 40px;"> <br><br>
     <input placeholder="Senha" type="password" name="senha" value="<?= @ $cliente['senha'] ?>" style="width: 250px; height: 40px;"> <br>
 		<button title="Enviar" style="background-color: black;
 			color: white;

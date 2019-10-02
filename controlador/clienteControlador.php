@@ -11,6 +11,7 @@ function adicionar(){
             $nome = $_POST["nome"];
             $senha = $_POST["senha"];
             $email = $_POST["Email"];
+            $tipo = $_POST["tipoCliente"];
             $sexo = $_POST["sexo"];
             $cpf = $_POST["cpf"];
             $nascimento = $_POST["nascimento"];
@@ -44,7 +45,7 @@ function adicionar(){
             $dados["errors"] = $errors;
             exibir("cliente/formulario", $dados);
         } else {     
-            $msg = adicionarCliente($nome,  $senha, $email, $cpf, $sexo, $nascimento);
+            $msg = adicionarCliente($nome,  $senha, $email, $tipo, $sexo, $cpf, $nascimento);
 		echo $msg;
         }
 

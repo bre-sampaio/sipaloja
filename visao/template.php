@@ -15,6 +15,7 @@
             <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
     
             <ul id="ul1">          
+                    
                     <li id="li1"> 
                         <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
                              <a href="./cliente/listarClientes" style="color: white;"> Listar Clientes </a></li>

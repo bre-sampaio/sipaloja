@@ -22,9 +22,9 @@ if (ehPOST()) {
 
     <br><br>
     
-    <select name="Tiposuario" style="padding: 10px 52px;">
-        <option value=""> Tipo de Usuario</option>
-       <option value=" user"> Cliente</option>
+    <select name="tipoCliente" style="padding: 10px 52px;">
+        <option value="null"> Tipo de Usuario</option>
+       <option value="user"> Cliente</option>
         <option value="admin"> Administrador</option>
     </select>
 
@@ -38,7 +38,6 @@ if (ehPOST()) {
     <br><br>
 
     <h3>Sexo: </h3>
-
     
     <input type="radio" name="sexo" value="F"> Feminino
     <input type="radio" name="sexo" value="M"> Masculino

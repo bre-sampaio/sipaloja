@@ -7,6 +7,7 @@
             <th>NOME</th> 
             <th>SENHA</th> 
             <th>EMAIL</th> 
+            <th> TIPO </th>
             <th>CPF</th>
             <th>SEXO</th> 
             <th>NASCIMENTO</th> 
@@ -27,6 +28,8 @@
         <td><?=$cliente['senha']?></td>
 
         <td> <?=$cliente['email']?> </td>
+        
+        <td> <?=$cliente['tipoCliente']?> </td>
 
         <td> <?=$cliente['cpf']?> </td>
 

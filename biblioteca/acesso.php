@@ -26,7 +26,7 @@ function acessoUsuarioEstaLogado() {
 
 function acessoPegarPapelDoUsuario() {
     if (acessoUsuarioEstaLogado()) {
-        return $_SESSION["acesso"]["tipoCliente"];
+        return $_SESSION["acesso"]["papel"];
     }
 }
 

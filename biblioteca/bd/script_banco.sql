@@ -32,10 +32,10 @@ CREATE TABLE cliente(
 	nome VARCHAR(60) NOT NULL,
 	senha VARCHAR(60) NOT NULL,
 	email VARCHAR(60) NOT NULL,
-	cpf VARCHAR(11) NOT NULL,
-	nascimento VARCHAR(10) NOT NULL,
-	sexo VARCHAR(1) NOT NULL,
         tipoCliente VARCHAR(50) NOT NULL DEFAULT 'user',
+	cpf VARCHAR(11) NOT NULL,
+	sexo VARCHAR(1) NOT NULL,
+	nascimento VARCHAR(10) NOT NULL,
 	PRIMARY KEY (idcliente)
 );
 

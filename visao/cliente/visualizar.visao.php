@@ -8,7 +8,7 @@
 
 <p>email: <?=$cliente['email']?></p>
 
-<p>Tipo: <?=$cliente['Tiposuario']?></p>
+<p>Tipo: <?=$cliente['tipoCliente']?></p>
 
 <p>cpf: <?=$cliente['cpf']?></p>
 

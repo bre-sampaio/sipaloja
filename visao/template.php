@@ -41,7 +41,10 @@
                             <a href="./pagamento/listarPagamentos" style="color: white;"> Listar Formas de Pagamento </a></li>
                           <?php } ?>
                 <div id="esque">
-                    <a href="./login/adicionar"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a> 
+                  <?php acessoPegarUsuarioLogado()?>
+                    <a href="./cliente/ver/"> Minha Conta </a>
+                   
+                    <a href="./login/"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a> 
                     <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">
                      <a href="./sacola/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
 	        </div>
@@ -49,7 +52,10 @@
             </ul>
         </div>
 
-        <br><br><br><br><br>
+        <br><br>
+
+
+<br>
 
         <main class="container" id="site">
             <?php require $viewFilePath; ?>

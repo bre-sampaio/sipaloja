@@ -12,8 +12,8 @@ function adicionar(){
             $senha = $_POST["senha"];
             $email = $_POST["Email"];
             $tipo = $_POST["tipoCliente"];
-            $sexo = $_POST["sexo"];
             $cpf = $_POST["cpf"];
+            $sexo = $_POST["sexo"];
             $nascimento = $_POST["nascimento"];
             
 	$errors = array();
@@ -45,7 +45,7 @@ function adicionar(){
             $dados["errors"] = $errors;
             exibir("cliente/formulario", $dados);
         } else {     
-            $msg = adicionarCliente($nome,  $senha, $email, $tipo, $sexo, $cpf, $nascimento);
+            $msg = adicionarCliente($nome,  $senha, $email, $tipo, $cpf, $sexo, $nascimento);
 		echo $msg;
         }
 
@@ -94,11 +94,11 @@ function adicionar(){
                 $nome = $_POST["nome"];
                 $senha = $_POST["senha"];
                 $email = $_POST["Email"];
-                $sexo = $_POST["sexo"];
                 $cpf = $_POST["cpf"];
+                $sexo = $_POST["sexo"];
                 $nascimento = $_POST["nascimento"];
 
-                editarCliente($id, $nome, $senha, $email, $sexo, $cpf, $nascimento);
+                editarCliente($id, $nome, $senha, $email, $cpf, $sexo, $nascimento);
                 redirecionar("cliente/listarClientes");
             }else{
                 $dados["cliente"] = pegarClientePorId($id);

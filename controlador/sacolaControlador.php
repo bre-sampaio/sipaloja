@@ -3,16 +3,37 @@
 require_once 'modelo/produtoModelo.php';
 
 /** anon */
-function adicionar($idproduto) {
- if (!isset($_SESSION["carrinho"])) {
-        $_SESSION["carrinho"] = array();
-    } else {
-        $produtos = $_SESSION["carrinho"];
-    }
-    $produtos[] = $produto;
-    $_SESSION["carrinho"] = $produtos;
-    redirecionar("sacola/listar");
+function adicionar($id) {
+	if (isset($_SESSION["carrinho"])) {
+		$produtos = $_SESSION["carrinho"];
+	} else {
+		$produtos = array();
+	}
+	$chave = existeProdutoNoCarrinho($produtos, $id);
+	
+	if($chave === false) {
+		$produto = viewProduto($id);
+		$produto["quantidade"] = 1;
+		$produtos[] = $produto;
+	} else {
+		$produto = $produtos[$chave];
+		$produto["quantidade"]++;
+		$produtos[$chave] = $produto;
+	}
+	$_SESSION["carrinho"] = $produtos;
+	redirecionar("sacola/index");
 }
+/** admin */
+function existeProdutoNoCarrinho($produtos, $id) {
+	foreach ($produtos as $chave => $produto) {
+		if ($produto["idproduto"] == $id) { //ja existe
+			return $chave;
+		} 
+	}
+	return false;
+}
+
+
 
 /** anon */
 function listar() {

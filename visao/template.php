@@ -41,12 +41,12 @@
                             <a href="./pagamento/listarPagamentos" style="color: white;"> Listar Formas de Pagamento </a></li>
                           <?php } ?>
                 <div id="esque">
-                  <?php acessoPegarUsuarioLogado()?>
-                    <a href="./cliente/ver/"> Minha Conta </a>
+                 
+                    <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>"> Minha Conta </a>
                    
                     <a href="./login/"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a> 
                     <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">
-                     <a href="./sacola/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
+                     <a href="./carrinho/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
 	        </div>
                  
             </ul>

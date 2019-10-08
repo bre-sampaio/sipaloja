@@ -68,7 +68,7 @@ function adicionar(){
         
         /* VER O CLIENTE */
         
-/** admin */
+/** anon */
         function ver($id){
             $dados["cliente"] = pegarClientePorId($id);
             $dados["enderecos"] = pegarTodosEderecos($id);
@@ -87,7 +87,7 @@ function adicionar(){
         
         /* EDITAR CLIENTE */
  
-/** user */       
+/** anon */       
         function editar($id){
             
             if (ehPost()){    

@@ -9,11 +9,47 @@
     </head>
 
     <body class="container">
+        
+        
+         <form method="POST" action="produto/buscar">
+                <div class="bloco">
+                   <input type="text" name="busca" placeholder="pesquisa"> 
+                   <button> texto </button>
+                </div>
+            </form> 
+        
+        
+        <div id="inicio"> 
+            <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
+             
+          
+            
+             
+            
+          
+                  <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">
+                
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                <div id="esque">    
+                    <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>" style="color: white;"> Minha Conta </a>
+                    <a href="./login/"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a>
+                     <a href="./carrinho/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
+	        </div>
+                 
+        </div>
 
         <div id="menu">
 
-            <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
-    
             <ul id="ul1">          
                     
                     <li id="li1"> 
@@ -40,15 +76,7 @@
                           <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
                             <a href="./pagamento/listarPagamentos" style="color: white;"> Listar Formas de Pagamento </a></li>
                           <?php } ?>
-                <div id="esque">
-                 
-                    <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>"> Minha Conta </a>
-                   
-                    <a href="./login/"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a> 
-                    <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">
-                     <a href="./carrinho/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
-	        </div>
-                 
+
             </ul>
         </div>
 

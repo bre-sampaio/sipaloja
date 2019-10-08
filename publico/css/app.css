@@ -4,9 +4,37 @@ body {
     text-align: center;
 }
 
+#inicio{
+    background-color: black;
+    height: 100px;
+}
+
+.bloco{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    margin: auto;
+}
+
+.bloco input[type='text']{
+  border: none;
+  background-color: transparent;
+  width: 80%;
+  height: 100%;
+}
+
+.bloco button{
+    border: none;
+    width: 20%;
+    height: 100%;
+    background-color: #ccc;
+}
+
+
 #menu{ 
     border: solid;
-    width: 100%;
+    width: 95%;
     border-width:35px; 
     background-color: black;
 }
@@ -25,7 +53,7 @@ body {
 #li1{
     display: inline;
     padding: 2%;
-    font-size: 20px;
+    font-size: 15px;
 }      
 
 a:link{ 
@@ -33,10 +61,9 @@ a:link{
     color: inherit;
 } 
 
-
 #esque{
     float: right;
-    padding-bottom: 6px;
+    padding-bottom: 2px;
 }
 
 

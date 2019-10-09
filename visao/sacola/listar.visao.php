@@ -13,7 +13,7 @@
         
         <td><?=$produto['Preco']?></td>
         
-        <td> <a href="./sacola/deletar/<?=$produto['idproduto']?>"> DELETAR </a>
+        <td> <a href="./sacola/remover/<?=$produto['idProduto']?>"> DELETAR </a>
     </tr>
 
     <?php endforeach; ?>

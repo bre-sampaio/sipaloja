@@ -43,6 +43,6 @@
 
 <p>Estoquemax: <?=$produto['Estoquemax']?></p>
 
-<a href="./sacola/adicionar/$produto['idProduto']"> car </a>
+<a href="./sacola/adicionar/<?=$produto['idProduto']?>"> carrinho </a>
 
 <a href="./produto/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo produto</a>

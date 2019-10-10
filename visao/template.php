@@ -10,40 +10,22 @@
 
     <body class="container">
         
-        
-         <form method="POST" action="produto/buscar">
-                <div class="bloco">
-                   <input type="text" name="busca" placeholder="pesquisa"> 
-                   <button> texto </button>
-                </div>
-            </form> 
-        
-        
-        <div id="inicio"> 
+        <div class="tudo">
+            
+       
+         <div id="inicio"> 
             <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
-             
-          
-            
-             
-            
-          
-                  <img src="./publico/img_sipa/pesquisa.png" id="pesquisa">
-                
                   
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                <div id="esque">    
-                    <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>" style="color: white;"> Minha Conta </a>
+         <form method="POST" action="produto/buscar">
+              <div class="bloco">
+                   <input type="text" name="busca" placeholder="  Pesquisa"> 
+              </div>
+              
+         </form> 
+                <div id="esque"> 
+                     <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>" style="color: white;"> Minha Conta </a>
                     <a href="./login/"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a>
-                     <a href="./carrinho/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
+                     <a href="./sacola/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
 	        </div>
                  
         </div>
@@ -79,7 +61,7 @@
 
             </ul>
         </div>
-
+  </div>
         <br><br>
 
 

@@ -3,12 +3,12 @@
 <table class="table" border="1">
     <thead>
         <tr>
+            <th width="10%"> IMG </th> 
             <th> ID </th>
             <th> NOME </th> 
             <th> DESCRIÇÃO </th> 
             <th> PREÇO </th> 
             <th> TAMANHO </th>
-            <th> IMG </th> 
             <th> CATEGORIA </th> 
             <th> ESTOQUE MINIMO </th> 
             <th> ESTOQUE MAXIMO </th>
@@ -21,6 +21,9 @@
     
      <?php foreach ($produtos as $produto): ?>
     <tr>
+        
+        <td>  <img src="<?=$produto['img']?>" alt="imagem"width="100%"> </td>
+        
         <td><?=$produto['idProduto']?></td>
 
         <td><?=$produto['Nome']?></td>
@@ -30,8 +33,6 @@
         <td> <?=$produto['Preco']?> </td>
 
         <td> <?=$produto['Tamanho']?> </td>
-
-        <td> <?=$produto['img']?> </td>
 
         <td> <?=$produto['Categoria']?> </td>
         

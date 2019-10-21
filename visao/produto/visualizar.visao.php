@@ -35,7 +35,7 @@
 
 <p>Tamanho: <?=$produto['Tamanho']?></p>
 
-<p>img: <?=$produto['img']?></p>
+<p>img: <img src="<?=$produto['img']?>" alt="imagem" width="10%"> </p>
 
 <p>Categoria: <?=$produto['Categoria']?></p>
 

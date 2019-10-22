@@ -26,7 +26,7 @@ require_once 'modelo/produtoModelo.php';
         if(isset($_SESSION["carrinho"])) {
          for ($i=0; $i < count($_SESSION["carrinho"]); $i++){
            $produtos[] = pegarProdutoPorId($_SESSION["carrinho"][$i]);
-           print_r($produtos);
+          
          } 
         } else {
            echo "Não existe sessao carrinho!";

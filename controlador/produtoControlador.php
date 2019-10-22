@@ -101,13 +101,14 @@ function editar($id) {
 }
 
 
-/** anon */    
-    function buscar(){
+
+/** anon */
+function buscar(){
 	if (ehpost()){
             $busca = $_POST["busca"];
             $produto = array();
             $dados["produtos"] = buscarProduto($busca);
-            exibir("produtos/listarP", $dados);
+            exibir("produto/listar", $dados);
 		
 	}
 }

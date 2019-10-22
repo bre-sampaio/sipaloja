@@ -66,16 +66,15 @@ function adicionarProduto($nome_produto, $preco, $desc, $tamanho, $img, $categor
             }
             return 'Produto editado com secesso';
         }
+   
         
-        
-        function buscarModel($nome){
-            $sql = "SELECT * FROM produto WHERE Nome LIKE '%$nome%'";
-            $resultado = mysqli_query(conn(), $sql);
-            $produtos = array();
-		while ($linha = mysqli_fetch_assoc($resultado)) {
-			$produtos[] = $linha;
-		}
-
-		return $produtos;
+        function buscarProduto ($buscar){
+	$sql = "SELECT * FROM produto WHERE nome LIKE '%$buscar%'";
+	$resultado = mysqli_query(conn(), $sql);
+	$produtos = array();
+            while($linha = mysqli_fetch_assoc($resultado)){
+		$produtos[] = $linha;
 	}
+	return $produtos;
+}
         

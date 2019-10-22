@@ -30,7 +30,7 @@ function adicionar(){
     }
 		
 } 
-/** admin */
+/** anon */
 	function listarPagamentos(){
 		$dados = array();
 		$dados["pagamentos"] = pegarTodosPagamentos();

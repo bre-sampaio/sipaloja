@@ -16,51 +16,39 @@
          <div id="inicio"> 
             <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
                   
-         <form method="POST" action="produto/buscar">
+          <form method="POST" action="produto/buscar" id="pesquisa">
               <div class="bloco">
-                   <input type="text" name="busca" placeholder="  Pesquisa"> 
+                  <input type="text" name="busca" placeholder="  Pesquisa">
               </div>
-              
          </form> 
                 <div id="esque"> 
-                     <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>" style="color: white;"> Minha Conta </a>
-                    <a href="./login/"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a>
+                     <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>" style="color: white;"> minha conta </a>
+                     <a href="./login/"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a>
                      <a href="./sacola/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
 	        </div>
                  
         </div>
-
+  <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
         <div id="menu">
 
-            <ul id="ul1">          
+            <ul id="ul1">   
+                  <a href="./cliente/listarClientes" style="color: white;"> Clientes </a></li>
+             
+                   <li id="li1">
+                       <a href="./produto/listarProdutos" style="color: white;"> Produtos </a></li>
                     
                     <li id="li1"> 
-                        <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
-                             <a href="./cliente/listarClientes" style="color: white;"> Listar Clientes </a></li>
-                        <?php } ?>
-                    
-                    <li id="li1">
-                        <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
-                            <a href="./produto/listarProdutos" style="color: white;"> Listar Produtos </a></li>
-                         <?php } ?>
-                    
-                    <li id="li1"> 
-                        <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
-                           <a href="./categoria/listarCategorias" style="color: white;"> Listar Categoria </a></li>
-                         <?php } ?>
-                    
-                     <li id="li1"> 
-                         <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?> 
-                             <a href="./cupom/listarCupons" style="color: white;"> Listar Cupons </a></li>
-                         <?php } ?>
+                       <a href="./pagamento/listarPagamentos" style="color: white;"> Formas de Pagamento </a></li>
                      
+                    <li id="li1"> 
+                       <a href="./categoria/listarCategorias" style="color: white;"> Categorias </a></li>
+                      
                      <li id="li1"> 
-                          <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
-                            <a href="./pagamento/listarPagamentos" style="color: white;"> Listar Formas de Pagamento </a></li>
-                          <?php } ?>
-
+                         <a href="./cupom/listarCupons" style="color: white;"> Cupons </a></li>
             </ul>
         </div>
+      <?php } ?>
+            
   </div>
         <br><br>
 

@@ -29,6 +29,14 @@
 		<button id="bot2"> Adicionar ao carrinho </button>
 	</div></a>
 </div>
+<br><br><br><br>
+
+<a href="./produto/listarProdutos" style="color: black; margin: auto;"> Ver todos os Produtos </a>
+<br><br><br><br>
+
+<div id="cup" style="background-color: black;">
+   <?php include './visao/cupom/formulario.visao.php';?>
+</div> 
 
 <br><br><br><br>
 

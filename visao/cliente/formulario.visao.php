@@ -22,7 +22,7 @@ if (ehPOST()) {
 
     <br><br>
     
-    <select name="tipoCliente" style="padding: 10px 52px;">
+    <select name="tipoCliente" style="padding: 11px 65px;">
         <option value="null"> Tipo de Usuario</option>
        <option value="user"> Cliente</option>
         <option value="admin"> Administrador</option>

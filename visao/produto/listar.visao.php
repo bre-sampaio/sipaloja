@@ -29,9 +29,9 @@
         <td><?=$produto['Nome']?></td>
 
         <td><?=$produto['Descricao']?></td>
-
+        
         <td> <?=$produto['Preco']?> </td>
-
+        
         <td> <?=$produto['Tamanho']?> </td>
 
         <td> <?=$produto['Categoria']?> </td>

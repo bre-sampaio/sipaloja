@@ -43,8 +43,8 @@ CREATE TABLE cliente(
 CREATE TABLE produto(
 	idProduto INT(11) NOT NULL AUTO_INCREMENT,
 	Nome VARCHAR(30) NOT NULL,
-        Preco VARCHAR(20) NOT NULL,
 	Descricao VARCHAR(60) NOT NULL,
+        Preco VARCHAR(20) NOT NULL,
 	Tamanho VARCHAR(60) NOT NULL,
 	img VARCHAR(60),
 	Categoria VARCHAR(20) NOT NULL,

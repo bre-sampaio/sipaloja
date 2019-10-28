@@ -11,9 +11,9 @@ if (ehPOST()) {
 <form action="" method="POST" enctype="multipart/form-data">
     <input placeholder="Nome do Produto" type="text" name="Nome" value="<?= @ $produto['Nome'] ?>"> <br><br>
  
-    <input placeholder="Descrição" type="text" name="Descricao" value="<?= @ $produto['Preco'] ?>"> <br><br>
+    <input placeholder="Descrição" type="text" name="Descricao" value="<?= @ $produto['Descricao'] ?>"> <br><br>
 
-    <input placeholder="Preço" type="text" name="Preco" value="<?= @ $produto['Descricao'] ?>"> <br><br>
+    <input placeholder="Preço" type="text" name="Preco" value="<?= @ $produto['Preco'] ?>"> <br><br>
 
     <input placeholder="Tamanho" type="text" name="Tamanho" value="<?= @ $produto['Tamanho'] ?>"> <br>
     

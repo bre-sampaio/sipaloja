@@ -22,7 +22,7 @@ INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuari
 /*sipa loja*/
 
 /* SCRIPT CLIENTE */
-
+drop database sipaloja;
 	CREATE DATABASE sipaloja;
 
 	USE sipaloja;

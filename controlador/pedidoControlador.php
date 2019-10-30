@@ -1,5 +1,7 @@
 <?php
-
+require_once "modelo/pedidoModelo.php";
+require_once "modelo/pagamentoModelo.php";
+require_once "modelo/enderecoModelo.php";
 
 function salvar () {
     if (ehPost ()) {
@@ -15,7 +17,13 @@ function salvar () {
     }else{
         
     }
-    exibir("pedidos/listar");
+    
+    $finalizar = acessoPegarUsuarioLogado() ;
+    
+    $dados = array();
+    $dados["enderecos"] = pegarFinalizar($finalizar);
+    $dados["pagamentos"] = pegarTodosPagamentos();
+    exibir("pedido/formulario", $dados);
     
 }
 

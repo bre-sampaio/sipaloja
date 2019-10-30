@@ -22,7 +22,7 @@
               </div>
          </form> 
                 <div id="esque"> 
-                     <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>" style="color: white;"> minha conta </a>
+                    
                      <a href="./login/"> <img src="./publico/img_sipa/profile.jpg" id="sac"> </a>
                      <a href="./sacola/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
 	        </div>
@@ -32,7 +32,7 @@
         <div id="menu">
 
             <ul id="ul1">   
-                  <a href="./cliente/listarClientes" style="color: white;"> Clientes </a></li>
+                  <a href="./cliente/listarClientes" style="color: white;"> Usuarios </a></li>
              
                    <li id="li1">
                        <a href="./produto/listarProdutos" style="color: white;"> Produtos </a></li>
@@ -45,6 +45,9 @@
                       
                      <li id="li1"> 
                          <a href="./cupom/listarCupons" style="color: white;"> Cupons </a></li>
+                    
+                     <li id="li1">
+                         <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>" style="color: white;"> Minha conta </a></li>
             </ul>
         </div>
       <?php } ?>

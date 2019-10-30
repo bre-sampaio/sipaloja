@@ -34,8 +34,17 @@
 <a href="./produto/listarProdutos" style="color: black; margin: auto;"> Ver todos os Produtos </a>
 <br><br><br><br>
 
-<div id="cup" style="background-color: black;">
-   <?php include './visao/cupom/formulario.visao.php';?>
+<div id="cup" style="background-color: black; height: 300px;">
+   
+    <form action="" method="POST"> 
+         <input placeholder="Email" type="Email" name="Email" value="" style="height: 40px; width: 50%; margin: 5% 25%; padding-left: 15px;">
+         <button title="Enviar" style="background-color: red;
+			color: white;
+			border-color: red;
+			padding: 20px 35px;
+			font-size: 15px; margin-left: 43%;">Cadastrar-me </button>
+    </form>
+    
 </div> 
 
 <br><br><br><br>

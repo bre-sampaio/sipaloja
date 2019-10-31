@@ -72,3 +72,9 @@ function adicionar(){
                 exibir("cupom/formulario", $dados);
             }
         }
+        
+  /* calcular desconto      
+    $valor_total_pedido = 150; //150 reais
+$percentual = 20; //significa 20% de desconto
+
+$valor_com_desconto = $valor_total_pedido * ( 1 - $percentual / 100 );

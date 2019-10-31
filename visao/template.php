@@ -16,7 +16,7 @@
          <div id="inicio"> 
             <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
                   
-          <form method="POST" action="produto/buscar" id="pesquisa">
+            <form method="POST" action="produto/buscar" id="pesquisa" style="display: inline;">
               <div class="bloco">
                   <input type="text" name="busca" placeholder="  Pesquisa">
               </div>
@@ -28,10 +28,11 @@
 	        </div>
                  
         </div>
-  <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
+
         <div id="menu">
 
             <ul id="ul1">   
+                 <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
                   <a href="./cliente/listarClientes" style="color: white;"> Usuarios </a></li>
              
                    <li id="li1">
@@ -48,9 +49,10 @@
                     
                      <li id="li1">
                          <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>" style="color: white;"> Minha conta </a></li>
+                  <?php } ?>
             </ul>
         </div>
-      <?php } ?>
+    
             
   </div>
         <br><br>

@@ -1,6 +1,6 @@
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+* {
+    font-family: "Segoe UI",Arial,sans-serif;
     
 }
 
@@ -53,7 +53,12 @@ body {
     font-size: 15px;
 }      
 
-a:link{ 
+a:link{
+     text-decoration:none; 
+    color: inherit;
+}
+
+a:visited{ 
     text-decoration:none; 
     color: inherit;
 } 
@@ -190,7 +195,7 @@ form{
 #rodape{
     margin-top: 1%;
     background-color: black;
-    height: 300px;
+    height: 350px;
 }
 
 #list2{

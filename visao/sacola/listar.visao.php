@@ -11,11 +11,11 @@
 
 <div id="pri" style="display: inline; width: 99%;">
 	<div class="img" style="display: inline; float: left; width: 25%; margin-right: 2%;">
-            <img src="<?=$produto['img']?>" alt="imagem"  style="width: 99%; height: 300px;">
+            <img src="<?=$produto['img']?>" alt="imagem"  style="width: 99%; height: 355px;">
 	</div>
 
 	<div class="desc" style=" float: left; width: 30%;">
-            <h2><?=$produto['Nome']?></h2>
+            <h2 style="margin-top: 20px;"><?=$produto['Nome']?></h2>
             <p style="font-size: 20px; width: 40%;">  <?=$produto['Preco']?> </p> <p style="font-size: 20px;"> Tamanho: <?=$produto['Tamanho']?> </p>
             <p style="font-size: 20px;"> R$ <?=$produto['Descricao']?> <br></p> 
             <p style="font-size: 18px;"> Quantidade </p>

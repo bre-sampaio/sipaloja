@@ -1,9 +1,11 @@
 <?php
 
-
+require_once 'modelo/produtoModelo.php';
 
 function index() {
-    exibir("paginas/sobre");
+    $dados = array();
+    $dados['produtos'] = pegarTodosProdutos();
+    exibir("paginas/sobre", $dados);
 }
 
 function mapa(){

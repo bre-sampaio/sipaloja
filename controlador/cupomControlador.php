@@ -1,6 +1,7 @@
 <?php
 
 require_once "modelo/cupomModelo.php";
+require_once "modelo/produtoModelo.php";
 
 /** admin */
 function adicionar(){
@@ -72,9 +73,32 @@ function adicionar(){
                 exibir("cupom/formulario", $dados);
             }
         }
+       
         
-  /* calcular desconto      
-    $valor_total_pedido = 150; //150 reais
-$percentual = 20; //significa 20% de desconto
-
-$valor_com_desconto = $valor_total_pedido * ( 1 - $percentual / 100 );
+  /** anon */  
+        
+function desconto () {
+	if (ehPost()) {
+		$desconto = Caldesconto($_POST["nome"]);
+	} else {
+		$desconto = 0;
+	}
+	$valorTotal = $_SESSION['total'];
+	$valorTotal = $valorTotal - $desconto;
+	$dados["produtos"] = $_SESSION["carrinho"];
+	$dados["total"] = $valorTotal;
+	$_SESSION['total'] = $valorTotal;
+	$_SESSION["quantcarrinho"] = 0;
+	if (isset($_SESSION["carrinho"])) {
+		$produtosCarrinho = array();
+		foreach ($_SESSION["carrinho"] as $produtoSessao) {
+			$_SESSION["quantcarrinho"] += $produtoSessao["quantidade"];
+			$produtoBanco = pegarProdutoPorId ($produtoSessao["idProduto"]);
+			$produtosCarrinho[] = $produtoBanco;
+		}
+		$dados["produtos"] = $produtosCarrinho;
+		exibir("sacola/listar", $dados);
+	} else {
+		exibir("sacola/listar", $dados);
+	}
+}

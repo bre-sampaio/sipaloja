@@ -52,7 +52,17 @@ function pegarTodosCupons(){
             }
             return 'Cupom editado com secesso';
         }
-
+        
+        
+        
+        /*desconto*/
+        
+function Caldesconto ($nome) {
+    $sql = "SELECT desconto FROM cupom WHERE nome = '$nome'";
+    $resultado = mysqli_query(conn(), $sql);
+    $cupons = mysqli_fetch_assoc($resultado);
+    return $cupons['desconto'];
+}
 
         
         

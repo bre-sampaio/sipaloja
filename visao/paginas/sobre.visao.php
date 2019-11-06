@@ -1,39 +1,37 @@
 
-<div id="pt2">	
-	<p class="divisor4">
-		<span> Destaques </span>
-	</p>
-
+  <img src="./publico/produtos/img2_logo.gif" style="width: 100%; height: 800px;">
+  <img src="./publico/produtos/img1_logo.png" style="width: 100%; height: 800px;">
+  <br><br>
+<div style="background-color: black; width: 15%; height: 57px; margin: auto;">
+    <p style="font-size: 20px; text-align: center; color: white;"> Destaques</p>
 </div>
 
 
+<br><BR>
+
 <div class="pri">
-	<a href="desprod.html"> <div id="prod" style="margin-left: 12%;">
-		<img src="produtos/tenis_adidas_1.jpg" style="width: 100%; height: 350px;">
-		<p id="desc"> Tênis Adidas Vermelho <br> R$ 100,00</p><br>
-		<button id="bot2" style="margin-left: 9%;"> Ver o produto </button>
-		<button id="bot2"> Adicionar ao carrinho </button>
-	</div> </a>
-
-	<a href="desprod1.html"> <div id="prod">
-		<img src="produtos/tenis_adidas_2.jpg" style="width: 100%; height: 350px;">
-		<p id="desc"> Tênis Adidas Vermelho <br> R$ 100,00</p><br>
-		<button id="bot2" style="margin-left: 9%;"> Ver o produto </button>
-		<button id="bot2"> Adicionar ao carrinho </button>
-	</div></a>
-
-	<a href="desprod2.html"> <div id="prod">
-		<img src="produtos/tenis_adidas_3.jpg" style="width: 100%; height: 350px;">
-		<p id="desc"> Tênis Adidas Vermelho <br> R$ 100,00</p><br>
-		<button id="bot2" style="margin-left: 9%;"> Ver o produto </button>
-		<button id="bot2"> Adicionar ao carrinho </button>
-	</div></a>
+    <?php foreach ($produtos as $produto):?>
+    <div id="prod" style="margin-left: 108px;">
+            <img src="<?=$produto['img']?>" style="width: 100%; height: 550px;">
+            <p id="desc"><?=$produto["Nome"]?><br> R$ <?=$produto["Preco"]?></p><br>
+            <a href="produto/visualizar/<?=$produto['idProduto']?>">
+                <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+            </a>
+            <button id="bot2"> Adicionar ao carrinho </button>
+        </div>
+    <?php endforeach;?>
 </div>
 <br><br><br><br>
 
 <a href="./produto/listarProdutos" style="color: black; margin: auto;"> Ver todos os Produtos </a>
 <br><br><br><br>
 
+<div style="display: inline;"> 
+    <img src="./publico/produtos/img3_logo.png" style="width: 45%; height: 580px; float: left; margin-left: 6%;">
+    <img src="./publico/produtos/img4_logo.png" style="width: 45%; height: 580px;">
+</div>
+
+<br><br><br><br>
 <div id="cup" style="background-color: black; height: 300px;">
    
     <form action="" method="POST" style="display: inline;"> 

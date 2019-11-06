@@ -1,10 +1,10 @@
 <h2 style="margin: auto;">Detalhes do produto</h2> <br><br>
 
     <div style="display: inline;">
-<img src="<?=$produto['img']?>" alt="imagem" style="width: 34%; height: 445px; padding-left: 10px; float: left; padding-right: 50px; margin-left: 20%;">
+<img src="<?=$produto['img']?>" alt="imagem" style="width: 25%; height: 600px; padding-left: 60px; float: left; padding-right: 50px; margin-left: 20%;">
     
 <div class="pala">
-    <h1 style="margin-top: -7px;"> <?=$produto['Nome']?> </h1> 
+    <h1 style="margin-top: 11px;"> <?=$produto['Nome']?> </h1> 
     <div id="meio">	
 	<p style="padding-left: 10%; font-size: 20px;">Frete grátis para Itapetininga <br> Prazo de fabricação: 1 dia <br> Tamanho: <br> <?=$produto['Tamanho']?> </p>
         <p style="font-size: 20px; margin-top: 20px;"> R$ <?=$produto['Descricao']?></p> <p> ou 5X de R$ 30,00 </p><br>
@@ -25,7 +25,7 @@
 			border-color: black;"> <a href="./sacola/adicionar/<?=$produto['idProduto']?>"> Adicionar ao carrinho </button> </a>
         
     </div>
-   
+    <br><br><br>
     
     <div style="background-color: black; margin-top: 200px; height: 400px;">    
         <h2 style="text-align: center; color: white; padding-top: 20px;">Informações do produto</h2>

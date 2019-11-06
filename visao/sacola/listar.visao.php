@@ -11,11 +11,11 @@
 
 <div id="pri" style="display: inline; width: 99%;">
 	<div class="img" style="display: inline; float: left; width: 25%; margin-right: 2%;">
-            <img src="<?=$produto['img']?>" alt="imagem"  style="width: 99%; height: 355px;">
+            <img src="<?=$produto['img']?>" alt="imagem"  style="width: 99%; height: 500px;">
 	</div>
 
 	<div class="desc" style=" float: left; width: 30%;">
-            <h2 style="margin-top: 20px;"><?=$produto['Nome']?></h2>
+            <h2 style="margin-top: 50px;"><?=$produto['Nome']?></h2>
             <p style="font-size: 20px; width: 40%;">  <?=$produto['Preco']?> </p> <p style="font-size: 20px;"> Tamanho: <?=$produto['Tamanho']?> </p>
             <p style="font-size: 20px;"> R$ <?=$produto['Descricao']?> <br></p> 
             <p style="font-size: 18px;"> Quantidade </p>
@@ -31,10 +31,40 @@
         
 	</div>
     <br><br>
-    <div class="resumo" style="background-color: black; padding: 20px; float: right; width:20%; height: 400px;"> 
-        <h2 style="color: white; text-align: center;"> Resumo do pedido </h2>
+    <div class="resumo" style="display: flex; flex-direction: column;background-color: black; padding: 20px; float: right; width:23%;"> 
+        <h2 style="color: white; text-align: center;"> SUBTOTAL </h2>
+        <p style="color: white;"> R$ ... </p>
         
-        <a href="./pedido/salvar" style="float: right; background-color: black; color: white; padding: 20px 35px; margin-top: 60px;"> Finalizar </a>
+        <br>
+        <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
+        
+        <p style="color: white;"> DIGITE O CEP DO ENDEREÇO DE ENTREGA:
+        <div style="display: flex; flex-direction: row; align-items: center;">
+                            
+            <input placeholder=" _____-___" type="" name="cep" value="" style="height: 35px; width: 200px; float: left; margin-right: 5%; margin-left: 5%;"> </p>
+
+            <button style="background-color: white; padding: 6px 10px; color: black;"> Calcular </button> </a>
+        </div>
+ 
+    
+        <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
+        
+        <P style="color: white;"> Cupom de Desconto </p>
+        
+      <form action="cupom/desconto" method="POST">
+        <input type="text" name="nome" value="" style="margin-left: 5%; padding: 7px; width: 270px;">
+	<button type="submit">Enviar</button>
+    </form>
+        
+      
+        
+         <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
+         <p style="float: left; color: white"> Total </p> <p style="color: white;"> R$ ... </p>
+         <br><br>
+         <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
+          
+        <a href="./pedido/salvar" style="width: 80%; text-align: center; border-radius: 3px; font-weight: bold;background-color: #33cc00; color: #000000; padding: 15px 0; margin: auto;"> Finalizar </a>
+        <br> <a href="./pedido/salvar" style="width: 80%; text-align: center; border-radius: 3px; font-weight: bold;background-color:#cccccc; color: #000000; padding: 15px 0; margin: auto;"> Continuar Comprando </a>
     </div>
     
     </div> 

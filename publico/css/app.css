@@ -120,50 +120,14 @@ form{
 	display: inline;
 }
 
-
-#prod{
-	border:solid;
-	border-color: #d3d3d3;
-	width: 25%;
-	height: 500px;
-	background-color: white;
-	float: left;
-	margin-bottom: 15px;
-	margin-left: 10px;
+#prod {
+    width: 25%;
+    background-color: white;
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 10px;
 }
 
-#prod1{
-	border:solid;
-	border-color: #d3d3d3;
-	width: 25%;
-	height: 500px;
-	background-color: white;
-	float: left;
-	margin-bottom: 15px;
-	margin-left: 10px;
-}
-
-#prod2{
-	border:solid;
-	border-color: #d3d3d3;
-	width: 25%;
-	height: 500px;
-	background-color: white;
-	float: left;
-	margin-bottom: 15px;
-	margin-left: 10px;
-}
-
-#prod3{
-	border:solid;
-	border-color: #d3d3d3;
-	width: 25%;
-	height: 500px;
-	background-color: white;
-	float: left;
-	margin-bottom: 15px;
-	margin-left: 10px;
-}
 
 #desc{
 	text-align: center;

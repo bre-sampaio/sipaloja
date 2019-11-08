@@ -57,6 +57,7 @@ CREATE TABLE produto(
 CREATE TABLE cupom(
 	idCupom INT(8) NOT NULL AUTO_INCREMENT,
 	Nome VARCHAR(20) NOT NULL,
+	desconto INT(4) NOT NULL,
 	PRIMARY KEY(idCupom)
 );
 

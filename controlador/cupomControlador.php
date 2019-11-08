@@ -9,6 +9,7 @@ function adicionar(){
 	if (ehPOST()) {
           
             $nome = $_POST["nome"];
+            $desconto= $_POST["desc"];
 
     /*VALIDAÇÕES*/        
             
@@ -23,7 +24,7 @@ function adicionar(){
             $dados["errors"] = $errors;
             exibir("cupom/formulario", $dados);
         } else {     
-         $msg = adicionarCupom($nome);
+         $msg = adicionarCupom($nome, $desconto);
 		echo $msg;
         }             
 

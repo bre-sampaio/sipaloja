@@ -5,7 +5,8 @@
         <tr>
             <th>ID </th>
             <th>CUPOM</th>  
-   
+            <th>DESCONTO</th>
+
             <th>VER</th> 
             <th>EDITAR</th>
             <th>DELETAR</th>
@@ -18,6 +19,7 @@
 
         <td><?=$cupom['Nome']?></td>
 
+        <td><?=$cupom['desconto']?>%</td>
 
         <td><a href="./cupom/ver/<?=$cupom['idCupom']?>" class="btn btn-secondary">VER</a></td>
 

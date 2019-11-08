@@ -1,7 +1,7 @@
 <?php
 
-function adicionarCupom($nome){
-     $sql = "INSERT INTO cupom(idCupom, nome) VALUES (NULL, '$nome')";
+function adicionarCupom($nome, $desconto){
+     $sql = "INSERT INTO cupom(idCupom, nome, desconto) VALUES (NULL, '$nome', '$desconto')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado) {
        die('Erro ao adicionar cupom '. mysqli_error($cnx));

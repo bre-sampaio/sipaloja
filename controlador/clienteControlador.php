@@ -46,7 +46,7 @@ function adicionar(){
             exibir("cliente/formulario", $dados);
         } else {     
             $msg = adicionarCliente($nome,  $senha, $email, $tipo, $cpf, $sexo, $nascimento);
-		echo $msg;
+	       redirecionar("./login");
         }
 
     } else {

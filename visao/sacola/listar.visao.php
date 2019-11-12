@@ -32,8 +32,8 @@
 	</div>
     <br><br>
     <div class="resumo" style="display: flex; flex-direction: column;background-color: black; padding: 20px; float: right; width:23%;"> 
-        <h2 style="color: white; text-align: center;"> SUBTOTAL </h2>
-        <p style="color: white;"> R$ ... </p>
+        <h2 style="color: white; text-align: center;"> SUBTOTAL <span class="price"><b style="color: white;"> R$ <?=$total?> </b> </span> </h2>
+         
         
         <br>
         <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
@@ -59,7 +59,7 @@
       
         
          <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
-         <p style="float: left; color: white"> Total </p> <p style="color: white;"> R$ ... </p>
+         <p style="float: left; color: white"> Total <b style="color: white;"> R$ <?=$total?> </b> </span> </p>
          <br><br>
          <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
           

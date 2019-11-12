@@ -14,10 +14,10 @@
     <div id="prod" style="margin-left: 108px;">
             <img src="<?=$produto['img']?>" style="width: 100%; height: 550px;">
             <p id="desc"><?=$produto["Nome"]?><br> R$ <?=$produto["Preco"]?></p><br>
-            <a href="produto/visualizar/<?=$produto['idProduto']?>">
+            <a href="./produto/ver/<?=$produto['idProduto']?>">
                 <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
             </a>
-            <button id="bot2"> Adicionar ao carrinho </button>
+           <button id="bot2"> <a href="./sacola/adicionar/<?=$produto['idProduto']?>"> Adicionar ao carrinho </button> </a>
         </div>
     <?php endforeach;?>
 </div>

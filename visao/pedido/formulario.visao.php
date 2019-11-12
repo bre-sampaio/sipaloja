@@ -1,30 +1,27 @@
 
 
 <div style="display: inline;">
-<div style=" margin-left: 5%; float: left; background-color: black; width: 40%; height: 350px;">
-    <p style="color: white;"> Resumo do pedido </p>
+<div style=" margin-left: 5%; float: left;width:30%; height: 350px;">
+    <p> Resumo do pedido </p>
 </div>
 
 
 
-<div style=" margin-right: 5%; float: right; background-color: black; width: 40%; height: 350px;">
-    <p style="color: white;"> Resumo da entrega </p>
-
+<div style="float: left;width: 30%; height: 350px;">
+    <p> Resumo da entrega </p>
+    
+<form action="" method="POST">
     <select name="idEndereco" style="padding: 10px 52px;">
             <?php foreach ($enderecos as $endereco):?>
             <option value="<?=$endereco["idEndereco"]?>"><?=$endereco["Logra"]?></option>
             <?php endforeach;?>
-        </select>
+    </select>
 
     </form>
 </div>
-</div>
 
 
-<br><br><br>
-
-
-<div style=" margin-left: 5%; width: 90%; background-color: black; color: white; height: 400px;"
+<div style="float: right; margin-left: 5%; width: 30%;height: 400px;"
 <p> Escolha a Forma de Pagamento: </p>
 
 <form action="" method="POST">
@@ -36,3 +33,4 @@
     </select>
     
 </form>
+    </div>

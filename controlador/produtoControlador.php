@@ -62,7 +62,7 @@ function listarProdutos() {
 
 /* VER O PRODUTO */
 
-/** admin */
+/** anon */
 function ver($id) {
     $dados["produto"] = pegarProdutoPorId($id);
     exibir("produto/visualizar", $dados);

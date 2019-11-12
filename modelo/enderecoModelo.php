@@ -30,8 +30,8 @@ function pegarTodosEderecos($id){
             return $endereco;
         }
         
-        function pegarFinalizar($idCliente){
-            $sql = "SELECT * FROM endereco WHERE idcliente = $idCliente";
+        function pegarFinalizar($idcliente){
+            $sql = "SELECT * FROM endereco WHERE idcliente = $idcliente";
             $resul = mysqli_query(conn(), $sql);
             $enderecos = array();
              while ($linha = mysqli_fetch_assoc($resul)) {

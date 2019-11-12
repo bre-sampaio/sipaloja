@@ -82,18 +82,20 @@ CREATE TABLE endereco(
 	Cidade VARCHAR(30) NOT NULL,
 	CEP VARCHAR(8) NOT NULL,
 	PRIMARY KEY(idEndereco),
-	FOREIGN KEY(idcliente) REFERENCES usuario(idcliente) ON UPDATE CASCADE ON DELETE CASCADE
+	FOREIGN KEY(idcliente) REFERENCES cliente(idcliente) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 
 CREATE TABLE pedido (
-	idPedido INT(11) NOT NULL AUTO_INCREMENT,
-	idcliente INT(11) NOT NULL,
-	idEndereco INT(11) NOT NULL,
-	dataCompra DATE NOT NULL,
-	PRIMARY KEY(idcliente, idEndereco),
-	FOREIGN KEY(idcliente) REFERENCES usuario(idcliente) ON UPDATE CASCADE ON DELETE CASCADE,
-	FOREIGN KEY(idEndereco) REFERENCES endereco(idEndereco) ON UPDATE CASCADE ON DELETE CASCADE
+	idPedido INT NOT NULL AUTO_INCREMENT,
+	idcliente INT NOT NULL,
+	idEndereco INT NOT NULL,
+        idFormaPagamento INT NOT NULL,
+        Valorcupom INT,
+	PRIMARY KEY(idPedido),
+	FOREIGN KEY(idcliente) REFERENCES cliente(idcliente) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY(idEndereco) REFERENCES endereco(idEndereco) ON UPDATE CASCADE ON DELETE CASCADE,
+        FOREIGN KEY(idFormaPagamento) REFERENCES FormaPagamento(idFormaPagamento) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 

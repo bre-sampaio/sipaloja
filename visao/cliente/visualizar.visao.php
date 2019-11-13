@@ -1,25 +1,50 @@
-    <h2>Detalhes do cliente</h2>
+<div style="display: inline;">
+    
+    <div style="float: left;">
 
-<p>id: <?=$cliente['idcliente']?></p>
+        <div style="display: inline;  width: 70%;"> 
 
-<p>nome: <?=$cliente['nome']?></p>
+            <div style="float: left; width: 30%;">
+                <img src="./publico/img_sipa/minhaconta.jpg" style=" width: 100%; height: 300px;"> 
+            </div>
 
-<p>senha: <?=$cliente['senha']?></p>
+            <div style="float: right; width: 67%;">
+                <p>nome: <?=$cliente['nome']?></p>
 
-<p>email: <?=$cliente['email']?></p>
+                <p>senha: <?=$cliente['senha']?></p>
 
-<p>Tipo: <?=$cliente['tipoCliente']?></p>
+                <p>email: <?=$cliente['email']?></p>
 
-<p>cpf: <?=$cliente['cpf']?></p>
+                <p>Tipo: <?=$cliente['tipoCliente']?></p>
 
-<p>sexo: <?=$cliente['sexo']?></p>
+                <p>cpf: <?=$cliente['cpf']?></p>
 
-<p>Data de Nascimento: <?=$cliente['nascimento']?></p>
+                <p>sexo: <?=$cliente['sexo']?></p>
 
-<br>
+                <p>Data de Nascimento: <?=$cliente['nascimento']?></p>
+            </div>
+
+        </div>
+</div>
+
+
+<div style="float: right; background-color: black; width: 30%; color: white;">
+    <h2> Minha Conta </h2>
+    
+    <a href=""  class="btn btn-primary"> Pedidos </a> <br><BR>
+    <a href=""  class="btn btn-primary"> Vales </a> <br><BR> 
+    <a href="./cliente/adicionar/" class="btn btn-primary"> Cadastro </a> <br><br>
+    <a href="./endereco/adicionar/<?=$cliente['idcliente']?>"  class="btn btn-primary"> Alterar Endereço </a> <br><BR> 
+ 
+</div>
+    <br><br><br>  <br><br><br>  <br><br><br>   <br><br><br>   <br><br><br> 
+<div>
 <h2>Enderecos</h2>
  <?php include './visao/endereco/listar.visao.php';?>
 
 <a href="./endereco/adicionar/<?=$cliente['idcliente']?>" class="btn btn-primary">Adicionar novo endereco</a>
 <br><br>
-<a href="./cliente/adicionar/" class="btn btn-primary" >Adicionar novo cliente</a> <br>
+</div>
+</div>
+
+

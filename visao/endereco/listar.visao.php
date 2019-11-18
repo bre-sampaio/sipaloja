@@ -1,10 +1,12 @@
-
+<?php require_once "biblioteca/acesso.php"; ?>
 
 <table class="table" border="1">
     <thead>
         <tr>
-            <th>ID ENDEREÇO </th>
-            <th>ID CLIENTE </th>
+            <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
+                <th>ID ENDEREÇO </th>
+                <th>ID CLIENTE </th>
+             <?php } ?>
             <th>LOGRADOURO</th> 
             <th>COMPLEMENTO</th> 
             <th>BAIRRO</th> 
@@ -20,10 +22,11 @@
     
     <?php foreach ($enderecos as $endereco): ?>
     <tr>
-        <td><?=$endereco['idEndereco']?></td>
-        
-        <td><?=$endereco['idcliente']?></td>
+         <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
+            <td><?=$endereco['idEndereco']?></td>
 
+            <td><?=$endereco['idcliente']?></td>
+          <?php } ?>
         <td><?=$endereco['Logra']?></td>
 
         <td> <?=$endereco['Comp']?> </td>

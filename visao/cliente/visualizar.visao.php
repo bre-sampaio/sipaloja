@@ -1,3 +1,6 @@
+<?php require_once "biblioteca/acesso.php"; ?>
+<div style="margin: auto;"> 
+    
 <div style="display: inline;">
     
     <div style="float: left;">
@@ -14,9 +17,9 @@
                 <p>senha: <?=$cliente['senha']?></p>
 
                 <p>email: <?=$cliente['email']?></p>
-
+            <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
                 <p>Tipo: <?=$cliente['tipoCliente']?></p>
-
+            <?php } ?>
                 <p>cpf: <?=$cliente['cpf']?></p>
 
                 <p>sexo: <?=$cliente['sexo']?></p>
@@ -27,7 +30,13 @@
         </div>
 </div>
 
+<h2>Enderecos</h2>
+ <?php include './visao/endereco/listar.visao.php';?>
 
+<a href="./endereco/adicionar/<?=$cliente['idcliente']?>" class="btn btn-primary">Adicionar novo endereco</a>
+</div>
+  <br><br><br><br>  
+    
 <div style="float: right; background-color: black; width: 30%; color: white;">
     <h2> Minha Conta </h2>
     
@@ -37,14 +46,5 @@
     <a href="./endereco/adicionar/<?=$cliente['idcliente']?>"  class="btn btn-primary"> Alterar Endereço </a> <br><BR> 
  
 </div>
-    <br><br><br>  <br><br><br>  <br><br><br>   <br><br><br>   <br><br><br> 
-<div>
-<h2>Enderecos</h2>
- <?php include './visao/endereco/listar.visao.php';?>
-
-<a href="./endereco/adicionar/<?=$cliente['idcliente']?>" class="btn btn-primary">Adicionar novo endereco</a>
-<br><br>
+    
 </div>
-</div>
-
-

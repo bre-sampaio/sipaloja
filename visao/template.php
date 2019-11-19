@@ -89,7 +89,7 @@
             </div>
             <hr/>
             <p id="p10">&copy; Todos os direitos reservados</p>
-            <p id="p11">Design: Brenda e Pedro </p>
+            <p id="p11">Design: Brenda Sampaio e Mateus Holtz</p>
             <p id="p12"> Email da loja: sipaloja@gmail.com </p>
 
             <div id="esque2">

@@ -86,10 +86,14 @@ function editar($id) {
         $desc = $_POST ["Descricao"];
         $preco = $_POST ["Preco"];
         $tamanho = $_POST ["Tamanho"];
-        $img = $_POST ["img"];
         $categoria = $_POST ["Categoria"];
         $estoquemin = $_POST ["Estoquemin"];
         $estoquemax = $_POST ["Estoquemax"];
+        
+         $img = $_FILES ["img"];
+        $destino = './publico/img_sipa/produtos' . $_FILES['img']['name'];
+ $img_tmp = $_FILES['img']['tmp_name'];
+ move_uploaded_file( $img_tmp, $destino );
 
         editarProduto($id, $nome_produto, $desc, $preco, $tamanho, $destino, $categoria, $estoquemin, $estoquemax);
         redirecionar("produto/listarProdutos");

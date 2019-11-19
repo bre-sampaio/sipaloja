@@ -83,6 +83,7 @@ function desconto () {
 		$desconto = Caldesconto($_POST["nome"]);
 	} else {
 		$desconto = 0;
+        $total = 0;
 	}
 	$valorTotal = $_SESSION['total'];
 	$valorTotal = $valorTotal - $desconto;

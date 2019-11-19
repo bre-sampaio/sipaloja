@@ -1,9 +1,9 @@
 <?php require_once "biblioteca/acesso.php"; ?>
-<div style="margin: auto;"> 
+<div style="margin: auto; display: inline;"> 
     
 <div style="display: inline;">
     
-    <div style="float: left;">
+    <div style="float: left; width: 80%;">
 
         <div style="display: inline;  width: 70%;"> 
 
@@ -28,16 +28,17 @@
             </div>
 
         </div>
-</div>
 
+  <br><br><br><br>   <br><br><br><br>  <br><br><br><br>  <br><br><br><br> 
+    
 <h2>Enderecos</h2>
  <?php include './visao/endereco/listar.visao.php';?>
 
 <a href="./endereco/adicionar/<?=$cliente['idcliente']?>" class="btn btn-primary">Adicionar novo endereco</a>
 </div>
-  <br><br><br><br>  
+</div>
     
-<div style="float: right; background-color: black; width: 30%; color: white;">
+<div style="float: right; background-color: black; width: 20%; height: 300px; color: white;">
     <h2> Minha Conta </h2>
     
     <a href=""  class="btn btn-primary"> Pedidos </a> <br><BR>

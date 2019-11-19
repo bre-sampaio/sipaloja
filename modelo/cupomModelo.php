@@ -55,7 +55,7 @@ function pegarTodosCupons(){
         
         
         
-        /*desconto*/
+    /*desconto*/
         
 function Caldesconto ($nome) {
     $sql = "SELECT desconto FROM cupom WHERE nome = '$nome'";

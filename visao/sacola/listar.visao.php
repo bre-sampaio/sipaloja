@@ -52,14 +52,17 @@
 
         <P style="color: white;"> Cupom de Desconto </p>
 
-        <form action="cupom/desconto" method="POST">
+        <form action="sacola/desconto" method="POST">
             <input type="text" name="nome" value="" style="margin-left: 5%; padding: 7px; width: 270px;">
             <button type="submit">Enviar</button>
         </form>
 
         <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
 
-        <p style="float: left; color: white"> Total <b style="color: white;"> R$ <?php if(isset($total)){echo $total;} ?> </b> </span> </p>
+        <p style="float: left; color: white"> Total <b style="color: white;">
+         R$ <?php if(isset($total)){echo $total;} ?> </b> 
+     </span> 
+ </p>
         <br><br>
         <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
 

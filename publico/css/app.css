@@ -117,7 +117,16 @@ form{
 	span{
 	    display: inline-block;
 	    background-color: #fff;
-    	padding: 0 10px;
+    	padding: 0 100px 0 0;
+    	text-transform: none;
+    	font-size: 20px;
+	}
+        
+        span2{
+	    display: inline-block;
+	    background-color: #fff;
+    	padding: 0 400px 0 0;
+        margin-left: 2%;
     	text-transform: none;
     	font-size: 20px;
 	}

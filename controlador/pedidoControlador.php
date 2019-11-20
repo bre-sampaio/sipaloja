@@ -2,6 +2,7 @@
 require_once "modelo/pedidoModelo.php";
 require_once "modelo/pagamentoModelo.php";
 require_once "modelo/enderecoModelo.php";
+require_once "modelo/produtoModelo.php";
 
 function salvar () {
     if (ehPost ()) {
@@ -36,6 +37,7 @@ function listar () {
 
 function ver ($idPedido) {
     $dados["pedidos"] = pegarPedidoPorId($idPedido);
+     $dados["pedidosProduto"] = pegarProdutoPorPedido($idpedido);
     exibir ("pedidos/visualizar" , $dados);
 }
 

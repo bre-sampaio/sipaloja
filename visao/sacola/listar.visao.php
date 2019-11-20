@@ -32,13 +32,24 @@
         <?php endforeach; ?>  
     </div>
 
-    <div class="resumo" style="display: flex; flex-direction: column;background-color: black; padding: 20px; width:23%; height: 600px;"> 
+    <div class="resumo" style="display: flex; flex-direction: column;background-color: black; padding: 20px; width:23%; height: 650px;"> 
         <h2 style="color: white; text-align: center;"> SUBTOTAL </h2> <br>
         <span class="price"><b style="color: #000000;"> R$ <?php if(isset($total)){echo $total;} ?> </b> </span>
 
         <br>
+        
+        
+        <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
+        <P style="color: white;"> Cupom de Desconto </p>
+
+        <form action="sacola/desconto" method="POST">
+            <input type="text" name="nome" value="" style="margin-left: 5%; padding: 7px; width: 270px;">
+            <button type="submit">Enviar</button>
+        </form>
+        
         <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
 
+    
         <p style="color: white;"> DIGITE O CEP DO ENDEREÇO DE ENTREGA:
         <div style="display: flex; flex-direction: row; align-items: center;">
 
@@ -46,24 +57,17 @@
 
             <button style="background-color: white; padding: 6px 10px; color: black;"> Calcular </button> </a>
         </div>
+        <br>
+        
+         <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
 
-
-        <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
-
-        <P style="color: white;"> Cupom de Desconto </p>
-
-        <form action="sacola/desconto" method="POST">
-            <input type="text" name="nome" value="" style="margin-left: 5%; padding: 7px; width: 270px;">
-            <button type="submit">Enviar</button>
-        </form>
-
-        <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
-
-        <p style="float: left; color: white"> Total <b style="color: white;">
+        <p style="float: left; color: white"> Total <b style="color: white;"> <bR><BR>
          R$ <?php if(isset($total)){echo $total;} ?> </b> 
      </span> 
  </p>
-        <br><br>
+        <br>
+
+        
         <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
 
         <a href="./pedido/salvar" style="width: 80%; text-align: center; border-radius: 3px; font-weight: bold;background-color: #33cc00; color: #000000; padding: 15px 0; margin: auto;"> Finalizar </a>

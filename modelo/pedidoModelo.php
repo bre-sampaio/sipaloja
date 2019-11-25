@@ -2,11 +2,11 @@
 
 
 function salvarPedido ($idFormaPagamento, $idcliente, $idEndereco, $valorcupom, $produtosCarrinho) {
-$sql = "INSERT INTO pedido (idFormaPagamento, idCliente, idEndereco, Valorcupom) VALUES ('$idFormaPagamento','$idcliente' '$idEndereco', '$valorcupom')";
+$sql = "INSERT INTO pedido (idFormaPagamento, idCliente, idEndereco, Valorcupom) VALUES ('$idFormaPagamento','$idcliente', '$idEndereco', '$valorcupom')";
 $resultado = mysqli_query ($cnx = conn(), $sql);
 $idPedido = mysqli_insert_id($cnx);
-foreach ($produtosCarrinho as $produtos) {
-    $idProduto = $produtos["idproduto"];
+foreach ($produtosCarrinho as $id) {
+    $idProduto = $id;
     $quantidade = 1;
     
     $sql = "INSERT INTO pedido_produto (idProduto, idPedido, Quantidade) VALUES ('$idProduto', '$idPedido', '$quantidade')";

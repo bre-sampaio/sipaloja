@@ -78,6 +78,7 @@ function remover($idproduto)
        $produtoBanco = pegarProdutoPorId($produtoSessao);
         $produtosCarrinho[] = $produtoBanco;
     }
+    $_SESSION["desconto"] = $valorTotal;
     $dados["produtos"] = $produtosCarrinho;
     $dados['total'] = $valorTotal;
     exibir("sacola/listar", $dados);

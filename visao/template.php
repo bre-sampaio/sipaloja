@@ -46,6 +46,9 @@
                       
                      <li id="li1"> 
                          <a href="./cupom/listarCupons" style="color: white;"> Cupons </a></li>
+                     
+                     <li id="li1"> 
+                         <a href="./pedido/listarPedidos" style="color: white;"> Pedidos </a></li>
                     
                   <?php } ?>
             </ul>

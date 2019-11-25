@@ -1,13 +1,13 @@
 <h2> Listar Pedidos: </h2>
 
-<table class="table">
+<table class="table" border="1">
     <thead>
         <tr>
             <th>Id Pedido</th>
             <th>Forma de Pagamento</th>
             <th>Endereço</th>
             <th>Valor cupom</th>
-            <th>Ver Detalhes</th>
+            <th>Detalhes</th>
             
         </tr>
     </thead>
@@ -15,9 +15,9 @@
     <tr>
         <td><?=$pedido['idPedido']?></td>
         <td><?=$pedido['descricao']?></td> 
-        <td><?=$pedido['logradouro']?></td> 
+        <td><?=$pedido['Logra']?></td> 
         <td><?=$pedido['Valorcupom']?></td> 
-        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./pedido/ver/<?=$pedido['idpedido']?>"><button class="bot" type="submit" <strong>DETALHAR</strong></button></a> <?php } ?></td>
+        <td> <?php if (acessoPegarPapelDoUsuario() == 'admin') {?> <a href="./pedido/ver/<?=$pedido['idPedido']?>"> DETALHAR <?php } ?></td>
         
     </tr>
     <?php endforeach; ?>

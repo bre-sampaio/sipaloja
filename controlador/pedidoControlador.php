@@ -44,13 +44,13 @@ function salvar () {
 function listarPedidos () {
     $dados = array ();
     $dados["pedidos"] = pegarTodosPedidos();
-    exibir ("pedidos/listar", $dados);
+    exibir ("pedido/listar", $dados);
 }
 
 function ver ($idPedido) {
     $dados["pedidos"] = pegarPedidoPorId($idPedido);
-     $dados["pedidosProduto"] = pegarProdutoPorPedido($idpedido);
-    exibir ("pedidos/visualizar" , $dados);
+     $dados["pedidosProduto"] = pegarProdutoPorPedido($idPedido);
+    exibir ("pedido/visualizar" , $dados);
 }
 
 

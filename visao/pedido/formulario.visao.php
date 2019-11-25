@@ -41,8 +41,6 @@
                         <div>
                             <p> Escolha a Forma de Pagamento: </p>
 
-
-
                             <select name="idFormaPagamento" style="padding: 10px 80px; margin-left: 2%;">
 <?php foreach ($pagamentos as $pagamento): ?>
                                     <option value="<?= $pagamento["idFormaPagamento"] ?>"><?= $pagamento["descricao"] ?></option>
@@ -50,9 +48,8 @@
                             </select>
 
                         </div>
+                        <button type="submit"> Finalizar </button>
                         </div>     
 
-                        <button type="submit"> Finalizar </button>
-
  </form>
-                        </div>
+ </div>

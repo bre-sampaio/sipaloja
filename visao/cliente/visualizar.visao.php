@@ -1,51 +1,56 @@
 <?php require_once "biblioteca/acesso.php"; ?>
-<div style="margin: auto; display: inline;"> 
-    
-<div style="display: inline;">
-    
-    <div style="float: left; width: 80%;">
 
-        <div style="display: inline;  width: 70%;"> 
+<div style="width: 50%; margin: auto;"> 
+<h2> Meus Dados</h2>
+ <div style="color: #d3d3d3; width: 100%; border: solid 1px;"></div>
 
-            <div style="float: left; width: 30%;">
-                <img src="./publico/img_sipa/minhaconta.jpg" style=" width: 100%; height: 300px;"> 
-            </div>
+ <div style="display: inline;"> 
+  
+<!--- Esquerda ---> 
 
-            <div style="float: right; width: 67%;">
-                <p>nome: <?=$cliente['nome']?></p>
+  
+ <div style="float: left;"> 
+    <p> Nome Completo </p>
+     <input placeholder="<?=$cliente['nome']?>" style="width: 250px; height: 40px;">
 
-                <p>senha: <?=$cliente['senha']?></p>
+      <p> CPF </p>
+     <input placeholder="<?=$cliente['cpf']?>" style="width: 250px; height: 40px;">
 
-                <p>email: <?=$cliente['email']?></p>
-            <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
-                <p>Tipo: <?=$cliente['tipoCliente']?></p>
-            <?php } ?>
-                <p>cpf: <?=$cliente['cpf']?></p>
+      <p> Data de Nascimento </p>
+     <input placeholder="<?=$cliente['nascimento']?>" style="width: 250px; height: 40px;">
 
-                <p>sexo: <?=$cliente['sexo']?></p>
+     <div> 
+     <p> Sexo </p>
+     <input placeholder="M" style="width: 50px; height: 50px;">
+     <input placeholder="<?=$cliente['sexo']?>" style="color: white; width: 53px; height: 50px; background-color: black; border-color: black;">
+    </div>
+ </div>
+ 
+ 
+ <!--- Diretita ---> 
+ 
+ 
+ <div style="float: right;">
+     <p> Email </p>
+    <input placeholder="<?=$cliente['email']?>" style="width: 250px; height: 40px;">
+     
+    <p> Senha </p>
+    <input placeholder="<?=$cliente['senha']?>" style="width: 250px; height: 40px;">
 
-                <p>Data de Nascimento: <?=$cliente['nascimento']?></p>
-            </div>
+    <p> Tipo do usuario </p>
+    <input placeholder="<?=$cliente['tipoCliente']?>" style="width: 250px; height: 40px;">
+ </div>
 
-        </div>
-
-  <br><br><br><br>   <br><br><br><br>  <br><br><br><br>  <br><br><br><br> 
-    
+ 
+ </div>
+ 
+ <br><BR><BR><BR><BR><BR><BR><BR><br><BR><BR><BR><BR><BR><BR><BR><br><BR><BR><BR><BR>  
 <h2>Enderecos</h2>
+<div style="color: #d3d3d3; width: 100%; border: solid 1px;"></div>
+
+<BR>
  <?php include './visao/endereco/listar.visao.php';?>
 
 <a href="./endereco/adicionar/<?=$cliente['idcliente']?>" class="btn btn-primary">Adicionar novo endereco</a>
-</div>
-</div>
-    
-<div style="float: right; background-color: black; width: 20%; height: 300px; color: white;">
-    <h2> Minha Conta </h2>
-    
-    <a href=""  class="btn btn-primary"> Pedidos </a> <br><BR>
-    <a href=""  class="btn btn-primary"> Vales </a> <br><BR> 
-    <a href="./cliente/adicionar/" class="btn btn-primary"> Cadastro </a> <br><br>
-    <a href="./endereco/adicionar/<?=$cliente['idcliente']?>"  class="btn btn-primary"> Alterar Endereço </a> <br><BR> 
- 
-</div>
-    
+
 </div>

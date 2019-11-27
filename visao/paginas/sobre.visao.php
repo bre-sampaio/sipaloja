@@ -13,7 +13,7 @@
     <?php foreach ($produtos as $produto):?>
     <div id="prod" style="margin-left: 108px;">
             <img src="<?=$produto['img']?>" style="width: 100%; height: 550px;">
-            <p id="desc"><?=$produto["Nome"]?><br> R$ <?=$produto["Preco"]?></p><br>
+            <p id="desc"><?=$produto["Nome"]?><br> R$ <?=$produto['Descricao']?></p><br>
             <a href="./produto/ver/<?=$produto['idProduto']?>">
                 <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
             </a>

@@ -9,6 +9,5 @@
 
 <h4>PRODUTOS COMPRADOS:</h4>
 <?php foreach ($pedidosProduto as $produto) :?>
-    <?=$produto['img']?>
     <div><?=$produto["Nome"]?><br></div>
 <?php endforeach;?>

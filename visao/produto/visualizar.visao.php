@@ -1,8 +1,22 @@
 <h2 style="margin: auto;">Detalhes do produto</h2> <br><br>
 
-    <div style="display: inline;">
-<img src="<?=$produto['img']?>" alt="imagem" style="width: 25%; height: 600px; padding-left: 60px; float: left; padding-right: 50px; margin-left: 20%;">
+<div style="display: inline; margin: auto; width: 70%;">
     
+    <div style="float: left;width: 55%;">
+   <div style="float: left; width: 12%;">
+        <img src="<?=$produto['img']?>" style="width:100%; height: 95px; "><br><br>
+        <img src="<?=$produto['img']?>" style="width:100%; height: 95px;"><br><br>
+	<img src="<?=$produto['img']?>" style="width:100%; height: 95px; "><br><br>
+	<img src="<?=$produto['img']?>" style="width:100%; height: 95px;"><br><br>
+        <img src="<?=$produto['img']?>" style="width:100%; height: 95px;">
+    </div>
+        
+    <div style="float: right;">   
+        <img src="<?=$produto['img']?>" alt="imagem" style="width: 65%; height: 556px; margin-left: -2%;">
+    </div>
+    </div>
+
+
 <div class="pala">
     <h1 style="margin-top: 11px;"> <?=$produto['Nome']?> </h1> 
     <div id="meio">	
@@ -25,22 +39,30 @@
 			border-color: black;"> <a href="./sacola/adicionar/<?=$produto['idProduto']?>"> Adicionar ao carrinho </button> </a>
         
     </div>
-    <br><br><br>
-    
-    <div style="background-color: black; margin-top: 200px; height: 400px;">    
-        <h2 style="text-align: center; color: white; padding-top: 20px;">Informações do produto</h2>
-        <p style="padding-left: 40%; font-size: 20px; color: white;"><br> Descricao: <?=$produto['Descricao']?> <br> Categoria: <?=$produto['Categoria']?><br> Estoquemin: <?=$produto['Estoquemin']?> <br> Estoquemax: <?=$produto['Estoquemax']?></p>
-  <p style="color: white; padding-left: 40%; font-size: 20px;">*Cabedal em couro e têxtil<br>
-			*Forro têxtil confortável<br>
-			*Solado de borracha vulcanizada que adere <br> ao board e garante maior controle<br>
-			*Código do artigo: D69237 <br><br><br></p>
+</div>
     </div>
-  
+    <br><br>
+
+    <div style=" margin: auto; width: 70%;">    
+    <h2> Descrição</h2> 
+<div style="color: #d3d3d3; width: 100%; border: solid 1px;"></div>
+    <p>
+        Camiseta de algodão com silk frontal. <br>
+        Basiquinha pra agradar todo mundo. <br>
+        Composição: 100% Algodão. <br>
+        Modelo Masculino: 1,80 de altura e veste G. <br>
+        Modelo Feminino: 1,60 de altura e veste P. <br><br>
+
+        <b>Instruções de Lavagem:</b> <br>
+        - Lave com água em temperatura ambiente. <br>
+        - Não usar alvejantes. <br>
+        - Não usar secadora. <br>
+        - Passar em temperatura mínima, pelo avesso e evitando a área estampada. <br>
+        - Não limpar a seco. 
+    </p>
+    </div>
     
-    
-    
-    
-<p>idProduto: <?=$produto['idProduto']?></p>
+<!-- <p>idProduto: <?=$produto['idProduto']?></p>
 
 <p>Nome: <?=$produto['Nome']?></p>
 
@@ -60,4 +82,4 @@
 
 <a href="./sacola/adicionar/<?=$produto['idProduto']?>"> carrinho </a>
 
-<a href="./produto/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo produto</a>
+<a href="./produto/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo produto</a> -->

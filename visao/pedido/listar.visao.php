@@ -1,3 +1,4 @@
+
 <h2> Listar Pedidos: </h2>
 
 <table class="table" border="1">
@@ -11,9 +12,10 @@
             
         </tr>
     </thead>
+
     <?php foreach ($pedidos as $pedido): ?>
     <tr>
-        <td><?=$pedido['idPedido']?></td>
+        <td> <?=$pedido['idPedido']?></td>
         <td><?=$pedido['descricao']?></td> 
         <td><?=$pedido['Logra']?></td> 
         <td><?=$pedido['Valorcupom']?></td> 
@@ -23,6 +25,5 @@
     <?php endforeach; ?>
     
 </table>
-
 
 

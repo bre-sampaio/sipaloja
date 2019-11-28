@@ -8,6 +8,7 @@
             <th>Número pedido</th>
             <th>Data da compra</th>
             <th>CEP</th>
+            <th>Detalhar</th>
             
         </tr>
     </thead>

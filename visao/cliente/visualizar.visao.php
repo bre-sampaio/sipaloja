@@ -40,8 +40,8 @@
     <p> Tipo do usuario </p>
     <input placeholder="<?=$cliente['tipoCliente']?>" style="width: 250px; height: 40px;">
     
-    <a href="login/logout"><button class="botao">Logout</button></a>
-
+    <br><br><br><a href="login/logout"><button style="margin-left: 20%; padding: 0 14px 0 14px; color: white; width: 110px; height: 50px; background-color: black; border-color: black; margin-top: 10px;">Logout</button></a>
+    <br><BR><a href="./cliente/editar/<?=$cliente['idcliente']?>">-> Editar meus dados <-</a>
  </div>
 
  

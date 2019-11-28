@@ -38,7 +38,7 @@
         <h3 id="totalFaturamento">Total faturado: R$<?= $totalFaturamento ?></h3>
 </div><br>
 
-<a href="./pedido/listarPedidosTime"><button class="botao">Voltar</button></a>
+<a href="./cliente/Adm"><button class="botao">Voltar</button></a>
 
 <style>
     #listaPedidos{

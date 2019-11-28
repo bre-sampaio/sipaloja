@@ -2,13 +2,18 @@
 
 
 function salvarPedido ($idFormaPagamento, $idcliente, $idEndereco, $valorcupom, $produtosCarrinho) {
-$sql = "INSERT INTO pedido (idFormaPagamento, idCliente, idEndereco, Valorcupom, data) VALUES ('$idFormaPagamento','$idcliente', '$idEndereco', '$valorcupom', curdate())";
-$resultado = mysqli_query ($cnx = conn(), $sql);
+$sql = "INSERT INTO pedido (idFormaPagamento, idCliente, idEndereco, Valorcupom, DataCompra) "
+        . "VALUES ('$idFormaPagamento','$idcliente', '$idEndereco', '$valorcupom', curdate())";
+$cnx=conn();
+$resultado = mysqli_query ($cnx, $sql);
+if (!$resultado) {
+        die(mysqli_error($cnx));
+}
+
 $idPedido = mysqli_insert_id($cnx);
 foreach ($produtosCarrinho as $id) {
     $idProduto = $id;
     $quantidade = 1;
-    
     $sql = "INSERT INTO pedido_produto (idProduto, idPedido, Quantidade) VALUES ('$idProduto', '$idPedido', '$quantidade')";
     $resultado = mysqli_query ($cnx = conn(), $sql);
 }
@@ -56,7 +61,9 @@ function pegarProdutoPorPedido($id){
 
 
 function pegarPedidosTempo($data1, $data2) {
-    $comando = "select * from pedido where DataCompra between '$data1' and '$data2'";
+    $comando = "select cliente.cpf, pedido.idPedido, pedido.DataCompra from cliente
+    inner join pedido on cliente.idcliente=pedido.idcliente
+    where pedido.DataCompra between '$data1' and '$data2';";
     $cnx = conn();
     $resul = mysqli_query($cnx, $comando);
     $pedidos = array();
@@ -84,7 +91,7 @@ function pegarPedidosLocalizacao($cidade) {
 
 function pegarFaturamentoTempo($data1, $data2) {
     $comando = "select pedido.idPedido, pedido.DataCompra, 
-    sum(produto.Preco) as valorPedido 
+    sum(produto.Descricao) as valorPedido 
     from pedido 
     inner join pedido_produto on pedido.idPedido=pedido_produto.idPedido 
     inner join produto on pedido_produto.idProduto=produto.idProduto 

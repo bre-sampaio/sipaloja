@@ -27,6 +27,7 @@ CREATE TABLE produto(
 	Tamanho VARCHAR(60) NOT NULL,
 	img VARCHAR(60),
 	Categoria VARCHAR(20) NOT NULL,
+        Estoque INT NOT NULL,
 	Estoquemin INT(5) NOT NULL,
 	Estoquemax INT(5) NOT NULL,
 	PRIMARY KEY(idProduto)
@@ -71,6 +72,7 @@ CREATE TABLE pedido (
 	idEndereco INT NOT NULL,
         idFormaPagamento INT NOT NULL,
         Valorcupom INT,
+        DataCompra date not null, 
 	PRIMARY KEY(idPedido),
 	FOREIGN KEY(idcliente) REFERENCES cliente(idcliente) ON UPDATE CASCADE ON DELETE CASCADE,
 	FOREIGN KEY(idEndereco) REFERENCES endereco(idEndereco) ON UPDATE CASCADE ON DELETE CASCADE,
@@ -111,3 +113,4 @@ CREATE TABLE FormaPagamento(
 );
 	
  
+update cliente set tipoCliente="admin" where idcliente=1; 

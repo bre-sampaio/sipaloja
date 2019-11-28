@@ -11,6 +11,7 @@ function adicionar() {
         $preco = $_POST ["Preco"];
         $tamanho = $_POST ["Tamanho"];
         $categoria = $_POST ["Categoria"];
+        $estoque = $_POST ["Estoque"];
         $estoquemin = $_POST ["Estoquemin"];
         $estoquemax = $_POST ["Estoquemax"];
 
@@ -41,7 +42,7 @@ function adicionar() {
             $dados["categorias"] = pegarTodosCategorias();
             exibir("produto/formularioProd", $dados);
         } else {
-            $msg = adicionarProduto($nome_produto, $desc, $preco, $tamanho, $destino, $categoria, $estoquemin, $estoquemax);
+            $msg = adicionarProduto($nome_produto, $desc, $preco, $tamanho, $destino, $categoria, $estoque, $estoquemin, $estoquemax);
             echo $msg;
         }
     } else {
@@ -87,6 +88,7 @@ function editar($id) {
         $preco = $_POST ["Preco"];
         $tamanho = $_POST ["Tamanho"];
         $categoria = $_POST ["Categoria"];
+        $estoque = $_POST ["Estoque"];
         $estoquemin = $_POST ["Estoquemin"];
         $estoquemax = $_POST ["Estoquemax"];
         
@@ -95,7 +97,7 @@ function editar($id) {
  $img_tmp = $_FILES['img']['tmp_name'];
  move_uploaded_file( $img_tmp, $destino );
 
-        editarProduto($id, $nome_produto, $desc, $preco, $tamanho, $destino, $categoria, $estoquemin, $estoquemax);
+        editarProduto($id, $nome_produto, $desc, $preco, $tamanho, $destino, $categoria,  $estoque, $estoquemin, $estoquemax);
         redirecionar("produto/listarProdutos");
     } else {
         $dados["produto"] = pegarProdutoPorId($id);
@@ -117,6 +119,12 @@ function buscar(){
 	}
 }
 
-?>
+/** admin */
+function listarProdutosCategoria() {
+    $dados['categorias'] = pegarTodosCategorias();
+    $dados['produtos'] = pegarTodosProdutos();
+    
+    exibir("produto/listarProdCategoria", $dados);    
+}
 
 

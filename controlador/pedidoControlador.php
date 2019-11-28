@@ -40,7 +40,6 @@ function salvar () {
 }
 }
 
-
 function listarPedidos () {
     $dados = array ();
     $dados["pedidos"] = pegarTodosPedidos();
@@ -51,6 +50,92 @@ function ver ($idPedido) {
     $dados["pedidos"] = pegarPedidoPorId($idPedido);
      $dados["pedidosProduto"] = pegarProdutoPorPedido($idPedido);
     exibir ("pedido/visualizar" , $dados);
+}
+
+
+
+/** admin */
+function listarPedidosTempo() {
+    if (ehPost()) {
+        $data1 = $_POST['data1'];
+        $data2 = $_POST['data2'];
+        
+        $dados = array();
+        $erros = array();
+        if ($data1 == null) {
+            $erros[] =  "Informe uma data válida";
+        }
+        if ($data2 == null) {
+            $erros[] = "Informe uma data válida";
+        }
+        if ($data1>$data2) {
+            $erros[] = "Selecione um intervalo de tempo válido.";
+        }
+        if (count($erros) == 0) {
+            $dados['pedidos'] = pegarPedidosTempo($data1, $data2);
+            exibir("pedido/listarPedidoTime", $dados);
+        } else {
+            $dados['erros'] = $erros;
+            exibir("pedido/formularioPedidoTime", $dados);
+        }
+    }else {
+        exibir("pedido/formularioPedidoTime");
+    }
+}
+
+
+/** admin */
+function listarPedidosLocal(){
+    if (ehPost()) {
+        $cidade = $_POST['cidade'];
+        
+        $dados = array();
+        $erros = array();
+        if ($cidade == null) {
+            $erros[] = "Insira uma cidade";
+        }
+        if (count($erros) == 0) {
+            $dados['pedidos'] = pegarPedidosLocalizacao($cidade);
+            $dados['cidade'] = $cidade;
+            exibir("pedido/listarPedidoLocal", $dados);
+        } else {
+            $dados['erros'] = $erros;
+            exibir("pedido/formularioPedidoLocal", $dados);
+        }
+    }else {
+        exibir("pedido/formularioPedidoLocal");
+    }
+}
+
+/** admin */
+function calcularFaturamentoTempo(){
+    if (ehPost()) {
+        $data1 = $_POST['data1'];
+        $data2 = $_POST['data2'];
+        
+        $dados = array();
+        $erros = array();
+        if ($data1 == null) {
+            $erros[] =  "Informe uma data válida";
+        }
+        if ($data2 == null) {
+            $erros[] = "Informe uma data válida";
+        }
+        if ($data1>$data2) {
+            $erros[] = "Selecione um intervalo de tempo válido.";
+        }
+        if (count($erros) == 0) {
+            $dados['pedidos'] = pegarFaturamentoTempo($data1, $data2);
+            $dados['data1'] = $data1;
+            $dados['data2'] = $data2;
+            exibir("pedido/listarFaturamentoTime", $dados);
+        } else {
+            $dados['erros'] = $erros;
+            exibir("pedido/formularioFaturamentoTime", $dados);
+        }
+    }else {
+        exibir("pedido/formularioFaturamentoTime");
+    }
 }
 
 

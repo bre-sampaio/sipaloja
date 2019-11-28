@@ -1,8 +1,10 @@
 <?php
 
-function adicionarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categoria, $estoquemin, $estoquemax){
-     $sql = "INSERT INTO produto(Nome, Descricao, Preco, Tamanho, img, Categoria, Estoquemin, Estoquemax) VALUES ('$nome_produto','$preco', '$desc','$tamanho', '$img', '$categoria', '$estoquemin','$estoquemax')";
+function adicionarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categoria,  $estoque, $estoquemin, $estoquemax){
+     $sql = "INSERT INTO produto(Nome, Descricao, Preco, Tamanho, img, Categoria, Estoque, Estoquemin, Estoquemax) VALUES ('$nome_produto','$preco', '$desc','$tamanho', '$img', '$categoria', '$estoque', '$estoquemin','$estoquemax')";
     
+     
+     
      $resultado = mysqli_query($cnx = conn(), $sql);
     
     if(!$resultado) {
@@ -48,7 +50,7 @@ function adicionarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categor
       
          /* EDITAR PRODUTO */
         
-         function editarProduto($id, $nome_produto, $desc, $preco, $tamanho, $img, $categoria, $estoquemin, $estoquemax){
+         function editarProduto($id, $nome_produto, $desc, $preco, $tamanho, $img, $categoria, $estoque, $estoquemin, $estoquemax){
             $sql = "UPDATE produto SET "
                     . "Nome = '$nome_produto', "
                     . "Descricao = '$desc', "
@@ -56,6 +58,7 @@ function adicionarProduto($nome_produto, $desc, $preco, $tamanho, $img, $categor
                     . "Tamanho = '$tamanho', "
                     . "img = '$img', "
                     . "Categoria = '$categoria', "
+                    . "Estoque = '$estoquemin', "
                     . "Estoquemin = '$estoquemin', "
                     . "Estoquemax = '$estoquemax'  "
                     . "WHERE idProduto = $id";

@@ -9,60 +9,67 @@
     </head>
 
     <body class="container">
-        
+
         <div class="tudo">
-            
-       
-         <div id="inicio"> 
-            <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
-                  
-            <form method="POST" action="produto/buscar" id="pesquisa" style="display: inline;">
-              <div class="bloco">
-                  <input type="text" name="busca" placeholder="  Pesquisa">
-              </div>
-         </form> 
+
+
+            <div id="inicio"> 
+                <a href="/SipaLoja/" > <img src="./publico/img_sipa/oie_transparent.png" id="img1"> </a>
+
+                <form method="POST" action="produto/buscar" id="pesquisa" style="display: inline;">
+                    <div class="bloco">
+                        <input type="text" name="busca" placeholder="  Pesquisa">
+                    </div>
+                </form> 
                 <div id="esque"> 
-                    <a href="./cliente/ver/<?= acessoPegarUsuarioLogado();?>" style="color: white;"> <img src="./publico/img_sipa/profile.jpg" id="sac"></a></li>
-                     <a href="./sacola/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
-                     <a href="./login/"> <img src="./publico/img_sipa/login.jpg" id="lo"> </a>
-	        </div>
-                 
-        </div>
+                    <?php if (acessoUsuarioEstaLogado()) { ?>
+                        <a href="./cliente/ver/<?= acessoPegarUsuarioLogado() ?>" style="color: white;"><img src="./publico/img_sipa/profile.jpg" id="sac"></a>
+                        <?php }
+                        ?>
 
-        <div id="menu">
+                        <a href="./sacola/listar"> <img src="./publico/img_sipa/sacola.jpg" id="sac"> </a>
+                        <a href="./login/"> <img src="./publico/img_sipa/login.jpg" id="lo"> </a>
+                    </div>
 
-            <ul id="ul1">   
-                 <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
-                  <a href="./cliente/listarClientes" style="color: white;"> Usuarios </a></li>
-             
-                   <li id="li1">
-                       <a href="./produto/listarProdutos" style="color: white;"> Produtos </a></li>
-                    
-                    <li id="li1"> 
-                       <a href="./pagamento/listarPagamentos" style="color: white;"> Formas de Pagamento </a></li>
-                     
-                    <li id="li1"> 
-                       <a href="./categoria/listarCategorias" style="color: white;"> Categorias </a></li>
-                      
-                     <li id="li1"> 
-                         <a href="./cupom/listarCupons" style="color: white;"> Cupons </a></li>
-                     
-                     <li id="li1"> 
-                         <a href="./pedido/listarPedidos" style="color: white;"> Pedidos </a></li>
-                    
-                  <?php } ?>
-            </ul>
-        </div>
-    
-            
-  </div>
-        <br><br>
+                </div>
+
+                <div id="menu">
+
+                    <ul id="ul1">   
+                        <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
+                            <a href="./cliente/listarClientes" style="color: white;"> Usuarios </a></li>
+
+                            <li id="li1">
+                                <a href="./produto/listarProdutos" style="color: white;"> Produtos </a></li>
+
+                            <li id="li1"> 
+                                <a href="./pagamento/listarPagamentos" style="color: white;"> Formas de Pagamento </a></li>
+
+                            <li id="li1"> 
+                                <a href="./categoria/listarCategorias" style="color: white;"> Categorias </a></li>
+
+                            <li id="li1"> 
+                                <a href="./cupom/listarCupons" style="color: white;"> Cupons </a></li>
+
+                            <li id="li1"> 
+                                <a href="./pedido/listarPedidos" style="color: white;"> Pedidos </a></li>
+                            
+                             <li id="li1"> 
+                                 <a href="./cliente/Adm" style="color: white;"> Administrador </a></li>
+
+                        <?php } ?>
+                    </ul>
+                </div>
 
 
-<br>
+            </div>
+            <br><br>
 
-        <main class="container" id="site">
-            <?php require $viewFilePath; ?>
+
+            <br>
+
+            <main class="container" id="site">
+                <?php require $viewFilePath; ?>
         </main>
 
         <br><br>

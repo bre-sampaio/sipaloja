@@ -28,6 +28,9 @@ if (ehPOST()) {
     
     
     <br><br>
+    
+    <input placeholder="Estoque" type="number" name="Estoque" value="<?= @ $produto['Estoque'] ?>"> <br><br>
+    
     <input placeholder="Estoque Mínimo" type="number" name="Estoquemin" value="<?= @ $produto['Estoquemin'] ?>"> <br><br>
 
     <input placeholder="Estoque Máximo" type="number" name="Estoquemax" value="<?= @ $produto['Estoquemax'] ?>"> <br><br>

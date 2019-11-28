@@ -33,14 +33,8 @@
 
 <br><br><br><br>
 
-        <div id="prod" style="margin-left: 108px;">
-            <img src="" style="width: 100%; height: 550px;">
-            <p id="desc"><br> R$ </p><br>
-            <a href="./produto/ver/">
-                <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
-            </a>
-           <button id="bot2"> <a href="./sacola/adicionar/<?=$produto['idProduto']?>"> Adicionar ao carrinho </button> </a>
-        </div>
+
+
 
 <br><br><br><br>
 <div id="cup" style="background-color: black; height: 200px;">

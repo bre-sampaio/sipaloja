@@ -11,7 +11,6 @@ function adicionar(){
             $nome = $_POST["nome"];
             $senha = $_POST["senha"];
             $email = $_POST["Email"];
-            $tipo = $_POST["tipoCliente"];
             $cpf = $_POST["cpf"];
             $sexo = $_POST["sexo"];
             $nascimento = $_POST["nascimento"];
@@ -45,7 +44,7 @@ function adicionar(){
             $dados["errors"] = $errors;
             exibir("cliente/formulario", $dados);
         } else {     
-            $msg = adicionarCliente($nome,  $senha, $email, $tipo, $cpf, $sexo, $nascimento);
+            $msg = adicionarCliente($nome,  $senha, $email, $cpf, $sexo, $nascimento);
 	       redirecionar("./login");
         }
 
@@ -106,5 +105,10 @@ function adicionar(){
             }
         }
 
-
+/** admin */
+function Adm() {
+    exibir("cliente/pagAdministrador");
+}
+        
 ?>
+

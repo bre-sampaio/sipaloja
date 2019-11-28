@@ -39,6 +39,9 @@
 
     <p> Tipo do usuario </p>
     <input placeholder="<?=$cliente['tipoCliente']?>" style="width: 250px; height: 40px;">
+    
+    <a href="login/logout"><button class="botao">Logout</button></a>
+
  </div>
 
  

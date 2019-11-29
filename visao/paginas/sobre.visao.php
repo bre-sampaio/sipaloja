@@ -33,10 +33,82 @@
 
 <br><br><br><br>
 
+<div class="pri">
+    <div id="prod" style="margin-left: 108px;">
+        <img src="./publico/produtos/ProdutosFixos/prodFixo1.jpg" style="width: 100%; height: 550px;">
+        <p id="desc"> Moletom Rosa <br> R$ 356,50 </p><br>
+        <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+        <button id="bot2"> Adicionar ao carrinho </button>
+    </div>
+
+    <div id="prod" style="margin-left: 108px;">
+        <img src="./publico/produtos/ProdutosFixos/prodFixo2.jpg" style="width: 100%; height: 550px;">
+        <p id="desc"> Moletom Verde <br> R$ 356,50 </p><br>
+        <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+        <button id="bot2"> Adicionar ao carrinho </button>
+    </div>
+    
+    <div id="prod" style="margin-left: 108px;">
+        <img src="./publico/produtos/ProdutosFixos/prodFixo3.jpg" style="width: 100%; height: 550px;">
+        <p id="desc"> Moletom Cinza <br> R$ 356,50 </p><br>
+        <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+        <button id="bot2"> Adicionar ao carrinho </button>
+    </div>
+</div>
+
+<br><bR>
+
+<div class="pri">
+    <div id="prod" style="margin-left: 108px;">
+        <img src="./publico/produtos/ProdutosFixos/prodFixo4.jpg" style="width: 100%; height: 550px;">
+        <p id="desc"> Corta Vento Preto <br> R$ 556,50 </p><br>
+        <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+        <button id="bot2"> Adicionar ao carrinho </button>
+    </div>
+
+    <div id="prod" style="margin-left: 108px;">
+        <img src="./publico/produtos/ProdutosFixos/prodFixo5.jpg" style="width: 100%; height: 550px;">
+        <p id="desc"> Camiseta Preta de Rosa <br> R$ 100,50</p><br>
+        <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+        <button id="bot2"> Adicionar ao carrinho </button>
+    </div>
+    
+    <div id="prod" style="margin-left: 108px;">
+        <img src="./publico/produtos/ProdutosFixos/prodFixo6.jpg" style="width: 100%; height: 550px;">
+        <p id="desc"> Camiseta Preta Simples <br> R$ 100,50</p><br>
+        <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+        <button id="bot2"> Adicionar ao carrinho </button>
+    </div>
+</div>
 
 
+<br><bR>
 
-<br><br><br><br>
+<div class="pri">
+    <div id="prod" style="margin-left: 108px;">
+        <img src="./publico/produtos/ProdutosFixos/prodFixo7.jpg" style="width: 100%; height: 550px;">
+        <p id="desc"> Corta Vento Preto <br> R$ 556,50 </p><br>
+        <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+        <button id="bot2"> Adicionar ao carrinho </button>
+    </div>
+
+    <div id="prod" style="margin-left: 108px;">
+        <img src="./publico/produtos/ProdutosFixos/prodFixo9.jpg" style="width: 100%; height: 550px;">
+        <p id="desc">  Corta Vento Branco <br> R$ 100,50</p><br>
+        <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+        <button id="bot2"> Adicionar ao carrinho </button>
+    </div>
+    
+    <div id="prod" style="margin-left: 108px;">
+        <img src="./publico/produtos/ProdutosFixos/prodFixo8.jpg" style="width: 100%; height: 550px;">
+        <p id="desc">  Corta Vento Laranja <br> R$ 100,50</p><br>
+        <button id="bot2" style="margin-left: 20%;"> Ver o produto </button>
+        <button id="bot2"> Adicionar ao carrinho </button>
+    </div>
+</div>
+
+
+<br><br><br><br><br><br>
 <div id="cup" style="background-color: black; height: 200px;">
     <p style="color: white; font-size: 20px; padding-left: 23%;"> Eiii, conta pra gente o seu e-mail, te deixaremos por dentro de todas as ofertas em primeira mão :)</p>
     <form action="" method="POST" style="display: inline;"> 
@@ -47,9 +119,7 @@
 			height: 50px;
                         margin-top: 1%;
 			font-size: 20px; float: left; padding-right: 30px; padding-left: 30px;"> Enviar </button>
-    </form>
-   
-    
+    </form>  
 </div> 
 
 <br><br><br><br>

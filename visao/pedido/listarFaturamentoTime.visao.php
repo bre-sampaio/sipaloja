@@ -1,90 +1,117 @@
-<h2>Lista de pedidos (<?php echo $data1 . " até " . $data2 ?>):</h2>	
+<h2 class="h23">Os pedios <?php echo "Entre " . $data1 . " até " . $data2 ?>:</h2> <br>
+<div style="color: #d3d3d3; width: 36%; margin: auto; border: solid 1px;"></div><br>
+
 <div id="listaPedidos">
 
-    <div id="campos">
-        <div id="campoNumeroPedido">
-            <h3>Pedido</h3>
-        </div>        
-        <div id="campoDataPedido">
-            <h3>Data</h3>
-        </div>
-        <div id="campoValorPedido">
-            <h3>Valor por pedido</h3>
-        </div>
-    </div>
-    <hr size="" width="100%">
+        <div class="tabela1">
+            <div class="NomeProduto">
+                <h3>Pedido</h3>
+            </div>
+            <div class="PrecoProduto">
+                <h3>Data</h3>
+            </div>
+            <div class="EstoqueProduto">
+                <h3>Valor</h3>
+            </div>
+        </div>  
+ 
     <?php
     $totalFaturamento = 0;
     foreach ($pedidos as $pedido):
         ?>
-        <div class="cadaPedido">
-            <div class="sobreNumeroPedido">
-                <div>
-                    <p><?= $pedido['idPedido'] ?></p>
-                </div>
+    <br><BR><Br>
+     <div class="tabela2">
+           <div class="nome">
+               <p><?= $pedido['idPedido'] ?></p>
             </div>
-            <div class="sobreDataPedido">
-                <p><?= $pedido['DataCompra'] ?></p>
+            <div class="sobrePrecoProduto">
+               <p><?= $pedido['DataCompra'] ?></p>
             </div>
-            <div class="sobreValorPEdido">
-                <p><?= $pedido['valorPedido'] ?></p>
+            <div class="sobreEstoqueProduto">
+                 <p><?= $pedido['valorPedido'] ?></p>
             </div>
-        </div>
-        <hr size="" width="100%">
+    </div>
+      
         <?php
         $totalFaturamento += $pedido['valorPedido'];
     endforeach;
-    ?>
-        <h3 id="totalFaturamento">Total faturado: R$<?= $totalFaturamento ?></h3>
-</div><br>
+    ?><br><br><br><br>
+ </div>   
+    <div style="color: #d3d3d3; width: 36%; margin: auto; border: solid 1px;"></div>
+    
+        <p class="total">Total faturado: R$<?= $totalFaturamento ?></p>
+<br>
 
-<a href="./cliente/Adm"><button class="botao">Voltar</button></a>
+<a href="./cliente/Adm"><button class="botaoV">Voltar</button></a>
+
 
 <style>
-    #listaPedidos{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
+        #listaPedidos{
+        width: 35%;
         margin: auto;
-        font-family: 'Cinzel', serif;
-        color: #6d6b6a;
     }
-    #campos{
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 20px;
+    
+    .h23{
+            margin: auto;
+            width: 36%;
+        }
+    
+    .tabela1{
+        display: inline;
     }
-    #campoNumeroPedido{
-        width: 40%;
+    
+    .NomeProduto{
+        width: 25%;
+        float: left;
+        margin-right: 6%;
     }
-    #campoDataPedido{
-        width: 30%;
-        text-align: left;
+    
+    .PrecoProduto{
+        width: 25%;
+        float: left;
+         margin-right: 6%;
     }
-    #campoValorPedido{
-        width: 30%;
-        text-align: right;
+    
+    .EstoqueProduto{
+        width: 15%;
+        float: left;
+         margin-right: 6%;
     }
-    .cadaPedido{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
+    
+     .tabela2{
+        display: inline;
     }
-    .sobreNumeroPedido{
-        width: 40%;
-        display: flex;
-        flex-direction: row;
+    
+    .nome{
+       width: 32%;
+        float: left;
     }
-    .sobreDataPedido{
-        width: 30%;
-        text-align: left;
+    
+     .sobrePrecoProduto{
+       width: 32%;
+        float: left;
     }
-    .sobreValorPedido{
-        width: 30%;
-        text-align: right;
+    
+    .sobreEstoqueProduto{
+       width: 18%;
+        float: left;
     }
-    #totalFaturamento{
-        font-family: 'Cinzel', serif;
-        color: #6d6b6a;
+    
+    .total{
+        margin-left: 32%;
+        font-size: 18px;
+        color: #646464;
     }
-</style>
+    
+    .botaoV{
+        margin-left: 45%;
+        border: solid;
+        background-color: black;
+        color: white;
+        border-color: black;
+        padding: 12px 28px;
+        font-size: 15px;
+        text-align: center; 
+    }
+
+</style> 

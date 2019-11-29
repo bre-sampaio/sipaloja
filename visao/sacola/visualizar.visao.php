@@ -35,29 +35,4 @@
 			*Solado de borracha vulcanizada que adere <br> ao board e garante maior controle<br>
 			*Código do artigo: D69237 <br><br><br></p>
     </div>
-  
-    
-    
-    
-    
-<p>idProduto: <?=$produto['idProduto']?></p>
-
-<p>Nome: <?=$produto['Nome']?></p>
-
-<p>Preco: <?=$produto['Preco']?></p>
-
-<p>Descricao: <?=$produto['Descricao']?></p>
-
-<p>Tamanho: <?=$produto['Tamanho']?></p>
-
-<p>img: <img src="<?=$produto['img']?>" alt="imagem" width="10%"> </p>
-
-<p>Categoria: <?=$produto['Categoria']?></p>
-
-<p>Estoquemin: <?=$produto['Estoquemin']?></p>
-
-<p>Estoquemax: <?=$produto['Estoquemax']?></p>
-
-<a href="./sacola/adicionar/<?=$produto['idProduto']?>"> carrinho </a>
-
-<a href="./produto/adicionar" class="btn btn-primary" <br><br><br>Adicionar novo produto</a>
+ 

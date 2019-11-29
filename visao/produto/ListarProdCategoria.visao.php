@@ -7,6 +7,8 @@
         ?>
     <h2 class="h22"><?= $categoria['nome'] ?></h2>	
     
+    
+    
      <div style="color: #d3d3d3; width: 100%; border: solid 1px;"></div>
      
         <div class="tabela1">
@@ -24,6 +26,8 @@
             </div>
         </div>        
      <br><br><br>
+
+     
         <?php
         foreach ($produtos as $produto):
             if ($categoria["idCategoria"] == $produto["Categoria"]) { ?>

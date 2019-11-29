@@ -5,7 +5,8 @@ if (ehPOST()) {
     }
 }
 ?>
-
+<h2 class="h23">Selecione o periodo de tempo: </h2> <br>
+<div style="color: #d3d3d3; width: 36%; margin: auto; border: solid 1px;"></div><br><BR>
 
 <form action="" method="POST" class="form1">
     <div class="div2">
@@ -17,7 +18,6 @@ if (ehPOST()) {
     <button class="botao2">Enviar</button>
 </form>
 <br><Br><BR>
-<a href="cliente/Adm"><button class="botaoV">Voltar</button></a>
 <style> 
     .botao2{
         border: solid;
@@ -26,26 +26,13 @@ if (ehPOST()) {
         border-color: black;
         padding: 12px 28px;
         font-size: 15px;
-        text-align: center; 
-        float: right;
-        margin-top: 7%;
-        margin-left: 40%;
-
+        text-align: center;
+        margin-top: 5%;
     }
-    
-    .botaoV{
-        margin-left: 45%;
-        border: solid;
-        background-color: black;
-        color: white;
-        border-color: black;
-        padding: 12px 28px;
-        font-size: 15px;
-        text-align: center; 
-    }
-    
+   
     .form1{
-        margin: auto;
+        padding-left:15%;
+        margin:auto;
         display: inline;
         width: 50%;
     }
@@ -58,6 +45,11 @@ if (ehPOST()) {
     .div2{
         float: left;
         width: 45%;
+    }
+    
+    .h23{
+        margin: auto;
+        width: 36%;
     }
 
 </style>

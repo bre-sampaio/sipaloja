@@ -1,23 +1,32 @@
-<div style="display: inline;">
-  
+<div style="display: inline; width: 50%; margin: auto;">
+    
+    <h2 class="h22"> Resumo do Pedido </h2>
             <div> 
                 <div style="float: left; width: 70%;"> 
-                    <p style="color: white; font-size: 20px;"> Produtos <Br> <a href="" style="margin-left: 10%;"> visualizar </a>
-                    <p style="color: white; font-size: 20px;"> Frete </p>   
+                    <p style="color: black; font-size: 20px;"> Produtos <Br>
+                    <p style="color: black; font-size: 20px;"> Frete </p>   
                 </div>
 
+                
                 <div style="float: right; width: 25%;"> 
-                    <p style="color: white; font-size: 20px;"> R$ <?php if (isset($total)) { echo $total; }?> </p>
-                    <p style="color: white; font-size: 20px;"> - </p>   
+                    <p style="color: black; font-size: 20px;"> R$ <?php if (isset($total)) { echo $total; }?> </p>
+                    <p style="color: black; font-size: 20px;"> - </p>   
                 </div>
-            </div> <br><BR><br><BR><br><BR><BR><BR>
-            <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
-
-            <p style=" color: white"> Total <b style="color: white;"> <bR><BR>
-                    <span class="price"><b style="color: #000000;">  R$ <?php if (isset($total)) { echo $total;}?></b> </span>
-            </p>
+                
+                
+            </div>
+    <bR><br><br><br><br>
+            
+            <div style="margin: -5px ;color: #d3d3d3; width: 100%; border: solid 1px;"></div>
+            <div style="display: inline;">
+                <p style=" color: black; float: left; margin-right: 70%; font-size: 20px;"> Total <b style="color: black;"></p> <bR>
+                    <span class="price"><b style="color: #000000; float: right;">  R$ <?php if (isset($total)) { echo $total;}?></b> </span>
+            </div>
+  
+            
+            <br><br>  
   <form action="" method="POST">
-            <h2> Endereco de entrega </h2> 
+              <h2 class="h22"> Endereco de entrega </h2> 
 
 
             <select name="idEndereco" style="padding: 10px 80px;">
@@ -30,7 +39,7 @@
             <div style="margin: 5px ;color: #FFFFFF; width: 100%; border: solid 1px;"></div>
 
             <div>
-                <p> Escolha a Forma de Pagamento: </p>
+                <h2 class="h22"> Escolha a Forma de Pagamento: </h2>
 
                 <select name="idFormaPagamento" style="padding: 10px 80px; margin-left: 2%;">
                     <?php foreach ($pagamentos as $pagamento): ?>
@@ -39,7 +48,32 @@
                 </select>
 
             </div>
-            <button type="submit"> Finalizar </button>  
+            
+            <br><br><BR>
+            
+            <button type="submit" class="botaoV"> Finalizar </button>  
        </form>
     
 </div>   
+
+
+
+<style> 
+    .h22{
+        background-color: #d3d3d3;
+        font-size: 20px;
+    }
+    
+        .botaoV{
+        margin-left: 40%;
+        border: solid;
+        background-color: black;
+        color: white;
+        border-color: black;
+        padding: 12px 28px;
+        font-size: 15px;
+        text-align: center; 
+    }
+    
+    
+</style>

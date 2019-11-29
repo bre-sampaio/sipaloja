@@ -45,6 +45,8 @@
                         <a href="./produto/editar/<?= $produto['idProduto'] ?>" class="btn btn-info">EDITAR</a>
 
                         <a href="./produto/deletar/<?= $produto['idProduto'] ?>" class="btn btn-danger">DELETAR</a>
+                        
+                        <br><BR><br>
 
                     </div>
                 </div>
@@ -53,10 +55,8 @@
         endforeach;
     endforeach;
     ?>
-</div><br>
-<a href="categoria/adicionar"><button class="botao2">Nova Categoria</button></a>
-<a href="produto/adicionar"><button class="botao2">Novo Produto</button></a><br><br>
-<a href="cliente/Adm"><button class="botao">Voltar</button></a><br><br>
+</div><br><br><br>
+<a href="cliente/Adm"><button class="botaoV">Voltar</button></a><br><br>
 
 
 <style> 
@@ -101,20 +101,30 @@
     }
     
     .nome{
-       width: 15%;
+       width: 23%;
         float: left;
     }
     
      .sobrePrecoProduto{
-       width: 15%;
+       width: 23%;
         float: left;
     }
     
     .sobreEstoqueProduto{
-       width: 15%;
+       width: 18%;
         float: left;
     }
     
+    .botaoV{
+        margin-left: 45%;
+        border: solid;
+        background-color: black;
+        color: white;
+        border-color: black;
+        padding: 12px 28px;
+        font-size: 15px;
+        text-align: center; 
+    }
     
     
     
